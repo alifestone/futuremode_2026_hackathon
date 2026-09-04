@@ -1,0 +1,41 @@
+{
+  "project": "LUNA — LIVE AI Comic",
+  "owner": "CSFCCA",
+  "version": "0.1.0",
+  "source_plan": "../LUNA_MV_製作計畫書.docx",
+  "audio": {
+    "file": "../《CSFCCA LIVE AI》_ALL_NEW.mp3",
+    "duration_sec": 134.3,
+    "note": "Duration estimated from CBR 128kbps header; re-measure with ffprobe when available."
+  },
+  "style": {
+    "medium": "manga",
+    "aspect_ratio": "3:4",
+    "art_direction": "anime cel-shaded, clean line art, K-pop idol energy, neon backlight, high-energy stage lighting",
+    "palette": "desaturated warm paper base, deep violet hair accent, white costume, chrome chain highlights"
+  },
+  "character": {
+    "id": "luna",
+    "name": "LUNA",
+    "reference_sheet": "assets/reference/luna_character_sheet.jpg",
+    "locked_keywords": [
+      "long deep-violet hair in a high braided ponytail with silver chain accents",
+      "white sleeveless mock-neck zip crop top",
+      "white cargo mini-skirt with black belt and hanging chain",
+      "black thigh strap on left leg",
+      "chunky white platform sneakers with white crew socks",
+      "silver bracelets on right wrist"
+    ],
+    "expressions": [
+      "calm", "happy", "playful wink", "surprised",
+      "shy", "angry", "upset", "thinking", "confident smirk"
+    ],
+    "traits": ["lively", "charismatic", "confident", "playful", "independent"]
+  },
+  "generation": {
+    "provider": "llamagen",
+    "mcp_endpoint": "https://llamagen.ai/api/mcp",
+    "credit_floor": 5000,
+    "note": "Per LlamaGen guide: call get_comic_api_usage first; stop if remaining credits < 5000."
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "$comment": "Measured from 《CSFCCA LIVE AI》_ALL_NEW.mp3 by decoding to PCM and running STFT analysis. Not estimated from the plan doc. Regenerate with scripts/analyze_audio.py.",
+  "source": "../《CSFCCA LIVE AI》_ALL_NEW.mp3",
+  "measured": {
+    "duration_sec": 134.3,
+    "codec": "MPEG-1 Layer III, CBR 128 kbps, 44.1 kHz, joint stereo",
+    "encoder": "LAME 3.99.5",
+    "note": "ID3 tag declares AI-generated content (TXXX:AIGC)."
+  },
+  "tempo": {
+    "bpm": 106.0,
+    "confidence": "high — onset-comb search over 95-125 BPM, score 1.291",
+    "beat_sec": 0.566,
+    "bar_sec": 2.2642,
+    "first_beat_offset_sec": 0.488,
+    "meter": "4/4",
+    "total_bars": 60,
+    "phrase_4bar_sec": 9.057,
+    "phrase_8bar_sec": 18.113
+  },
+  "sections": [
+    { "name": "Intro",            "bar": 1,  "start": 0.49,   "end": 11.81,  "energy_db": -23.35, "signature": "no bass (0.12x), airy pads — sparsest passage in the track" },
+    { "name": "Build / Pre-drop", "bar": 6,  "start": 11.81,  "end": 20.86,  "energy_db": -17.90, "signature": "bass slams in at 1.6x, +5.5 dB jump — first hook statement" },
+    { "name": "Verse 1A",         "bar": 10, "start": 20.86,  "end": 29.92,  "energy_db": -20.00, "signature": "bass drops to 0.62x, low-mid vocal carries (1.32x)" },
+    { "name": "Verse 1B",         "bar": 14, "start": 29.92,  "end": 36.71,  "energy_db": -19.99, "signature": "same bed, vocal phrasing continues" },
+    { "name": "Pre-chorus",       "bar": 17, "start": 36.71,  "end": 45.77,  "energy_db": -19.76, "signature": "air band climbs to 1.15-1.24x — riser into chorus" },
+    { "name": "Chorus 1",         "bar": 21, "start": 45.77,  "end": 57.09,  "energy_db": -18.58, "signature": "mid jumps to 1.32x, peak 0.64 at 0:48 — full arrangement" },
+    { "name": "Chorus 1 ext.",    "bar": 26, "start": 57.09,  "end": 75.20,  "energy_db": -18.40, "signature": "sustained, hi/air 1.2-1.4x at 1:08-1:12" },
+    { "name": "Verse 2",          "bar": 34, "start": 75.20,  "end": 84.26,  "energy_db": -17.88, "signature": "bass forward 1.26x, mid pulls back to 0.90x" },
+    { "name": "Breakdown",        "bar": 38, "start": 84.26,  "end": 93.32,  "energy_db": -19.78, "signature": "BASS CUTS TO 0.02x at 1:30 — near-total dropout, the track's emptiest bar" },
+    { "name": "Final chorus",     "bar": 42, "start": 93.32,  "end": 118.22, "energy_db": -17.26, "signature": "bass returns 1.3x and climbs; loudest sustained passage" },
+    { "name": "Climax",           "bar": 53, "start": 118.22, "end": 129.54, "energy_db": -16.48, "signature": "peak energy of the track, bass 1.6x" },
+    { "name": "Outro",            "bar": 58, "start": 129.54, "end": 134.30, "energy_db": -18.23, "signature": "bass collapses to 0.4x; final transient peak 0.96 at 2:12" }
+  ],
+  "hard_cut_points": [
+    { "t": 11.81,  "why": "bass entry — strongest downbeat in the first half" },
+    { "t": 45.77,  "why": "chorus 1 downbeat" },
+    { "t": 84.26,  "why": "breakdown — bass disappears" },
+    { "t": 93.32,  "why": "final chorus re-entry, highest novelty of the track" },
+    { "t": 129.54, "why": "outro collapse" },
+    { "t": 132.90, "why": "final transient hit (peak 0.96) — hold last frame" }
+  ]
+}

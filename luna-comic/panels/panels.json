@@ -1,0 +1,160 @@
+{
+  "$comment": "EDIT THIS FILE to change the comic. Each panel is regenerated independently by scripts/generate.py. Keep `character_ref` on every panel — it is the consistency anchor. `status` is managed by the scripts: pending -> queued -> done/failed.",
+  "defaults": {
+    "character_ref": "assets/reference/luna_character_sheet.jpg",
+    "style_suffix": "anime cel-shaded manga panel, clean line art, K-pop MV aesthetic, neon backlight, cinematic lighting",
+    "aspect_ratio": "3:4",
+    "negative": "extra fingers, deformed hands, inconsistent hair color, changed outfit, text artifacts, watermark"
+  },
+  "pages": [
+    {
+      "page": 1,
+      "title": "Intro — Standby",
+      "beat": "0:00–0:20",
+      "layout": "3-panel vertical",
+      "panels": [
+        {
+          "id": "P01",
+          "time": "0:00-0:07",
+          "expression": "calm",
+          "camera": "wide establishing shot, low angle",
+          "action": "LUNA stands alone at the center of a darkened stage, backlit by a single cold spotlight, ponytail still",
+          "caption": "準備好了嗎？",
+          "status": "pending"
+        },
+        {
+          "id": "P02",
+          "time": "0:07-0:14",
+          "expression": "confident smirk",
+          "camera": "medium close-up, 3/4 angle",
+          "action": "she lifts her chin and opens her eyes as the stage lights snap on behind her",
+          "caption": "下一個舞台，交給我吧。",
+          "status": "pending"
+        },
+        {
+          "id": "P03",
+          "time": "0:14-0:20",
+          "expression": "happy",
+          "camera": "full body, front, slight dolly-in",
+          "action": "hair flip as the beat drops, chains on her skirt swinging, neon violet rim light",
+          "caption": "",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "page": 2,
+      "title": "Verse — Narrative",
+      "beat": "0:20–0:55",
+      "layout": "4-panel grid",
+      "panels": [
+        {
+          "id": "P04",
+          "time": "0:20-0:29",
+          "expression": "thinking",
+          "camera": "close-up on face, side angle",
+          "action": "walking through a neon-lit city street at night, reflections in wet asphalt",
+          "caption": "",
+          "status": "pending"
+        },
+        {
+          "id": "P05",
+          "time": "0:29-0:38",
+          "expression": "surprised",
+          "camera": "medium shot, over-the-shoulder",
+          "action": "she turns toward a giant holographic billboard showing her own face",
+          "caption": "",
+          "status": "pending"
+        },
+        {
+          "id": "P06",
+          "time": "0:38-0:47",
+          "expression": "upset",
+          "camera": "close-up, low angle",
+          "action": "the hologram glitches and fragments; she reaches a hand toward it",
+          "caption": "那真的是我嗎？",
+          "status": "pending"
+        },
+        {
+          "id": "P07",
+          "time": "0:47-0:55",
+          "expression": "confident smirk",
+          "camera": "medium close-up, front",
+          "action": "she clenches her fist, resolve returning, violet light gathering around her",
+          "caption": "",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "page": 3,
+      "title": "Chorus — Explosion",
+      "beat": "0:55–1:30",
+      "layout": "splash + 2 insets",
+      "panels": [
+        {
+          "id": "P08",
+          "time": "0:55-1:12",
+          "expression": "confident smirk",
+          "camera": "full body splash, dynamic low angle",
+          "action": "mid-dance pose pointing directly at camera, ponytail whipping, explosion of neon particles and stage lights behind her",
+          "caption": "LIVE AI",
+          "status": "pending"
+        },
+        {
+          "id": "P09",
+          "time": "1:12-1:21",
+          "expression": "playful wink",
+          "camera": "tight close-up inset",
+          "action": "winking at the camera with a peace sign, sparkle effect",
+          "caption": "",
+          "status": "pending"
+        },
+        {
+          "id": "P10",
+          "time": "1:21-1:30",
+          "expression": "happy",
+          "camera": "wide inset, back view",
+          "action": "seen from behind facing a roaring crowd of glowing light sticks",
+          "caption": "",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "page": 4,
+      "title": "Bridge & Outro",
+      "beat": "1:30–2:14",
+      "layout": "3-panel vertical",
+      "panels": [
+        {
+          "id": "P11",
+          "time": "1:30-1:47",
+          "expression": "shy",
+          "camera": "medium close-up, soft focus",
+          "action": "quiet moment backstage, warm dim light, she catches her breath and smiles to herself",
+          "caption": "",
+          "status": "pending"
+        },
+        {
+          "id": "P12",
+          "time": "1:47-2:02",
+          "expression": "calm",
+          "camera": "wide shot, silhouette",
+          "action": "walking back toward the stage light, silhouetted in the doorway, long shadow behind her",
+          "caption": "",
+          "status": "pending"
+        },
+        {
+          "id": "P13",
+          "time": "2:02-2:14",
+          "expression": "confident smirk",
+          "camera": "extreme close-up on eyes, then pull to full body",
+          "action": "final hero pose under a single beam, CSFCCA logo light flare",
+          "caption": "See you on the next stage.",
+          "status": "pending"
+        }
+      ]
+    }
+  ]
+}
