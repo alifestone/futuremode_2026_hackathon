@@ -65,7 +65,8 @@ The point of this structure: **shots.json is the only file you edit by hand.**
 
 1. Edit a shot's `action`, `expression`, `camera`, or `caption`.
 2. `python scripts/build_shots.py` — reports exactly which shots changed.
-3. Regenerate only those shots. `--model "Kling 3.0"` prints one provider's batch,
+3. Regenerate only those shots. `--model "ComfyUI MiniMax H3"` prints the local
+   provider's batch,
    which is the unit you actually paste into a single interface.
 
 Because every shot carries the same `character_ref` and the same `locked_keywords`

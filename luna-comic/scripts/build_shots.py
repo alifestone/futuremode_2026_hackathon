@@ -15,7 +15,7 @@ needs and a still does not: clip duration, and how the motion sits on the beat.
 Usage:
     python scripts/build_shots.py                    # write out/shot_prompts.{json,md}
     python scripts/build_shots.py --show S12         # print one shot
-    python scripts/build_shots.py --model "Kling 3.0"  # print one model's batch
+    python scripts/build_shots.py --model "ComfyUI MiniMax H3"  # print local batch
 """
 import argparse
 import hashlib
