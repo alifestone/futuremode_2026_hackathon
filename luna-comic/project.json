@@ -4,7 +4,7 @@
   "version": "0.1.0",
   "source_plan": "../LUNA_MV_製作計畫書.docx",
   "audio": {
-    "file": "../《CSFCCA LIVE AI》_ALL_NEW.mp3",
+    "file": "../歌曲.mp3",
     "duration_sec": 134.3,
     "note": "Duration estimated from CBR 128kbps header; re-measure with ffprobe when available."
   },
@@ -36,6 +36,13 @@
     "provider": "llamagen",
     "mcp_endpoint": "https://llamagen.ai/api/mcp",
     "credit_floor": 5000,
-    "note": "Per LlamaGen guide: call get_comic_api_usage first; stop if remaining credits < 5000."
+    "note": "Per LlamaGen guide: call get_comic_api_usage first; stop if remaining credits < 5000.",
+    "video_providers": {
+      "$comment": "Per-model assignments come from storyboard/shots.json. No API keys are wired up yet — fill in env_var and endpoint when credentials arrive. Shot counts here must match build_shots.py's summary output.",
+      "Kling 3.0": { "shots": 14, "env_var": "KLING_API_KEY", "endpoint": "" },
+      "Veo 3.1": { "shots": 6, "env_var": "VEO_API_KEY", "endpoint": "" },
+      "Seedance 2.0": { "shots": 3, "env_var": "SEEDANCE_API_KEY", "endpoint": "" },
+      "Runway Gen-4.5": { "shots": 1, "env_var": "RUNWAY_API_KEY", "endpoint": "" }
+    }
   }
 }

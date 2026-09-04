@@ -12,11 +12,14 @@ STFT-based analysis:
 
 Usage:
     pip install numpy imageio-ffmpeg
-    python scripts/analyze_audio.py
+    python scripts/analyze_audio.py            # analyse the default track
+    python scripts/analyze_audio.py other.mp3  # analyse a different file
 
-Re-run this if the track is ever re-exported; the shot grid in
-storyboard/shots.json is keyed to the numbers it prints.
+Re-run this only if the track is ever re-exported; the shot grid in
+storyboard/shots.json is keyed to the numbers it prints. A pure rename of the
+same audio does not need a re-run — pass the new path instead.
 """
+import argparse
 import pathlib
 import subprocess
 import sys
@@ -26,7 +29,7 @@ import numpy as np
 
 SR, HOP, NFFT = 22050, 512, 1024
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-TRACK = ROOT / ".." / "《CSFCCA LIVE AI》_ALL_NEW.mp3"
+DEFAULT_TRACK = ROOT / ".." / "歌曲.mp3"
 
 
 def decode(path):
@@ -124,7 +127,12 @@ def boundaries(S, kernel_sec=8.0):
 
 
 def main():
-    track = TRACK.resolve()
+    ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
+    ap.add_argument("track", nargs="?", default=str(DEFAULT_TRACK),
+                    help="path to the track (default: ../歌曲.mp3)")
+    args = ap.parse_args()
+
+    track = pathlib.Path(args.track).resolve()
     if not track.exists():
         sys.exit(f"track not found: {track}")
     x = decode(track)

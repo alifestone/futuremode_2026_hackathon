@@ -1,6 +1,6 @@
 {
-  "$comment": "Measured from 《CSFCCA LIVE AI》_ALL_NEW.mp3 by decoding to PCM and running STFT analysis. Not estimated from the plan doc. Regenerate with scripts/analyze_audio.py.",
-  "source": "../《CSFCCA LIVE AI》_ALL_NEW.mp3",
+  "$comment": "Measured from the track by decoding to PCM and running STFT analysis. Not estimated from the plan doc. Regenerate with scripts/analyze_audio.py. The source file was renamed from 《CSFCCA LIVE AI》_ALL_NEW.mp3 to 歌曲.mp3; the audio is byte-identical, so these measurements still hold.",
+  "source": "../歌曲.mp3",
   "measured": {
     "duration_sec": 134.3,
     "codec": "MPEG-1 Layer III, CBR 128 kbps, 44.1 kHz, joint stereo",

@@ -1,0 +1,241 @@
+{
+  "$comment": "ESTIMATED timings, not measured. Section assignment is by hand against beatmap.json's 12 measured sections; placement inside a section is proportional to line length. Only lines with anchor=hard_cut are exact. Regenerate with scripts/align_lyrics.py.",
+  "source": "../歌詞.txt",
+  "grid": {
+    "bpm": 106.0,
+    "bar_sec": 2.2642,
+    "first_beat_offset_sec": 0.488
+  },
+  "lines": [
+    {
+      "id": "L01",
+      "text": "訊息亮起，畫面開啟，倒數開始，世界重啟。",
+      "section": "Intro",
+      "bar": 1,
+      "start": 0.49,
+      "end": 7.28,
+      "confidence": "estimated",
+      "anchor": null
+    },
+    {
+      "id": "L02",
+      "text": "3、2、1，Live AI！",
+      "section": "Intro",
+      "bar": 4,
+      "start": 7.28,
+      "end": 11.81,
+      "confidence": "estimated",
+      "anchor": null
+    },
+    {
+      "id": "L03",
+      "text": "Li-Li-Live A-AI！",
+      "section": "Build / Pre-drop",
+      "bar": 6,
+      "start": 11.81,
+      "end": 20.87,
+      "confidence": "estimated",
+      "anchor": null
+    },
+    {
+      "id": "L04",
+      "text": "一張空白的畫面，等著第一束光出現，一個還沒有人看過的世界，正在之間慢慢浮現。",
+      "section": "Verse 1A",
+      "bar": 10,
+      "start": 20.87,
+      "end": 25.39,
+      "confidence": "estimated",
+      "anchor": null
+    },
+    {
+      "id": "L05",
+      "text": "沒有閃影棚，沒有既定劇本，記憶時間不停往前，把腦海裡不可能的畫面，現在全部變成眼前。",
+      "section": "Verse 1A",
+      "bar": 12,
+      "start": 25.39,
+      "end": 29.92,
+      "confidence": "estimated",
+      "anchor": null
+    },
+    {
+      "id": "L06",
+      "text": "從第一個 prompt 到最後一個鏡頭，每次生成都是新的宇宙。",
+      "section": "Verse 1B",
+      "bar": 14,
+      "start": 29.92,
+      "end": 36.72,
+      "confidence": "estimated",
+      "anchor": null
+    },
+    {
+      "id": "L07",
+      "text": "時間正在倒數，沒有人可以停留，這一刻創意決定所有！",
+      "section": "Pre-chorus",
+      "bar": 17,
+      "start": 36.72,
+      "end": 45.77,
+      "confidence": "estimated",
+      "anchor": null
+    },
+    {
+      "id": "L08",
+      "text": "Live AI，現在就創造未來，讓想像穿越畫面之外。",
+      "section": "Chorus 1",
+      "bar": 21,
+      "start": 45.77,
+      "end": 50.3,
+      "confidence": "anchored",
+      "anchor": "hard_cut"
+    },
+    {
+      "id": "L09",
+      "text": "Live AI，讓世界重新打開，沒有答案，只有你怎麼去創作。",
+      "section": "Chorus 1",
+      "bar": 23,
+      "start": 50.3,
+      "end": 57.09,
+      "confidence": "estimated",
+      "anchor": null
+    },
+    {
+      "id": "L10",
+      "text": "讓光影，讓聲音，讓故事全部醒來，把不可能變成現在。",
+      "section": "Chorus 1 ext.",
+      "bar": 26,
+      "start": 57.09,
+      "end": 59.36,
+      "confidence": "estimated",
+      "anchor": null
+    },
+    {
+      "id": "L11",
+      "text": "CSF CCA Live AI。",
+      "section": "Chorus 1 ext.",
+      "bar": 27,
+      "start": 59.36,
+      "end": 61.62,
+      "confidence": "estimated",
+      "anchor": null
+    },
+    {
+      "id": "L12",
+      "text": "Create it, make it, show me your world, world, w-w-w-world.",
+      "section": "Chorus 1 ext.",
+      "bar": 28,
+      "start": 61.62,
+      "end": 68.41,
+      "confidence": "estimated",
+      "anchor": null
+    },
+    {
+      "id": "L13",
+      "text": "Dream it, build it, let the future unfold, fold.",
+      "section": "Chorus 1 ext.",
+      "bar": 31,
+      "start": 68.41,
+      "end": 75.21,
+      "confidence": "estimated",
+      "anchor": null
+    },
+    {
+      "id": "L14",
+      "text": "3-2-1。",
+      "section": "Verse 2",
+      "bar": 34,
+      "start": 75.21,
+      "end": 84.26,
+      "confidence": "estimated",
+      "anchor": null
+    },
+    {
+      "id": "L15",
+      "text": "Live AI，現在就創造未來，讓你的世界被所有人看見。",
+      "section": "Final chorus",
+      "bar": 42,
+      "start": 93.32,
+      "end": 102.38,
+      "confidence": "anchored",
+      "anchor": "hard_cut"
+    },
+    {
+      "id": "L16",
+      "text": "Live AI，把未知全部打開，每個靈感都可能改變明天。",
+      "section": "Final chorus",
+      "bar": 46,
+      "start": 102.38,
+      "end": 111.43,
+      "confidence": "estimated",
+      "anchor": null
+    },
+    {
+      "id": "L17",
+      "text": "讓電影，讓音樂，讓動畫重新醒來，這不是等待未來。",
+      "section": "Final chorus",
+      "bar": 50,
+      "start": 111.43,
+      "end": 118.23,
+      "confidence": "estimated",
+      "anchor": null
+    },
+    {
+      "id": "L18",
+      "text": "Live AI。",
+      "section": "Climax",
+      "bar": 53,
+      "start": 118.23,
+      "end": 120.49,
+      "confidence": "estimated",
+      "anchor": null
+    },
+    {
+      "id": "L19",
+      "text": "讓想像成真。",
+      "section": "Climax",
+      "bar": 54,
+      "start": 120.49,
+      "end": 122.75,
+      "confidence": "estimated",
+      "anchor": null
+    },
+    {
+      "id": "L20",
+      "text": "Live AI。",
+      "section": "Climax",
+      "bar": 55,
+      "start": 122.75,
+      "end": 125.02,
+      "confidence": "estimated",
+      "anchor": null
+    },
+    {
+      "id": "L21",
+      "text": "Live AI。",
+      "section": "Climax",
+      "bar": 56,
+      "start": 125.02,
+      "end": 127.28,
+      "confidence": "estimated",
+      "anchor": null
+    },
+    {
+      "id": "L22",
+      "text": "讓未來發生。",
+      "section": "Climax",
+      "bar": 57,
+      "start": 127.28,
+      "end": 129.55,
+      "confidence": "estimated",
+      "anchor": null
+    },
+    {
+      "id": "L23",
+      "text": "CSF CCA Live AI。",
+      "section": "Outro",
+      "bar": 59,
+      "start": 132.9,
+      "end": 134.08,
+      "confidence": "anchored",
+      "anchor": "hard_cut"
+    }
+  ]
+}
