@@ -40,8 +40,8 @@
       "sync": "airy pad only - emptiness is the point",
       "caption": "",
       "lyric_lines": [
-        "L01",
-        "L02"
+        "L02",
+        "L03"
       ]
     },
     {
@@ -59,7 +59,7 @@
       "sync": "1 bar - land the eye-open exactly on 0:11.81",
       "caption": "",
       "lyric_lines": [
-        "L02"
+        "L03"
       ]
     },
     {
@@ -95,7 +95,8 @@
       "sync": "downbeats at 16.34 / 18.60 / 20.86 - snap poses on each",
       "caption": "LIVE AI",
       "lyric_lines": [
-        "L03"
+        "L03",
+        "L04"
       ]
     },
     {
@@ -113,8 +114,8 @@
       "sync": "bass drops to 0.62x - pull back to narrative",
       "caption": "",
       "lyric_lines": [
-        "L03",
-        "L04"
+        "L04",
+        "L05"
       ]
     },
     {
@@ -132,7 +133,8 @@
       "sync": "vocal band peaks - hold the face",
       "caption": "",
       "lyric_lines": [
-        "L05"
+        "L05",
+        "L06"
       ]
     },
     {
@@ -150,7 +152,8 @@
       "sync": "rack focus on the bar line at 32.19",
       "caption": "",
       "lyric_lines": [
-        "L06"
+        "L06",
+        "L07"
       ]
     },
     {
@@ -168,7 +171,7 @@
       "sync": "1 bar stinger",
       "caption": "",
       "lyric_lines": [
-        "L06"
+        "L07"
       ]
     },
     {
@@ -186,8 +189,8 @@
       "sync": "air band rising to 1.15x - riser begins",
       "caption": "那真的是我嗎？",
       "lyric_lines": [
-        "L06",
-        "L07"
+        "L07",
+        "L08"
       ]
     },
     {
@@ -205,7 +208,8 @@
       "sync": "riser tops out at 45.77 - whip-pan is the cut",
       "caption": "",
       "lyric_lines": [
-        "L07"
+        "L09",
+        "L10"
       ]
     },
     {
@@ -223,7 +227,8 @@
       "sync": "HARD CUT on chorus downbeat. First true peak (0.64).",
       "caption": "",
       "lyric_lines": [
-        "L08"
+        "L11",
+        "L12"
       ]
     },
     {
@@ -241,7 +246,8 @@
       "sync": "mid band 1.36x - widest frame of the chorus",
       "caption": "",
       "lyric_lines": [
-        "L09"
+        "L12",
+        "L13"
       ]
     },
     {
@@ -259,7 +265,7 @@
       "sync": "1-bar punch-in",
       "caption": "",
       "lyric_lines": [
-        "L09"
+        "L13"
       ]
     },
     {
@@ -277,9 +283,8 @@
       "sync": "8 bars sustained. Use the model's max clip length here.",
       "caption": "",
       "lyric_lines": [
-        "L10",
-        "L11",
-        "L12"
+        "L14",
+        "L15"
       ]
     },
     {
@@ -297,8 +302,7 @@
       "sync": "hi/air climbing to 1.28x",
       "caption": "",
       "lyric_lines": [
-        "L12",
-        "L13"
+        "L16"
       ]
     },
     {
@@ -316,7 +320,8 @@
       "sync": "air peaks 1.44x at 1:10 - fastest cutting in the film",
       "caption": "",
       "lyric_lines": [
-        "L13"
+        "L16",
+        "L17"
       ]
     },
     {
@@ -334,8 +339,8 @@
       "sync": "mid pulls back to 0.90x",
       "caption": "",
       "lyric_lines": [
-        "L13",
-        "L14"
+        "L18",
+        "L19"
       ]
     },
     {
@@ -353,7 +358,8 @@
       "sync": "hold - the calm before the dropout",
       "caption": "",
       "lyric_lines": [
-        "L14"
+        "L19",
+        "L20"
       ]
     },
     {
@@ -370,7 +376,10 @@
       "action": "BASS VANISHES - everything cuts to darkness but a single overhead beam; she stands alone, hologram shards dissolving around her",
       "sync": "bass 0.39x falling to 0.02x. The emptiest bar in the track.",
       "caption": "",
-      "lyric_lines": []
+      "lyric_lines": [
+        "L20",
+        "L21"
+      ]
     },
     {
       "id": "S21",
@@ -386,7 +395,10 @@
       "action": "at total silence her eyes lift to the lens, decision made; frame cuts to black on the last beat",
       "sync": "1:30 is the absolute floor (bass 0.02x). Silence = power.",
       "caption": "",
-      "lyric_lines": []
+      "lyric_lines": [
+        "L21",
+        "L22"
+      ]
     },
     {
       "id": "S22",
@@ -403,7 +415,9 @@
       "sync": "HARD CUT. Highest novelty score in the track (0.86).",
       "caption": "LIVE AI",
       "lyric_lines": [
-        "L15"
+        "L22",
+        "L23",
+        "L24"
       ]
     },
     {
@@ -421,8 +435,11 @@
       "sync": "loudest sustained passage. 7 internal cuts at 4.53s intervals.",
       "caption": "",
       "lyric_lines": [
-        "L16",
-        "L17"
+        "L24",
+        "L25",
+        "L26",
+        "L27",
+        "L28"
       ]
     },
     {
@@ -440,13 +457,11 @@
       "sync": "Track peak then collapse. Final transient (0.96) at 132.9 - cut to logo there.",
       "caption": "See you on the next stage.",
       "lyric_lines": [
-        "L17",
-        "L18",
-        "L19",
-        "L20",
-        "L21",
-        "L22",
-        "L23"
+        "L28",
+        "L29",
+        "L30",
+        "L31",
+        "L32"
       ]
     }
   ]
