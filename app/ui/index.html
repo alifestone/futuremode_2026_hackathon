@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LUNA Workflow</title>
+<style>
+  :root{--bg:#0d1117;--panel:#161b22;--line:#30363d;--fg:#e6edf3;--dim:#8b949e;
+        --acc:#58a6ff;--ok:#3fb950;--warn:#d29922;--bad:#f85149;}
+  *{box-sizing:border-box}
+  body{margin:0;font:14px/1.5 -apple-system,"PingFang TC","Microsoft JhengHei",sans-serif;background:var(--bg);color:var(--fg)}
+  header{display:flex;align-items:center;gap:16px;padding:10px 20px;border-bottom:1px solid var(--line);position:sticky;top:0;background:var(--bg)}
+  header h1{font-size:16px;margin:0}
+  nav{display:flex;gap:4px}
+  nav button{background:none;border:1px solid transparent;color:var(--dim);padding:6px 12px;cursor:pointer;border-radius:6px;font-size:13px}
+  nav button.active{color:var(--fg);border-color:var(--line);background:var(--panel)}
+  main{padding:20px;max-width:1200px;margin:0 auto}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;margin-bottom:16px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:14px}
+  .card h3{margin:0 0 6px;font-size:13px;color:var(--dim)}
+  .card .big{font-size:26px;font-weight:700}
+  table{width:100%;border-collapse:collapse;font-size:13px}
+  th,td{text-align:left;padding:6px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{color:var(--dim);font-weight:600;position:sticky;top:52px;background:var(--bg)}
+  tr.clickable{cursor:pointer}
+  tr.clickable:hover{background:#1c2333}
+  .mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px}
+  .tag{display:inline-block;padding:1px 8px;border-radius:10px;font-size:11px;border:1px solid var(--line)}
+  .tag.ok{color:var(--ok);border-color:var(--ok)}
+  .tag.warn{color:var(--warn);border-color:var(--warn)}
+  .tag.bad{color:var(--bad);border-color:var(--bad)}
+  .tag.dim{color:var(--dim)}
+  button.act{background:var(--acc);color:#0d1117;border:none;padding:6px 14px;border-radius:6px;cursor:pointer;font-weight:600}
+  button.act.ghost{background:var(--panel);color:var(--fg);border:1px solid var(--line)}
+  button.act:disabled{opacity:.5;cursor:default}
+  pre{background:#0d1117;border:1px solid var(--line);border-radius:8px;padding:12px;overflow:auto;font-size:12px;white-space:pre-wrap;word-break:break-word}
+  .problems .bad{color:var(--bad)}
+  .modal{position:fixed;inset:0;background:rgba(0,0,0,.6);display:none;align-items:center;justify-content:center;z-index:50}
+  .modal.open{display:flex}
+  .modal .box{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:20px;width:min(860px,92vw);max-height:86vh;overflow:auto}
+  label{display:block;color:var(--dim);font-size:12px;margin:10px 0 4px}
+  input,textarea,select{width:100%;background:#0d1117;border:1px solid var(--line);color:var(--fg);border-radius:6px;padding:8px;font:inherit}
+  textarea{min-height:70px;resize:vertical}
+  .row{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}
+  .muted{color:var(--dim)}
+  .flex{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+  .clips td{border:none;padding:2px 6px}
+  .hash{color:var(--dim);font-size:11px}
+</style>
+</head>
+<body>
+<header>
+  <h1>🎬 LUNA Workflow <span class="muted" id="projName"></span></h1>
+  <nav>
+    <button data-tab="overview" class="active">總覽</button>
+    <button data-tab="items">Items <span id="navItems"></span></button>
+    <button data-tab="storyboard">分鏡表</button>
+    <button data-tab="cut">單 Cut</button>
+    <button data-tab="gen">生成</button>
+    <button data-tab="export">匯出</button>
+  </nav>
+  <div style="margin-left:auto" class="muted" id="statusLine"></div>
+</header>
+<main>
+
+<!-- ============ OVERVIEW ============ -->
+<section id="tab-overview">
+  <div class="grid" id="ovCards"></div>
+  <div class="card" style="margin-bottom:12px">
+    <h3>Gap Report（build.py --draft 的 problems）</h3>
+    <div id="ovProblems" class="problems"></div>
+    <div class="row">
+      <button class="act ghost" onclick="actBuild()">重新編譯 (build)</button>
+      <button class="act ghost" onclick="actLock()">全部 Lock（硬門檻＋封包）</button>
+      <button class="act ghost" onclick="loadOverview(true)">刷新</button>
+    </div>
+  </div>
+  <div class="card">
+    <h3>Cut 生命週期</h3>
+    <table><thead><tr>
+      <th>Cut</th><th>段落</th><th>時間</th><th>Lock</th><th>Clips</th><th>Current</th><th>接受</th>
+    </tr></thead><tbody id="ovLifecycle"></tbody></table>
+  </div>
+</section>
+
+<!-- ============ ITEMS ============ -->
+<section id="tab-items" style="display:none">
+  <div class="row">
+    <select id="itemTypeFilter" style="width:auto"><option value="">全部型別</option></select>
+    <button class="act" onclick="newItem()">＋ 新 Item</button>
+    <span class="muted mono" id="itemSaveState"></span>
+  </div>
+  <table><thead><tr><th>id</th><th>型別</th><th>文字（點擊編輯）</th><th>鎖</th><th>引用它的 cuts</th></tr></thead>
+  <tbody id="itemRows"></tbody></table>
+</section>
+
+<!-- ============ STORYBOARD ============ -->
+<section id="tab-storyboard" style="display:none">
+  <div class="row">
+    <button class="act ghost" onclick="actBuild()">重新編譯</button>
+    <span class="muted">點列編輯；`items` 欄位以逗號分隔填 item id</span>
+  </div>
+  <table><thead><tr>
+    <th>Cut</th><th>段落</th><th>時間</th><th>表情</th><th>動作 / 鏡位</th><th>items</th><th>in/out</th><th>vocal intent</th>
+  </tr></thead><tbody id="shotRows"></tbody></table>
+</section>
+
+<!-- ============ SINGLE CUT ============ -->
+<section id="tab-cut" style="display:none">
+  <div class="flex" style="margin-bottom:12px">
+    <select id="cutPick" style="width:auto"></select>
+    <button class="act ghost" onclick="loadShot()">載入</button>
+    <button class="act" onclick="copyPrompt()">複製最終提示詞</button>
+    <button class="act ghost" onclick="downloadRef()">下載 ref 圖</button>
+  </div>
+  <div class="card">
+    <h3 id="cutTitle"></h3>
+    <div class="hash" id="cutHash"></div>
+    <pre id="cutPrompt"></pre>
+  </div>
+  <div class="card" style="margin-top:12px">
+    <h3>參考圖（此 cut 的 context 組成）</h3>
+    <div id="cutRefs"></div>
+  </div>
+  <div class="card" style="margin-top:12px">
+    <h3>Clips 紀錄（platform × context_hash）</h3>
+    <table><tbody id="cutClips"></tbody></table>
+  </div>
+</section>
+
+<!-- ============ GENERATION ============ -->
+<section id="tab-gen" style="display:none">
+  <div class="card" style="margin-bottom:12px">
+    <div class="row">
+      <button class="act" onclick="runSelected()">▶ 本機生成選取 cuts</button>
+      <button class="act ghost" onclick="runPending()">▶ 生成所有 pending</button>
+      <span class="muted">執行在本機 ComfyUI MiniMax H3（免費 open weights）</span>
+    </div>
+    <div id="genLog" class="mono muted"></div>
+  </div>
+  <table><thead><tr>
+    <th><input type="checkbox" id="selAll" onchange="toggleAll()"></th>
+    <th>Cut</th><th>段落</th><th>時長</th><th>Lock</th><th>Clips(platform/hash)</th>
+  </tr></thead><tbody id="genRows"></tbody></table>
+</section>
+
+<!-- ============ EXPORT ============ -->
+<section id="tab-export" style="display:none">
+  <div class="flex" style="margin-bottom:12px">
+    <select id="expCut" style="width:auto"></select>
+    <select id="expPlatform" style="width:auto">
+      <option value="generic_web">generic_web（貼上塊）</option>
+      <option value="local">local（ComfyUI graph）</option>
+      <option value="comfy_cloud">comfy_cloud（comfy.org，計費）</option>
+    </select>
+    <button class="act" onclick="doExport()">產生</button>
+    <button class="act ghost" onclick="copyExport()">複製</button>
+    <button class="act ghost" onclick="downloadContext()">下載 context.json</button>
+  </div>
+  <pre id="exportOut" style="min-height:200px">選取 cut 與平台後按「產生」。</pre>
+</section>
+
+</main>
+
+<!-- ============ EDIT MODAL ============ -->
+<div class="modal" id="modal"><div class="box">
+  <div id="modalTitle" style="font-weight:700;margin-bottom:8px"></div>
+  <div id="modalBody"></div>
+  <div class="row">
+    <button class="act" onclick="modalSave()">儲存</button>
+    <button class="act ghost" onclick="modalClose()">取消</button>
+    <span class="muted mono" id="modalMsg"></span>
+  </div>
+</div></div>
+
+<script>
+const $ = s => document.querySelector(s);
+let BOOK = {shots:[],defaults:{}}, COMPILED = {shots:[],problems:[]}, ITEMS = {items:[]}, STATE = {shots:{}};
+
+// ---------- navigation ----------
+document.querySelectorAll("nav button").forEach(b => b.onclick = () => {
+  document.querySelectorAll("nav button").forEach(x => x.classList.toggle("active", x === b));
+  document.querySelectorAll("main section").forEach(s => s.style.display = "none");
+  $("#tab-" + b.dataset.tab).style.display = "block";
+  ({items:loadItems, storyboard:loadStoryboard, cut:loadShotSelect, gen:loadGen, export:()=>loadShotSelect()})[b.dataset.tab]?.();
+});
+
+// ---------- shared ----------
+async function api(path, opts) {
+  const r = await fetch(path, opts);
+  const t = await r.text();
+  try { return JSON.parse(t); } catch { return {text:t}; }
+}
+async function loadAll() {
+  const [s, items, shots, state] = await Promise.all([
+    api("/api/summary"), api("/api/items"), api("/api/shots"), api("/api/state")]);
+  BOOK = shots.book; COMPILED = shots.compiled; ITEMS = items; STATE = state;
+  $("#projName").textContent = s.project || "";
+  $("#navItems").textContent = s.items || "";
+  loadOverviewInner(s);
+  return s;
+}
+let SUM = null;
+async function loadOverview(force) {
+  const s = await loadAll();
+  if (force) actBuild();
+  else loadOverviewInner(s);
+}
+function loadOverviewInner(s) {
+  SUM = s;
+  const clips = Object.values(s.state.shots || {}).reduce((a,r)=>a+r.clips?.length||0,0);
+  const stale = Object.entries(s.state.shots||{}).reduce((a,[id,r])=>a+(r.clips||[]).filter(c=>c.context_hash!==(s.packages[id]||r.context_hash)).length,0);
+  $("#ovCards").innerHTML = `
+    <div class="card"><h3>Cuts</h3><div class="big">${s.shots}</div></div>
+    <div class="card"><h3>Items</h3><div class="big">${s.items}</div></div>
+    <div class="card"><h3>已 Lock</h3><div class="big">${s.locked}</div></div>
+    <div class="card"><h3>Clips</h3><div class="big">${clips}</div></div>
+    <div class="card"><h3>Problems</h3><div class="big ${s.problems.length?'bad':''}">${s.problems.length}</div></div>
+    <div class="card"><h3>歌曲</h3><div class="big">${(s.song?.bpm||"")+" BPM"}</div><div class="muted">${s.song?.duration_sec||''}s</div></div>`;
+  $("#ovProblems").innerHTML = (s.problems||[]).length
+    ? s.problems.map(p=>`<div class="bad">⚠ ${p}</div>`).join("")
+    : '<span class="ok">✓ 無結構問題（語意仍需 plan pass 的人工 review）</span>';
+  if (s.reference_sheet) {
+    $("#ovCards").insertAdjacentHTML("afterbegin", `
+      <div class="card"><h3>角色設定圖 (ref)</h3>
+        <a href="/api/image?path=${encodeURIComponent(s.reference_sheet)}" target="_blank">
+        <img src="/api/image?path=${encodeURIComponent(s.reference_sheet)}"
+             style="max-width:100%;border-radius:8px;border:1px solid var(--line)" alt="ref"></a>
+        <div class="muted mono">${s.reference_sheet}</div>
+      </div>`);
+  }
+  const byId = Object.fromEntries(COMPILED.shots.map(c=>[c.id,c]));
+  $("#ovLifecycle").innerHTML = BOOK.shots.map(sh=>{
+    const c = byId[sh.id]||{};
+    const rec = s.state.shots?.[sh.id]||{};
+    const clips = rec.clips||[];
+    const current = clips.filter(cl=>cl.context_hash===(s.packages[sh.id]||c.context_hash)).length;
+    const accepted = rec.accepted ? ' <span class="tag ok">✓</span>' : ' <span class="tag dim">—</span>';
+    return `<tr class="clickable" onclick="openShot('${sh.id}')">
+      <td class="mono">${sh.id}</td><td>${sh.section}</td>
+      <td class="mono">${sh.start.toFixed(2)}–${sh.end.toFixed(2)}</td>
+      <td>${s.packages[sh.id]?'<span class="tag ok">lock</span>':'<span class="tag dim">—</span>'}</td>
+      <td>${clips.length}</td>
+      <td>${current?`<span class="tag ok">${current}</span>`:'<span class="tag warn">stale/無</span>'}</td>
+      <td>${accepted}</td></tr>`;
+  }).join("");
+}
+async function actBuild() {
+  $("#statusLine").textContent = "building…";
+  const r = await api("/api/build", {method:"POST", body:"{}"});
+  $("#statusLine").textContent = "build done";
+  loadAll().then(()=>loadOverviewInner(SUM));
+}
+async function actLock() {
+  const r = await api("/api/lock", {method:"POST", body:"{}"});
+  alert(r.out || r.err);
+  loadAll().then(()=>loadOverviewInner(SUM));
+}
+
+// ---------- items ----------
+async function loadItems() {
+  const types = new Set(ITEMS.items.map(i=>i.type));
+  const f = $("#itemTypeFilter");
+  f.innerHTML = '<option value="">全部型別</option>' + [...types].map(t=>`<option>${t}</option>`).join("");
+  const usage = {};
+  BOOK.shots.forEach(s=>s.items?.forEach(i=>usage[i]=(usage[i]||0)+1));
+  renderItems(usage);
+  $("#itemTypeFilter").onchange = ()=>renderItems(usage);
+}
+function renderItems(usage) {
+  const t = $("#itemTypeFilter").value;
+  const rows = ITEMS.items.filter(i=>!t||i.type===t).map(it=>`
+    <tr class="clickable" onclick="openItem('${it.id}')">
+      <td class="mono">${it.id}</td><td>${it.type}</td>
+      <td>${esc(it.text.slice(0,110))}${it.text.length>110?'…':''}</td>
+      <td>${it.locked?'<span class="tag warn">locked</span>':''}</td>
+      <td>${usage[it.id]||0} cuts</td></tr>`).join("");
+  $("#itemRows").innerHTML = rows || '<tr><td colspan="5" class="muted">（無）</td></tr>';
+}
+function openItem(id) {
+  const it = ITEMS.items.find(i=>i.id===id);
+  openModal(`Item ${id}`, `
+    <label>type</label><input id="mi_type" value="${it.type}">
+    <label>locked</label><input id="mi_locked" type="checkbox" ${it.locked?"checked":""}>
+    <label>text</label><textarea id="mi_text" rows="8">${esc(it.text)}</textarea>
+    <label>note</label><input id="mi_note" value="${esc(it.note||"")}">`,
+    ()=>{
+      it.type = $("#mi_type").value; it.locked = $("#mi_locked").checked;
+      it.text = $("#mi_text").value; it.note = $("#mi_note").value;
+      saveItems();
+    });
+}
+function newItem() {
+  const id = prompt("新 item id（例 scene.xxx）："); if(!id) return;
+  ITEMS.items.push({id, type:"scene", text:"", note:""});
+  openItem(id);
+}
+async function saveItems() {
+  const r = await api("/api/items", {method:"POST", headers:{"Content-Type":"application/json"},
+    body: JSON.stringify(ITEMS)});
+  $("#itemSaveState").textContent = "已存 → 重新編譯…";
+  await actBuild();
+  $("#itemSaveState").textContent = "已存並編譯";
+  await loadAll();
+  loadItems();
+}
+
+// ---------- storyboard ----------
+function loadStoryboard() {
+  const byId = Object.fromEntries((COMPILED.shots||[]).map(c=>[c.id,c]));
+  $("#shotRows").innerHTML = BOOK.shots.map(sh=>{
+    const c = byId[sh.id]||{};
+    return `<tr class="clickable" onclick="openShot('${sh.id}')">
+      <td class="mono">${sh.id}</td><td>${sh.section}</td>
+      <td class="mono">${sh.start.toFixed(2)}–${sh.end.toFixed(2)}</td>
+      <td>${sh.expression}</td>
+      <td>${esc(sh.action.slice(0,70))}${sh.action.length>70?"…":""}</td>
+      <td class="mono">${(sh.items||[]).join(", ")}</td>
+      <td class="muted">${(sh.continuity_in||"").slice(0,40)} / ${(sh.continuity_out||"").slice(0,40)}</td>
+      <td class="muted">${esc((sh.lyric_intent||"").slice(0,50))}${sh.lyric_intent?.length>50?"…":""}</td></tr>`;
+  }).join("");
+}
+function openShot(id) {
+  const sh = BOOK.shots.find(s=>s.id===id); if(!sh) return;
+  openModal(`Shot ${id} — ${sh.section} ${sh.start.toFixed(2)}–${sh.end.toFixed(2)}s`, `
+    <label>expression</label><input id="ms_expr" value="${sh.expression}">
+    <label>camera</label><input id="ms_camera" value="${esc(sh.camera)}">
+    <label>action</label><textarea id="ms_action" rows="4">${esc(sh.action)}</textarea>
+    <label>sync</label><textarea id="ms_sync" rows="2">${esc(sh.sync||"")}</textarea>
+    <label>items（逗號分隔）</label><textarea id="ms_items" rows="2">${(sh.items||[]).join(", ")}</textarea>
+    <label>overrides（JSON，選填）</label><textarea id="ms_ovr" rows="2">${esc(JSON.stringify(sh.overrides||{}))}</textarea>
+    <label>continuity_in</label><textarea id="ms_cin" rows="2">${esc(sh.continuity_in||"")}</textarea>
+    <label>continuity_out</label><textarea id="ms_cout" rows="2">${esc(sh.continuity_out||"")}</textarea>
+    <label>lyric_intent</label><textarea id="ms_intent" rows="3">${esc(sh.lyric_intent||"")}</textarea>
+    <label>caption（字卡）</label><input id="ms_cap" value="${esc(sh.caption||"")}">`,
+    ()=>{
+      sh.expression=$("#ms_expr").value; sh.camera=$("#ms_camera").value; sh.action=$("#ms_action").value;
+      sh.sync=$("#ms_sync").value; sh.items=$("#ms_items").value.split(",").map(s=>s.trim()).filter(Boolean);
+      try{ sh.overrides = $("#ms_ovr").value.trim()?JSON.parse($("#ms_ovr").value):{}; }catch{ alert("overrides 不是合法 JSON"); return; }
+      sh.continuity_in=$("#ms_cin").value; sh.continuity_out=$("#ms_cout").value;
+      sh.lyric_intent=$("#ms_intent").value; sh.caption=$("#ms_cap").value;
+      saveBook();
+    });
+}
+async function saveBook() {
+  const r = await api("/api/shots", {method:"POST", headers:{"Content-Type":"application/json"},
+    body: JSON.stringify(BOOK)});
+  await actBuild(); await loadAll(); loadStoryboard();
+}
+
+// ---------- single cut ----------
+function loadShotSelect() {
+  $("#cutPick").innerHTML = BOOK.shots.map(s=>`<option>${s.id}</option>`).join("");
+  $("#expCut").innerHTML = BOOK.shots.map(s=>`<option>${s.id}</option>`).join("");
+}
+async function loadShot() {
+  const id = $("#cutPick").value;
+  const c = COMPILED.shots.find(x=>x.id===id); if(!c) return alert("no compiled data — build 先");
+  $("#cutTitle").textContent = `${c.id} · ${c.section} ${c.start.toFixed(2)}–${c.end.toFixed(2)}s (${c.dur.toFixed(2)}s)`;
+  $("#cutHash").textContent = "context_hash " + c.context_hash;
+  $("#cutPrompt").textContent = c.prompt;
+  $("#cutRefs").innerHTML = (c.references||[]).map(r=>
+    `<figure style="display:inline-block;margin:8px;vertical-align:top">` +
+    `<a href=\"/api/image?path=${encodeURIComponent(r)}\" target=\"_blank\">` +
+    `<img src=\"/api/image?path=${encodeURIComponent(r)}\"` +
+    ` style=\"max-width:360px;border-radius:8px;border:1px solid var(--line);display:block\"></a>` +
+    `<figcaption class=\"mono muted\">${r} <span class=\"hash\">(${c.ref_hashes?.[0]?.slice(0,8)||""})</span></figcaption></figure>`
+  ).join("") || '<span class="muted">無參考圖</span>';
+  const rec = STATE.shots?.[id]||{};
+  $("#cutClips").innerHTML = (rec.clips||[]).map(cl=>`
+    <tr><td class="tag ${cl.context_hash===c.context_hash?'ok':'warn'}">${cl.platform}</td>
+      <td class="mono">${cl.file}</td><td class="mono hash">${cl.context_hash}</td></tr>`).join("")
+    || '<tr><td class="muted">（無 clip）</td></tr>';
+}
+function copyPrompt(){ const c=COMPILED.shots.find(x=>x.id===$("#cutPick").value); if(c){navigator.clipboard.writeText(c.prompt); $("#statusLine").textContent="copied";} }
+function downloadRef(){ const c=COMPILED.shots.find(x=>x.id===$("#cutPick").value); if(!c)return; const p=c.references?.[0]; if(p) location.href="/api/download?path="+encodeURIComponent(p); }
+
+// ---------- generation ----------
+function loadGen() {
+  $("#genRows").innerHTML = BOOK.shots.map(sh=>{
+    const rec = STATE.shots?.[sh.id]||{};
+    const clips = (rec.clips||[]).map(cl=>`<span class="tag ${cl.context_hash===(SUM?.packages?.[sh.id])?'ok':'warn'}">${cl.platform} ${cl.context_hash.slice(0,8)}</span>`).join(" ");
+    const locked = SUM?.packages?.[sh.id] ? '<span class="tag ok">lock</span>' : '<span class="tag bad">未lock</span>';
+    return `<tr><td><input type="checkbox" class="pick" value="${sh.id}"></td>
+      <td class="mono">${sh.id}</td><td>${sh.section}</td>
+      <td class="mono">${sh.dur.toFixed(2)}s</td><td>${locked}</td>
+      <td class="clips">${clips||'<span class="muted">—</span>'}</td></tr>`;
+  }).join("");
+}
+function toggleAll(){ document.querySelectorAll(".pick").forEach(c=>c.checked=$("#selAll").checked); }
+function selectedCuts(){ return [...document.querySelectorAll(".pick:checked")].map(c=>c.value); }
+async function runSelected(){ const cuts=selectedCuts(); if(!cuts.length)return alert("勾選 cuts"); await api("/api/run",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({cuts})}); pollGen(); }
+async function runPending(){ await api("/api/run",{method:"POST",body:"{}"}); pollGen(); }
+async function pollGen(){
+  $("#genLog").textContent = "生成中…（本機 ComfyUI）";
+  const t = setInterval(async()=>{
+    const s = await api("/api/state");
+    const done = Object.values(s.shots||{}).filter(r=>r.status==="done").length;
+    const fail = Object.values(s.shots||{}).filter(r=>r.status==="failed").length;
+    $("#genLog").textContent = `done ${done} · failed ${fail}（每 3 秒輪詢）`;
+    if (document.querySelector("nav button.active").dataset.tab !== "gen") clearInterval(t);
+  }, 3000);
+  setTimeout(()=>{ clearInterval(t); loadAll(); $("#genLog").textContent="輪詢結束，重新整理 (refresh overview)。"; }, 120000);
+}
+
+// ---------- export ----------
+async function doExport() {
+  const cut=$("#expCut").value, platform=$("#expPlatform").value;
+  const r = await api(`/api/export?cut=${cut}&platform=${platform}`);
+  $("#exportOut").textContent = r.text ?? JSON.stringify(r, null, 2);
+}
+function copyExport(){ navigator.clipboard.writeText($("#exportOut").textContent); $("#statusLine").textContent="copied"; }
+function downloadContext(){ const cut=$("#expCut").value; location.href="/api/download?path="+encodeURIComponent(`out/packages/${cut}/context.json`); }
+
+// ---------- modal ----------
+let MODAL_CB = null;
+function openModal(title, body, cb){
+  MODAL_CB = cb; $("#modalTitle").textContent = title; $("#modalBody").innerHTML = body;
+  $("#modal").classList.add("open"); $("#modalMsg").textContent="";
+}
+function modalSave(){ if(MODAL_CB){ try{ MODAL_CB(); modalClose(); }catch(e){ $("#modalMsg").textContent=String(e); } } }
+function modalClose(){ $("#modal").classList.remove("open"); }
+function esc(s){ return String(s??"").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;"); }
+
+// boot
+loadOverview(false);
+</script>
+</body>
+</html>

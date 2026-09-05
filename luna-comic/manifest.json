@@ -1,0 +1,48 @@
+{
+  "$comment": "Project manifest (decisions.md §11.2). Declares song/character/style/sources. Items live in items.json; the storyboard lives in storyboard/shots.json. beatmap.json and lyrics/ are measured pre-production artifacts — referenced, never rewritten by the app.",
+  "schema_version": "0.1.0",
+  "project": "LUNA — LIVE AI Comic",
+  "owner": "CSFCCA",
+  "source_plan": "../LUNA_MV_製作計畫書.docx",
+  "song": {
+    "file": "../歌曲.mp3",
+    "title": "CSFCCA LIVE AI",
+    "duration_sec": 134.3,
+    "bpm": 106.0,
+    "bar_sec": 2.2642,
+    "first_beat_offset_sec": 0.488,
+    "meter": "4/4",
+    "total_bars": 60,
+    "beatmap": "storyboard/beatmap.json",
+    "lyrics_srt": "../歌詞.srt",
+    "lyrics_aligned": "lyrics/lyrics.json",
+    "measured_note": "timings come from whisper large-v3 forced alignment + STFT beatmap — see beatmap.json"
+  },
+  "character": {
+    "id": "luna",
+    "name": "LUNA",
+    "reference_sheet": "assets/reference/luna_character_sheet.jpg",
+    "expressions": [
+      "calm", "happy", "playful wink", "surprised",
+      "shy", "angry", "upset", "thinking", "confident smirk"
+    ],
+    "traits": ["lively", "charismatic", "confident", "playful", "independent"],
+    "note": "locked_keywords moved verbatim into items.json as char.luna — the registry is now the single source"
+  },
+  "style": {
+    "medium": "manga",
+    "aspect_ratio": "16:9",
+    "negative": "extra fingers, deformed hands, inconsistent hair color, changed outfit, text artifacts, watermark, multiple characters",
+    "style_suffix_note": "moved into items.json as style.mv (single source)"
+  },
+  "generation": {
+    "provider": "local ComfyUI MiniMax H3 (free) / comfy.org cloud (billed)",
+    "video_providers": {
+      "local": { "env_var": "COMFYUI_API_URL", "endpoint": "http://127.0.0.1:8188", "note": "open weights on the box, no key" },
+      "comfy_cloud": { "env_var": "COMFY_API_KEY", "note": "billed credits; ask before spending" }
+    }
+  },
+  "legacy": {
+    "panels": "superseded — 13-panel 3:4 comic track, timeline predates audio measurement; kept read-only"
+  }
+}

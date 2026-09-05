@@ -1,0 +1,74 @@
+{
+  "$comment": "The completeness contract. 7 fixed item types; each type declares the facets (checklist) its text must cover. plan.py uses this to print gap reports and drive the agent's detail-filling pass; lock.py uses parts of it for structural validation (refs resolve, fields present, min length). Facet coverage itself is semantic — checked by the plan-pass LLM lint + human diff review, never by fragile keyword matching (decisions.md §4.4).",
+  "schema_version": "0.1.0",
+  "types": {
+    "character": {
+      "role": "character identity lock. Repeat verbatim in every shot that shows the character. Never two character items for the same body.",
+      "scope": "all_shots",
+      "required": true,
+      "min_text_chars": 80,
+      "facets": ["hair style & colour", "full outfit (top/bottom)", "accessories", "shoes", "palette anchor"]
+    },
+    "state": {
+      "role": "world or character state VARIABLE — a dated variant that exists at a specific timeline point. A fact change must be a new state item, never an override (decisions.md §3.5).",
+      "scope": "per_shot",
+      "required": false,
+      "min_text_chars": 20,
+      "facets": ["trigger point (bar / second)", "the fact itself", "which base items it modifies"]
+    },
+    "scene": {
+      "role": "scene base — the fixed description of a location. Repeated verbatim by every shot in that location so the world does not drift.",
+      "scope": "per_section",
+      "required": true,
+      "min_text_chars": 60,
+      "facets": ["space type", "scale & layout", "ground / skyline", "time of day", "weather", "colour basis"]
+    },
+    "set_piece": {
+      "role": "fixed prop / stage device that lives in a scene. One item per object. Do not fold a prop into a scene item (drift risk).",
+      "scope": "per_shot",
+      "required": false,
+      "min_text_chars": 20,
+      "facets": ["position", "size", "material", "light behaviour", "interactivity"]
+    },
+    "look": {
+      "role": "lighting + atmosphere together — one item manages both so light and mood never get described twice by different items.",
+      "scope": "per_section",
+      "required": true,
+      "min_text_chars": 40,
+      "facets": ["key light direction", "light quality (hard/soft)", "colour temperature", "atmosphere terms", "contrast"]
+    },
+    "style": {
+      "role": "project style lock — art direction, aspect ratio, grade. Repeated in every prompt.",
+      "scope": "all_shots",
+      "required": true,
+      "min_text_chars": 20,
+      "facets": ["art style", "aspect ratio", "grading"]
+    },
+    "camera_grammar": {
+      "role": "optional editing/camera conventions as text (e.g. hard cuts land on bar lines, handheld only for close-ups).",
+      "scope": "optional",
+      "required": false,
+      "min_text_chars": 10,
+      "facets": ["one rule per item"]
+    }
+  },
+  "compile_order": ["character", "state", "scene", "set_piece", "look", "action/camera/sync", "style"],
+  "reserved_id_prefixes": {
+    "char": "character",
+    "state": "state",
+    "scene": "scene",
+    "set": "set_piece",
+    "look": "look",
+    "style": "style",
+    "cam": "camera_grammar"
+  },
+  "shot_contract": {
+    "required_fields": ["id", "items", "action", "camera", "expression", "continuity_in", "continuity_out", "lyric_intent", "sync"],
+    "rules": [
+      "shots with non-empty lyric_lines MUST have a non-empty lyric_intent (decisions.md §5.1)",
+      "shots MUST reference at least one character item and one scene item",
+      "overrides may only append emphasis to an item — never replace it (decisions.md §3.5)",
+      "every automated cut lands on a bar line (beatmap grid)"
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+# S08 — paste this exact prompt block
+
+## Prompt (copy everything in the code block)
+```
+LUNA is the character shown in <Picture 1> — keep her hair, outfit, accessories and proportions exactly as they appear there. LUNA, a K-pop virtual idol: long deep-violet hair in a high braided ponytail with silver chain accents, white sleeveless mock-neck zip crop top, white cargo mini-skirt with black belt and hanging chain, black thigh strap on left leg, chunky white platform sneakers with white crew socks, silver bracelets on right wrist. expression: surprised. a night city street, neon signage reflecting off wet asphalt; glass skyscrapers with holographic billboards, anonymous pedestrians blurred in the far distance. a colossal holographic billboard across the street, projector banks at its base, its surface rendering a life-size human face in scanlines. wet neon city light: magenta and cyan signage reflecting on asphalt, shallow depth, city bokeh swimming behind the subject. every automated cut lands exactly on a bar line; hard cuts are the grammar of this edit. she turns; a colossal holographic billboard across the street is playing her own face back at her; camera: over-the-shoulder, rack focus to background. anime cel-shaded, clean line art, K-pop MV aesthetic, neon backlight, cinematic lighting; 16:9; high-detail generated video. continuity: opens continuing she turns from the previous glance; over-the-shoulder opens onto the street; leaves the colossal billboard comes into focus, showing her own face back at her. vocal: 「沒有攝影棚 沒有既定劇本 只有時間不停往前 / 把腦海裡不可能的畫面現在全部變成眼前」 — no studio, no script — and yet her own face is playing on the billboard; the script is writing itself (L06 沒有攝影棚 沒有既定劇本). duration 4.53s, motion synced to 106.0 BPM; rack focus on the bar line at 32.19. Avoid: extra fingers, deformed hands, inconsistent hair color, changed outfit, text artifacts, watermark, multiple characters
+```
+
+## Reference image
+Upload the project character sheet as the reference image. It is the only image.
+
+## Settings
+- duration: 4.53s in the timeline (generate the grid length above it)
+- aspect ratio: 16:9
+- context_hash: 46071d93f62e83984af08af0f97b11532464b58c0f0d54785b4f381d32da8453
+
+## Edit intent (assembler, not the model)
+- trim to bar line: keep the generated clip and cut to 29.92s–34.45s
+- transition: hard cut (all cuts in this edit are hard cuts on the bar grid)
+- lyric intent: no studio, no script — and yet her own face is playing on the billboard; the script is writing itself (L06 沒有攝影棚 沒有既定劇本)

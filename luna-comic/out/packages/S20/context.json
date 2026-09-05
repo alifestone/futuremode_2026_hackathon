@@ -1,0 +1,85 @@
+{
+  "schema": "cut_context",
+  "schema_version": "0.1.0",
+  "cut_id": "S20",
+  "project": "LUNA — LIVE AI Comic",
+  "prompt": "LUNA, a K-pop virtual idol: long deep-violet hair in a high braided ponytail with silver chain accents, white sleeveless mock-neck zip crop top, white cargo mini-skirt with black belt and hanging chain, black thigh strap on left leg, chunky white platform sneakers with white crew socks, silver bracelets on right wrist. expression: upset. near-total blackout on the arena: one hard overhead beam on the performer, everything else void. loose hologram shards dissolving in the air around her, fading like spent memories. a packed live-arena stage at full performance power: towering light rigs, LED floor, haze, spotlight banks, walls of light behind the performer, audience pit swelling below the stage edge. near-dark: one hard overhead beam on her face, everything else void black, fragile and exposed. BASS VANISHES - everything cuts to darkness but a single overhead beam; she stands alone singing into the dropout, hologram shards dissolving around her; camera: slow orbit, medium close-up, near-black frame. anime cel-shaded, clean line art, K-pop MV aesthetic, neon backlight, cinematic lighting; 16:9; high-detail generated video. continuity: opens continuing the bass vanishes; everything cuts to darkness but the overhead beam; leaves she stands alone, hologram shards dissolving around her in the dark. vocal: 「Dream it Build it Let the future unfold fold / 321 LIVE AI 現在就創造未來」 — the dropout is the 'dream' before the build; her voice alone = the future already decided (L20 Dream it Build it / L21 321 LIVE AI 現在就創造未來). duration 4.53s, motion synced to 106.0 BPM; bass 0.39x falling to 0.02x - the emptiest bar in the track, but the vocal carries through it alone (L20 at 85.0). Instruments drop, she does not",
+  "model_prompt": "LUNA is the character shown in <Picture 1> — keep her hair, outfit, accessories and proportions exactly as they appear there. LUNA, a K-pop virtual idol: long deep-violet hair in a high braided ponytail with silver chain accents, white sleeveless mock-neck zip crop top, white cargo mini-skirt with black belt and hanging chain, black thigh strap on left leg, chunky white platform sneakers with white crew socks, silver bracelets on right wrist. expression: upset. near-total blackout on the arena: one hard overhead beam on the performer, everything else void. loose hologram shards dissolving in the air around her, fading like spent memories. a packed live-arena stage at full performance power: towering light rigs, LED floor, haze, spotlight banks, walls of light behind the performer, audience pit swelling below the stage edge. near-dark: one hard overhead beam on her face, everything else void black, fragile and exposed. BASS VANISHES - everything cuts to darkness but a single overhead beam; she stands alone singing into the dropout, hologram shards dissolving around her; camera: slow orbit, medium close-up, near-black frame. anime cel-shaded, clean line art, K-pop MV aesthetic, neon backlight, cinematic lighting; 16:9; high-detail generated video. continuity: opens continuing the bass vanishes; everything cuts to darkness but the overhead beam; leaves she stands alone, hologram shards dissolving around her in the dark. vocal: 「Dream it Build it Let the future unfold fold / 321 LIVE AI 現在就創造未來」 — the dropout is the 'dream' before the build; her voice alone = the future already decided (L20 Dream it Build it / L21 321 LIVE AI 現在就創造未來). duration 4.53s, motion synced to 106.0 BPM; bass 0.39x falling to 0.02x - the emptiest bar in the track, but the vocal carries through it alone (L20 at 85.0). Instruments drop, she does not. Avoid: extra fingers, deformed hands, inconsistent hair color, changed outfit, text artifacts, watermark, multiple characters",
+  "item_snapshot": [
+    {
+      "id": "char.luna",
+      "type": "character",
+      "text": "LUNA, a K-pop virtual idol: long deep-violet hair in a high braided ponytail with silver chain accents, white sleeveless mock-neck zip crop top, white cargo mini-skirt with black belt and hanging chain, black thigh strap on left leg, chunky white platform sneakers with white crew socks, silver bracelets on right wrist"
+    },
+    {
+      "id": "state.arena_blackout",
+      "type": "state",
+      "text": "near-total blackout on the arena: one hard overhead beam on the performer, everything else void"
+    },
+    {
+      "id": "state.holo_dissolving",
+      "type": "state",
+      "text": "loose hologram shards dissolving in the air around her, fading like spent memories"
+    },
+    {
+      "id": "scene.arena_lit",
+      "type": "scene",
+      "text": "a packed live-arena stage at full performance power: towering light rigs, LED floor, haze, spotlight banks, walls of light behind the performer, audience pit swelling below the stage edge"
+    },
+    {
+      "id": "look.breakdown_void",
+      "type": "look",
+      "text": "near-dark: one hard overhead beam on her face, everything else void black, fragile and exposed"
+    },
+    {
+      "id": "style.mv",
+      "type": "style",
+      "text": "anime cel-shaded, clean line art, K-pop MV aesthetic, neon backlight, cinematic lighting; 16:9; high-detail generated video"
+    }
+  ],
+  "refs": [
+    {
+      "path": "assets/reference/luna_character_sheet.jpg",
+      "hash": "703ff0f65094c02d",
+      "sha256": "703ff0f65094c02d8e1de16488ba8afe3afb8f1b8ee759e872d0e53a7075843e"
+    }
+  ],
+  "settings": {
+    "start": 84.26,
+    "end": 88.79,
+    "dur": 4.53,
+    "bar": 38,
+    "section": "Breakdown",
+    "expression": "",
+    "ratio": "16:9",
+    "bpm": 106.0,
+    "item_ids": [
+      "char.luna",
+      "scene.arena_lit",
+      "state.arena_blackout",
+      "state.holo_dissolving",
+      "look.breakdown_void",
+      "style.mv"
+    ]
+  },
+  "continuity": {
+    "in": "the bass vanishes; everything cuts to darkness but the overhead beam",
+    "out": "she stands alone, hologram shards dissolving around her in the dark"
+  },
+  "lyric_lines": [
+    "L20",
+    "L21"
+  ],
+  "lyric_intent": "the dropout is the 'dream' before the build; her voice alone = the future already decided (L20 Dream it Build it / L21 321 LIVE AI 現在就創造未來)",
+  "caption": "",
+  "edit_intent": {
+    "in": 84.26,
+    "out": 88.79,
+    "trim_to_bar": true,
+    "transition": "hard cut",
+    "caption_overrides_subtitle": false
+  },
+  "negative": "extra fingers, deformed hands, inconsistent hair color, changed outfit, text artifacts, watermark, multiple characters",
+  "context_hash": "af8c38a95169b279ef3e4d463d890bf7039c1693e72b7888f926c1ca7e9a5a2a",
+  "locked_at": null
+}

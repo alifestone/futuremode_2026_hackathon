@@ -26,3 +26,7 @@ graphify-out/.graphify_*
 graphify-out/cache/
 graphify-out/manifest.json
 graphify-out/cost.json
+
+# app — frozen snapshot package builds are reproducible via app/scripts/lock.py;
+# the per-package reference-image copies are just self-containment conveniences
+luna-comic/out/packages/*/ref/

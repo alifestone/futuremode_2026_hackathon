@@ -1,0 +1,188 @@
+{
+  "load_ref": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "luna/luna_character_sheet.jpg"
+    }
+  },
+  "unet": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "unet_name": "minimax_h3_fl2va_pruned_int8_convrot.safetensors",
+      "weight_dtype": "default"
+    }
+  },
+  "clip": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "clip_name": "qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
+      "type": "minimax",
+      "device": "default"
+    }
+  },
+  "vae_video": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "minimax_h3_video_vae_fp16.safetensors"
+    }
+  },
+  "cond": {
+    "class_type": "MiniMaxH3ReferenceToVideo",
+    "inputs": {
+      "clip": [
+        "clip",
+        0
+      ],
+      "vae": [
+        "vae_video",
+        0
+      ],
+      "prompt": "LUNA is the character shown in <Picture 1> — keep her hair, outfit, accessories and proportions exactly as they appear there. LUNA, a K-pop virtual idol: long deep-violet hair in a high braided ponytail with silver chain accents, white sleeveless mock-neck zip crop top, white cargo mini-skirt with black belt and hanging chain, black thigh strap on left leg, chunky white platform sneakers with white crew socks, silver bracelets on right wrist. expression: surprised. a night city street, neon signage reflecting off wet asphalt; glass skyscrapers with holographic billboards, anonymous pedestrians blurred in the far distance. a colossal holographic billboard across the street, projector banks at its base, its surface rendering a life-size human face in scanlines. wet neon city light: magenta and cyan signage reflecting on asphalt, shallow depth, city bokeh swimming behind the subject. every automated cut lands exactly on a bar line; hard cuts are the grammar of this edit. she turns; a colossal holographic billboard across the street is playing her own face back at her; camera: over-the-shoulder, rack focus to background. anime cel-shaded, clean line art, K-pop MV aesthetic, neon backlight, cinematic lighting; 16:9; high-detail generated video. continuity: opens continuing she turns from the previous glance; over-the-shoulder opens onto the street; leaves the colossal billboard comes into focus, showing her own face back at her. vocal: 「沒有攝影棚 沒有既定劇本 只有時間不停往前 / 把腦海裡不可能的畫面現在全部變成眼前」 — no studio, no script — and yet her own face is playing on the billboard; the script is writing itself (L06 沒有攝影棚 沒有既定劇本). duration 4.53s, motion synced to 106.0 BPM; rack focus on the bar line at 32.19. Avoid: extra fingers, deformed hands, inconsistent hair color, changed outfit, text artifacts, watermark, multiple characters",
+      "width": 960,
+      "height": 544,
+      "length": 124,
+      "ref_image_size": "match",
+      "ref_images.ref_image_0": [
+        "load_ref",
+        0
+      ],
+      "audio_vae": [
+        "vae_audio",
+        0
+      ]
+    }
+  },
+  "noise": {
+    "class_type": "RandomNoise",
+    "inputs": {
+      "noise_seed": 0
+    }
+  },
+  "guider": {
+    "class_type": "BasicGuider",
+    "inputs": {
+      "model": [
+        "lora",
+        0
+      ],
+      "conditioning": [
+        "cond",
+        0
+      ]
+    }
+  },
+  "sampler": {
+    "class_type": "KSamplerSelect",
+    "inputs": {
+      "sampler_name": "res_multistep"
+    }
+  },
+  "sigmas": {
+    "class_type": "BasicScheduler",
+    "inputs": {
+      "scheduler": "simple",
+      "steps": 8,
+      "denoise": 1.0,
+      "model": [
+        "lora",
+        0
+      ]
+    }
+  },
+  "sample": {
+    "class_type": "SamplerCustomAdvanced",
+    "inputs": {
+      "noise": [
+        "noise",
+        0
+      ],
+      "guider": [
+        "guider",
+        0
+      ],
+      "sampler": [
+        "sampler",
+        0
+      ],
+      "sigmas": [
+        "sigmas",
+        0
+      ],
+      "latent_image": [
+        "cond",
+        1
+      ]
+    }
+  },
+  "decode_video": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "sample",
+        0
+      ],
+      "vae": [
+        "vae_video",
+        0
+      ]
+    }
+  },
+  "video": {
+    "class_type": "CreateVideo",
+    "inputs": {
+      "images": [
+        "decode_video",
+        0
+      ],
+      "fps": 24.0,
+      "bit_depth": 8,
+      "color_space": "sRGB",
+      "audio": [
+        "decode_audio",
+        0
+      ]
+    }
+  },
+  "save": {
+    "class_type": "SaveVideo",
+    "inputs": {
+      "video": [
+        "video",
+        0
+      ],
+      "filename_prefix": "luna/S08",
+      "format": "mp4",
+      "format.codec": "h264"
+    }
+  },
+  "lora": {
+    "class_type": "LoraLoaderModelOnly",
+    "inputs": {
+      "lora_name": "minimax_h3_fl2v_turbo_8step_v1.0_comfyui_bf16.safetensors",
+      "strength_model": 1.0,
+      "model": [
+        "unet",
+        0
+      ]
+    }
+  },
+  "vae_audio": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "minimax_h3_audio_vae_fp32.safetensors"
+    }
+  },
+  "decode_audio": {
+    "class_type": "VAEDecodeAudio",
+    "inputs": {
+      "samples": [
+        "sample",
+        0
+      ],
+      "vae": [
+        "vae_audio",
+        0
+      ]
+    }
+  }
+}

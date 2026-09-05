@@ -1,8 +1,8 @@
 {
   "shots": {
+    "S12": {},
     "S03": {
       "status": "done",
-      "hash": "5eec69b44a06",
       "prompt_id": "9a571fc4-ccc7-4f83-9396-070e734abc71",
       "file": "out/clips/S03.mp4",
       "backend": "local",
@@ -15,7 +15,18 @@
       "height": 416,
       "frames": 56,
       "steps": 8,
-      "turbo": true
+      "turbo": true,
+      "context_hash": "legacy-5eec69b44a06",
+      "clips": [
+        {
+          "platform": "local",
+          "file": "out/clips/S03.mp4",
+          "context_hash": "legacy-5eec69b44a06",
+          "ts": 1788574779,
+          "legacy": true,
+          "note": "migrated from pre-item pipeline"
+        }
+      ]
     }
   }
 }

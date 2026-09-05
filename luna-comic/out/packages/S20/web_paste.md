@@ -1,0 +1,19 @@
+# S20 — paste this exact prompt block
+
+## Prompt (copy everything in the code block)
+```
+LUNA is the character shown in <Picture 1> — keep her hair, outfit, accessories and proportions exactly as they appear there. LUNA, a K-pop virtual idol: long deep-violet hair in a high braided ponytail with silver chain accents, white sleeveless mock-neck zip crop top, white cargo mini-skirt with black belt and hanging chain, black thigh strap on left leg, chunky white platform sneakers with white crew socks, silver bracelets on right wrist. expression: upset. near-total blackout on the arena: one hard overhead beam on the performer, everything else void. loose hologram shards dissolving in the air around her, fading like spent memories. a packed live-arena stage at full performance power: towering light rigs, LED floor, haze, spotlight banks, walls of light behind the performer, audience pit swelling below the stage edge. near-dark: one hard overhead beam on her face, everything else void black, fragile and exposed. BASS VANISHES - everything cuts to darkness but a single overhead beam; she stands alone singing into the dropout, hologram shards dissolving around her; camera: slow orbit, medium close-up, near-black frame. anime cel-shaded, clean line art, K-pop MV aesthetic, neon backlight, cinematic lighting; 16:9; high-detail generated video. continuity: opens continuing the bass vanishes; everything cuts to darkness but the overhead beam; leaves she stands alone, hologram shards dissolving around her in the dark. vocal: 「Dream it Build it Let the future unfold fold / 321 LIVE AI 現在就創造未來」 — the dropout is the 'dream' before the build; her voice alone = the future already decided (L20 Dream it Build it / L21 321 LIVE AI 現在就創造未來). duration 4.53s, motion synced to 106.0 BPM; bass 0.39x falling to 0.02x - the emptiest bar in the track, but the vocal carries through it alone (L20 at 85.0). Instruments drop, she does not. Avoid: extra fingers, deformed hands, inconsistent hair color, changed outfit, text artifacts, watermark, multiple characters
+```
+
+## Reference image
+Upload the project character sheet as the reference image. It is the only image.
+
+## Settings
+- duration: 4.53s in the timeline (generate the grid length above it)
+- aspect ratio: 16:9
+- context_hash: af8c38a95169b279ef3e4d463d890bf7039c1693e72b7888f926c1ca7e9a5a2a
+
+## Edit intent (assembler, not the model)
+- trim to bar line: keep the generated clip and cut to 84.26s–88.79s
+- transition: hard cut (all cuts in this edit are hard cuts on the bar grid)
+- lyric intent: the dropout is the 'dream' before the build; her voice alone = the future already decided (L20 Dream it Build it / L21 321 LIVE AI 現在就創造未來)

@@ -1,0 +1,73 @@
+{
+  "schema": "cut_context",
+  "schema_version": "0.1.0",
+  "cut_id": "S07",
+  "project": "LUNA — LIVE AI Comic",
+  "prompt": "LUNA, a K-pop virtual idol: long deep-violet hair in a high braided ponytail with silver chain accents, white sleeveless mock-neck zip crop top, white cargo mini-skirt with black belt and hanging chain, black thigh strap on left leg, chunky white platform sneakers with white crew socks, silver bracelets on right wrist. expression: thinking. a night city street, neon signage reflecting off wet asphalt; glass skyscrapers with holographic billboards, anonymous pedestrians blurred in the far distance. wet neon city light: magenta and cyan signage reflecting on asphalt, shallow depth, city bokeh swimming behind the subject. bokeh softer and more diffuse, the city lights swimming like a thought forming. she glances up at something off-frame, city bokeh swimming behind her; camera: close-up on face, shallow focus, handheld drift. anime cel-shaded, clean line art, K-pop MV aesthetic, neon backlight, cinematic lighting; 16:9; high-detail generated video. continuity: opens continuing her walking slows; the frame holds on her face as she stops; leaves her gaze lifts past the lens toward something off-frame, thinking. vocal: 「一個還沒有人看過的世界正在指尖慢慢浮現 / 沒有攝影棚 沒有既定劇本 只有時間不停往前」 — the world materializing at her fingertips: the gaze is the act of creation (L05 一個還沒有人看過的世界正在指尖慢慢浮現). duration 4.53s, motion synced to 106.0 BPM; vocal band peaks - hold the face",
+  "model_prompt": "LUNA is the character shown in <Picture 1> — keep her hair, outfit, accessories and proportions exactly as they appear there. LUNA, a K-pop virtual idol: long deep-violet hair in a high braided ponytail with silver chain accents, white sleeveless mock-neck zip crop top, white cargo mini-skirt with black belt and hanging chain, black thigh strap on left leg, chunky white platform sneakers with white crew socks, silver bracelets on right wrist. expression: thinking. a night city street, neon signage reflecting off wet asphalt; glass skyscrapers with holographic billboards, anonymous pedestrians blurred in the far distance. wet neon city light: magenta and cyan signage reflecting on asphalt, shallow depth, city bokeh swimming behind the subject. bokeh softer and more diffuse, the city lights swimming like a thought forming. she glances up at something off-frame, city bokeh swimming behind her; camera: close-up on face, shallow focus, handheld drift. anime cel-shaded, clean line art, K-pop MV aesthetic, neon backlight, cinematic lighting; 16:9; high-detail generated video. continuity: opens continuing her walking slows; the frame holds on her face as she stops; leaves her gaze lifts past the lens toward something off-frame, thinking. vocal: 「一個還沒有人看過的世界正在指尖慢慢浮現 / 沒有攝影棚 沒有既定劇本 只有時間不停往前」 — the world materializing at her fingertips: the gaze is the act of creation (L05 一個還沒有人看過的世界正在指尖慢慢浮現). duration 4.53s, motion synced to 106.0 BPM; vocal band peaks - hold the face. Avoid: extra fingers, deformed hands, inconsistent hair color, changed outfit, text artifacts, watermark, multiple characters",
+  "item_snapshot": [
+    {
+      "id": "char.luna",
+      "type": "character",
+      "text": "LUNA, a K-pop virtual idol: long deep-violet hair in a high braided ponytail with silver chain accents, white sleeveless mock-neck zip crop top, white cargo mini-skirt with black belt and hanging chain, black thigh strap on left leg, chunky white platform sneakers with white crew socks, silver bracelets on right wrist"
+    },
+    {
+      "id": "scene.city_street",
+      "type": "scene",
+      "text": "a night city street, neon signage reflecting off wet asphalt; glass skyscrapers with holographic billboards, anonymous pedestrians blurred in the far distance"
+    },
+    {
+      "id": "look.street_neon",
+      "type": "look",
+      "text": "wet neon city light: magenta and cyan signage reflecting on asphalt, shallow depth, city bokeh swimming behind the subject"
+    },
+    {
+      "id": "style.mv",
+      "type": "style",
+      "text": "anime cel-shaded, clean line art, K-pop MV aesthetic, neon backlight, cinematic lighting; 16:9; high-detail generated video"
+    }
+  ],
+  "refs": [
+    {
+      "path": "assets/reference/luna_character_sheet.jpg",
+      "hash": "703ff0f65094c02d",
+      "sha256": "703ff0f65094c02d8e1de16488ba8afe3afb8f1b8ee759e872d0e53a7075843e"
+    }
+  ],
+  "settings": {
+    "start": 25.39,
+    "end": 29.92,
+    "dur": 4.53,
+    "bar": 12,
+    "section": "Verse 1A",
+    "expression": "",
+    "ratio": "16:9",
+    "bpm": 106.0,
+    "item_ids": [
+      "char.luna",
+      "scene.city_street",
+      "look.street_neon",
+      "style.mv"
+    ]
+  },
+  "continuity": {
+    "in": "her walking slows; the frame holds on her face as she stops",
+    "out": "her gaze lifts past the lens toward something off-frame, thinking"
+  },
+  "lyric_lines": [
+    "L05",
+    "L06"
+  ],
+  "lyric_intent": "the world materializing at her fingertips: the gaze is the act of creation (L05 一個還沒有人看過的世界正在指尖慢慢浮現)",
+  "caption": "",
+  "edit_intent": {
+    "in": 25.39,
+    "out": 29.92,
+    "trim_to_bar": true,
+    "transition": "hard cut",
+    "caption_overrides_subtitle": false
+  },
+  "negative": "extra fingers, deformed hands, inconsistent hair color, changed outfit, text artifacts, watermark, multiple characters",
+  "context_hash": "d1bd7266b50196b6b93986225b51b5948daf86a7aaa50dbbf6472da0caeb9404",
+  "locked_at": null
+}

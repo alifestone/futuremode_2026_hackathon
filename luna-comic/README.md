@@ -1,5 +1,9 @@
 # LUNA — LIVE AI Comic
 
+> ⚠️ **2026-09-05：管線已升級。** 本目錄現在是 `app/` 引擎的 **sample project**（decisions.md §11）。
+> 新的工作流、契約、封包、對帳機制全部在 `../app/PROTOCOL.md`。
+> 下列舊段落保留作為脈絡；實際操作請以 `app/scripts/*` 與 `app/ui/` 為準。
+
 An editable comic project for CSFCCA's virtual idol **LUNA**, derived from
 `LUNA_MV_製作計畫書.docx` and the existing character sheet.
 
@@ -36,6 +40,9 @@ compiles with `build_shots.py`. `panels.json` (13 panels, 3:4) is the earlier co
 track, kept but superseded — its timeline predates the audio measurement. The two
 carry different aspect ratios and different negative prompts, which is why they have
 separate compilers rather than one shared script.
+
+> 上述兩軌的描述是舊架構。新的 `app/` 引擎把場景/燈光/道具/狀態抽成 `items.json`
+> 鎖定（7 型別），分鏡只引用 item id；`panels.json` 維持 superseded 原樣。
 
 ## Setup
 
