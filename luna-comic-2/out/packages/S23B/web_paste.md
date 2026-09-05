@@ -1,0 +1,19 @@
+# S23B — paste this exact prompt block
+
+## Prompt (copy everything in the code block)
+```
+LUNA is the character shown in <Picture 1> — keep her hair, outfit, accessories and proportions exactly as they appear there. LUNA, a K-pop virtual idol: long deep-violet hair in a high braided ponytail with silver chain accents, white sleeveless mock-neck zip crop top, white cargo mini-skirt with black belt and hanging chain, black thigh strap on left leg, chunky white platform sneakers with white crew socks, silver bracelets on right wrist. expression: happy. a packed live-arena stage at full performance power: towering light rigs, LED floor, haze, spotlight banks, walls of light behind the performer, audience pit swelling below the stage edge. high-energy stage lighting: neon backlight, strobes, chromatic haze, saturated K-pop colour, cinematic contrast. every automated cut lands exactly on a bar line; hard cuts are the grammar of this edit. sustained final chorus, second half - alternating close-ups tightening toward the climax handoff; camera: close-ups on each 2-bar line, tightening in. anime cel-shaded, clean line art, K-pop MV aesthetic, neon backlight, cinematic lighting; 16:9; high-detail generated video. continuity: opens continuing tightening close-ups from the S23A final wide, each 2-bar line a new frame; leaves climax handoff — the energy at its highest, ready to hand to the hero. vocal: 「這不是等待未來 / LIVE AI / 讓想像成真」 — tightening close-ups: not waiting for the future — arriving (L26 這不是等待未來 → L27 LIVE AI). duration 6.78s, motion synced to 106.0 BPM; 3 bars, cuts at 113.71 / 115.97. Ends flush on the climax downbeat at 118.22. Avoid: extra fingers, deformed hands, inconsistent hair color, changed outfit, text artifacts, watermark, multiple characters
+```
+
+## Reference image
+Upload the project character sheet as the reference image. It is the only image.
+
+## Settings
+- duration: 6.78s in the timeline (generate the grid length above it)
+- aspect ratio: 16:9
+- context_hash: 87455e48ec3d9492afcca68d4e09f46b7631c9c032283cf5e42dcc98843c62d2
+
+## Edit intent (assembler, not the model)
+- trim to bar line: keep the generated clip and cut to 111.44s–118.22s
+- transition: hard cut (all cuts in this edit are hard cuts on the bar grid)
+- lyric intent: tightening close-ups: not waiting for the future — arriving (L26 這不是等待未來 → L27 LIVE AI)

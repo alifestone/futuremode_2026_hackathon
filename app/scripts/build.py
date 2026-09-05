@@ -14,8 +14,8 @@ canonical compile order is enforced.
       emphasis only -> shot.overrides[item_id] = "appended text" (never replaces)
 
 Usage:
-    python app/scripts/build.py [--project luna-comic]            # write out/compiled.{json,md}
-    python app/scripts/build.py --show S12                         # print one resolved shot
+    python app/scripts/build.py                # default project = luna-comic-2, write out/compiled.{json,md}
+    python app/scripts/build.py --show S12     # print one resolved shot
     python app/scripts/build.py --model "ComfyUI MiniMax H3"       # print a model batch
     python app/scripts/build.py --draft                            # don't hard-fail on contract
 """
@@ -254,7 +254,7 @@ def to_markdown(project, compiled):
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__)
-    ap.add_argument("--project", default="luna-comic", help="project dir under the repo root")
+    ap.add_argument("--project", default="luna-comic-2", help="project dir under the repo root")
     ap.add_argument("--show", metavar="CUT_ID", help="print one resolved cut and exit")
     ap.add_argument("--model", help="print only the batch for one model and exit")
     ap.add_argument("--draft", action="store_true", help="report problems only, never fail")

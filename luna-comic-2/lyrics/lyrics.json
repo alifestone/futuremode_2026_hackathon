@@ -1,0 +1,299 @@
+{
+  "$comment": "MEASURED timings — whisper large-v3 forced alignment against the actual vocal audio, read as-is from ../歌詞.srt. `section` and `bar` are computed against beatmap.json purely for readability; they do not affect start/end. Regenerate with scripts/align_lyrics.py.",
+  "source": "../歌詞.srt",
+  "grid": {
+    "bpm": 106.0,
+    "bar_sec": 2.2642,
+    "first_beat_offset_sec": 0.488
+  },
+  "lines": [
+    {
+      "id": "L01",
+      "text": "訊號亮起 畫面開啟",
+      "section": "Intro",
+      "bar": 1,
+      "start": 0.68,
+      "end": 4.44,
+      "confidence": "forced_aligned"
+    },
+    {
+      "id": "L02",
+      "text": "倒數開始 世界重啟",
+      "section": "Intro",
+      "bar": 3,
+      "start": 5.2,
+      "end": 8.44,
+      "confidence": "forced_aligned"
+    },
+    {
+      "id": "L03",
+      "text": "321 LIVE AI Li Li Live AI",
+      "section": "Intro",
+      "bar": 5,
+      "start": 8.52,
+      "end": 20.64,
+      "confidence": "forced_aligned"
+    },
+    {
+      "id": "L04",
+      "text": "一張空白的畫面等著第一束光出現",
+      "section": "Build / Pre-drop",
+      "bar": 10,
+      "start": 20.64,
+      "end": 24.26,
+      "confidence": "forced_aligned"
+    },
+    {
+      "id": "L05",
+      "text": "一個還沒有人看過的世界正在指尖慢慢浮現",
+      "section": "Verse 1A",
+      "bar": 12,
+      "start": 24.54,
+      "end": 28.78,
+      "confidence": "forced_aligned"
+    },
+    {
+      "id": "L06",
+      "text": "沒有攝影棚 沒有既定劇本 只有時間不停往前",
+      "section": "Verse 1A",
+      "bar": 14,
+      "start": 29.02,
+      "end": 33.44,
+      "confidence": "forced_aligned"
+    },
+    {
+      "id": "L07",
+      "text": "把腦海裡不可能的畫面現在全部變成眼前",
+      "section": "Verse 1B",
+      "bar": 16,
+      "start": 33.74,
+      "end": 37.96,
+      "confidence": "forced_aligned"
+    },
+    {
+      "id": "L08",
+      "text": "從第一個 Prompt 到最後一個鏡頭",
+      "section": "Pre-chorus",
+      "bar": 18,
+      "start": 38.44,
+      "end": 41.08,
+      "confidence": "forced_aligned"
+    },
+    {
+      "id": "L09",
+      "text": "每一次生成都是新的宇宙",
+      "section": "Pre-chorus",
+      "bar": 19,
+      "start": 41.26,
+      "end": 43.36,
+      "confidence": "forced_aligned"
+    },
+    {
+      "id": "L10",
+      "text": "時間正在倒數沒有人可以停留",
+      "section": "Pre-chorus",
+      "bar": 20,
+      "start": 43.54,
+      "end": 45.6,
+      "confidence": "forced_aligned"
+    },
+    {
+      "id": "L11",
+      "text": "這一刻創意決定所有",
+      "section": "Chorus 1",
+      "bar": 21,
+      "start": 45.8,
+      "end": 47.74,
+      "confidence": "forced_aligned"
+    },
+    {
+      "id": "L12",
+      "text": "LIVE AI 現在就創造未來",
+      "section": "Chorus 1",
+      "bar": 22,
+      "start": 48.38,
+      "end": 52.58,
+      "confidence": "forced_aligned"
+    },
+    {
+      "id": "L13",
+      "text": "讓想像穿越畫面之外",
+      "section": "Chorus 1",
+      "bar": 24,
+      "start": 53.18,
+      "end": 57.0,
+      "confidence": "forced_aligned"
+    },
+    {
+      "id": "L14",
+      "text": "LIVE AI 讓世界重新打開",
+      "section": "Chorus 1 ext.",
+      "bar": 26,
+      "start": 57.3,
+      "end": 61.62,
+      "confidence": "forced_aligned"
+    },
+    {
+      "id": "L15",
+      "text": "沒有答案只有你怎麼去創造",
+      "section": "Chorus 1 ext.",
+      "bar": 28,
+      "start": 62.08,
+      "end": 66.1,
+      "confidence": "forced_aligned"
+    },
+    {
+      "id": "L16",
+      "text": "讓光影 讓聲音 讓故事全部醒來",
+      "section": "Chorus 1 ext.",
+      "bar": 31,
+      "start": 67.3,
+      "end": 71.68,
+      "confidence": "forced_aligned"
+    },
+    {
+      "id": "L17",
+      "text": "把不可能變成現在",
+      "section": "Chorus 1 ext.",
+      "bar": 33,
+      "start": 72.18,
+      "end": 74.96,
+      "confidence": "forced_aligned"
+    },
+    {
+      "id": "L18",
+      "text": "CSFCCA LIVE AI",
+      "section": "Verse 2",
+      "bar": 34,
+      "start": 75.2,
+      "end": 76.86,
+      "confidence": "forced_aligned"
+    },
+    {
+      "id": "L19",
+      "text": "Create it Make it Show me your world world w w w world",
+      "section": "Verse 2",
+      "bar": 35,
+      "start": 77.48,
+      "end": 81.64,
+      "confidence": "forced_aligned"
+    },
+    {
+      "id": "L20",
+      "text": "Dream it Build it Let the future unfold fold",
+      "section": "Verse 2",
+      "bar": 37,
+      "start": 81.96,
+      "end": 84.88,
+      "confidence": "forced_aligned"
+    },
+    {
+      "id": "L21",
+      "text": "321 LIVE AI 現在就創造未來",
+      "section": "Breakdown",
+      "bar": 38,
+      "start": 85.34,
+      "end": 90.66,
+      "confidence": "forced_aligned"
+    },
+    {
+      "id": "L22",
+      "text": "讓你的世界被所有人看見",
+      "section": "Breakdown",
+      "bar": 41,
+      "start": 91.02,
+      "end": 94.9,
+      "confidence": "forced_aligned"
+    },
+    {
+      "id": "L23",
+      "text": "LIVE AI 把未知全部打開",
+      "section": "Final chorus",
+      "bar": 43,
+      "start": 95.26,
+      "end": 99.54,
+      "confidence": "forced_aligned"
+    },
+    {
+      "id": "L24",
+      "text": "每一個靈感都可能改變明天",
+      "section": "Final chorus",
+      "bar": 45,
+      "start": 100.3,
+      "end": 103.86,
+      "confidence": "forced_aligned"
+    },
+    {
+      "id": "L25",
+      "text": "讓電影 讓音樂 讓動畫重新醒來",
+      "section": "Final chorus",
+      "bar": 47,
+      "start": 105.22,
+      "end": 109.68,
+      "confidence": "forced_aligned"
+    },
+    {
+      "id": "L26",
+      "text": "這不是等待未來",
+      "section": "Final chorus",
+      "bar": 49,
+      "start": 109.82,
+      "end": 112.96,
+      "confidence": "forced_aligned"
+    },
+    {
+      "id": "L27",
+      "text": "LIVE AI",
+      "section": "Final chorus",
+      "bar": 51,
+      "start": 113.24,
+      "end": 115.48,
+      "confidence": "forced_aligned"
+    },
+    {
+      "id": "L28",
+      "text": "讓想像成真",
+      "section": "Final chorus",
+      "bar": 52,
+      "start": 115.78,
+      "end": 120.7,
+      "confidence": "forced_aligned"
+    },
+    {
+      "id": "L29",
+      "text": "LIVE AI",
+      "section": "Climax",
+      "bar": 54,
+      "start": 120.92,
+      "end": 122.34,
+      "confidence": "forced_aligned"
+    },
+    {
+      "id": "L30",
+      "text": "LIVE AI",
+      "section": "Climax",
+      "bar": 55,
+      "start": 122.96,
+      "end": 126.46,
+      "confidence": "forced_aligned"
+    },
+    {
+      "id": "L31",
+      "text": "讓未來發生",
+      "section": "Climax",
+      "bar": 57,
+      "start": 127.46,
+      "end": 129.64,
+      "confidence": "forced_aligned"
+    },
+    {
+      "id": "L32",
+      "text": "CSFCCA LIVE AI",
+      "section": "Outro",
+      "bar": 58,
+      "start": 129.82,
+      "end": 132.22,
+      "confidence": "forced_aligned"
+    }
+  ]
+}

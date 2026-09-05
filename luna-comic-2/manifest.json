@@ -1,0 +1,48 @@
+{
+  "$comment": "Project manifest (decisions.md §11.2) for luna-comic-2 — a fresh instance bootstrapped from ONLY the source media (song mp3, character sheet image, lyrics). All media paths point INSIDE this folder, so the project is self-contained. Items live in items.json; the storyboard lives in storyboard/shots.json. beatmap.json and lyrics/ are measured pre-production artifacts — referenced, never rewritten by the app.",
+  "schema_version": "0.1.0",
+  "project": "LUNA — LIVE AI Comic (luna-comic-2)",
+  "owner": "CSFCCA",
+  "source_plan": "../LUNA_MV_製作計畫書.docx",
+  "song": {
+    "file": "assets/歌曲.mp3",
+    "title": "CSFCCA LIVE AI",
+    "duration_sec": 134.3,
+    "bpm": 106.0,
+    "bar_sec": 2.2642,
+    "first_beat_offset_sec": 0.488,
+    "meter": "4/4",
+    "total_bars": 60,
+    "beatmap": "storyboard/beatmap.json",
+    "lyrics_srt": "lyrics/歌詞.srt",
+    "lyrics_aligned": "lyrics/lyrics.json",
+    "measured_note": "timings come from whisper large-v3 forced alignment + STFT beatmap — measured from assets/歌曲.mp3, byte-identical to the original 歌曲.mp3"
+  },
+  "character": {
+    "id": "luna",
+    "name": "LUNA",
+    "reference_sheet": "assets/reference/luna_character_sheet.jpg",
+    "expressions": [
+      "calm", "happy", "playful wink", "surprised",
+      "shy", "angry", "upset", "thinking", "confident smirk"
+    ],
+    "traits": ["lively", "charismatic", "confident", "playful", "independent"],
+    "note": "reference sheet copied into this folder; character lock lives in items.json as char.luna (the registry is the single source)"
+  },
+  "style": {
+    "medium": "manga",
+    "aspect_ratio": "16:9",
+    "negative": "extra fingers, deformed hands, inconsistent hair color, changed outfit, text artifacts, watermark, multiple characters",
+    "style_suffix_note": "moved into items.json as style.mv (single source)"
+  },
+  "generation": {
+    "provider": "local ComfyUI MiniMax H3 (free) / comfy.org cloud (billed)",
+    "video_providers": {
+      "local": { "env_var": "COMFYUI_API_URL", "endpoint": "http://127.0.0.1:8188", "note": "open weights on the box, no key" },
+      "comfy_cloud": { "env_var": "COMFY_API_KEY", "note": "billed credits; ask before spending" }
+    }
+  },
+  "legacy": {
+    "note": "no panels/legacy track in this fresh instance — luna-comic-2 is media-only by design"
+  }
+}

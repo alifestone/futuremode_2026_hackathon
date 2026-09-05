@@ -11,7 +11,7 @@ Platforms v1 (decisions.md §8.2):
   generic_web  — human-paste block for any web video platform (Hailuo-style)
 
 Usage:
-    python app/scripts/export.py --project luna-comic --cut S12 [--platform local|comfy_cloud|generic_web]
+    python app/scripts/export.py --cut S12 [--platform local|comfy_cloud|generic_web]  # default project luna-comic-2
     python app/scripts/export.py --list
     python app/scripts/export.py --probe                   # print cost model info
 """
@@ -210,7 +210,7 @@ def generic_web_block(cut):
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__)
-    ap.add_argument("--project", default="luna-comic")
+    ap.add_argument("--project", default="luna-comic-2")
     ap.add_argument("--cut", help="cut id (required unless --list)")
     ap.add_argument("--platform", choices=["local", "comfy_cloud", "generic_web"], default="generic_web")
     ap.add_argument("--list", action="store_true")

@@ -9,7 +9,7 @@ Also reports local-vs-web parity: cuts that have both a local and a web clip
 recorded, with their hashes side by side.
 
 Usage:
-    python app/scripts/verify.py [--project luna-comic]        # human table
+    python app/scripts/verify.py            # default project = luna-comic-2
     python app/scripts/verify.py --json                        # machine JSON
     python app/scripts/verify.py --check                       # exit 1 if any stale
 """
@@ -68,7 +68,7 @@ def stale_flag(clips, current):
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__)
-    ap.add_argument("--project", default="luna-comic")
+    ap.add_argument("--project", default="luna-comic-2")
     ap.add_argument("--json", action="store_true")
     ap.add_argument("--check", action="store_true")
     args = ap.parse_args()

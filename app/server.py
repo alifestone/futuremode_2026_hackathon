@@ -32,7 +32,7 @@ from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 
 REPO = pathlib.Path(__file__).resolve().parent.parent
 APP = REPO / "app"
-PROJECT = REPO / (sys.argv[1] if len(sys.argv) > 2 and sys.argv[1] == "--project" else "luna-comic")
+PROJECT = REPO / (sys.argv[1] if len(sys.argv) > 2 and sys.argv[1] == "--project" else "luna-comic-2")
 if len(sys.argv) > 2 and sys.argv[1] == "--project":
     PROJECT = REPO / sys.argv[2]
 

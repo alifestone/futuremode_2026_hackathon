@@ -1,0 +1,19 @@
+# S06 — paste this exact prompt block
+
+## Prompt (copy everything in the code block)
+```
+LUNA is the character shown in <Picture 1> — keep her hair, outfit, accessories and proportions exactly as they appear there. LUNA, a K-pop virtual idol: long deep-violet hair in a high braided ponytail with silver chain accents, white sleeveless mock-neck zip crop top, white cargo mini-skirt with black belt and hanging chain, black thigh strap on left leg, chunky white platform sneakers with white crew socks, silver bracelets on right wrist. expression: calm. a night city street, neon signage reflecting off wet asphalt; glass skyscrapers with holographic billboards, anonymous pedestrians blurred in the far distance. wet neon city light: magenta and cyan signage reflecting on asphalt, shallow depth, city bokeh swimming behind the subject. arrangement thins out; she walks a neon-wet city street at night, reflections rippling under her platform sneakers; camera: tracking side profile, walking. anime cel-shaded, clean line art, K-pop MV aesthetic, neon backlight, cinematic lighting; 16:9; high-detail generated video. continuity: opens continuing the dance energy cools; the world cuts to a night street, she walks in profile; leaves she walks left, reflections rippling under her sneakers, the street opening ahead. vocal: 「一張空白的畫面等著第一束光出現 / 一個還沒有人看過的世界正在指尖慢慢浮現」 — a blank-canvas city: empty street waiting for the first beam; she is the first light moving through it (L04 一張空白的畫面等著第一束光出現). duration 4.53s, motion synced to 106.0 BPM; bass drops to 0.62x - pull back to narrative. Avoid: extra fingers, deformed hands, inconsistent hair color, changed outfit, text artifacts, watermark, multiple characters
+```
+
+## Reference image
+Upload the project character sheet as the reference image. It is the only image.
+
+## Settings
+- duration: 4.53s in the timeline (generate the grid length above it)
+- aspect ratio: 16:9
+- context_hash: 36fe5c84bb5124f1edd245bc6122a1da021fad74e6a7c90eff88be37d9556576
+
+## Edit intent (assembler, not the model)
+- trim to bar line: keep the generated clip and cut to 20.86s–25.39s
+- transition: hard cut (all cuts in this edit are hard cuts on the bar grid)
+- lyric intent: a blank-canvas city: empty street waiting for the first beam; she is the first light moving through it (L04 一張空白的畫面等著第一束光出現)

@@ -15,7 +15,8 @@ must and will show the same hash, making divergence attributable to platform
 noise rather than missing context.
 
 Usage:
-    python app/scripts/run.py --project luna-comic --list
+    python app/scripts/run.py                    # default project = luna-comic-2, run pending
+    python app/scripts/run.py --list
     python app/scripts/run.py --cuts S03                     # anchor first
     python app/scripts/run.py --pending                      # everything not done
     python app/scripts/run.py --cuts S04 --force             # re-roll
@@ -156,7 +157,7 @@ def pending_cuts(project_dir, compiled):
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__)
-    ap.add_argument("--project", default="luna-comic")
+    ap.add_argument("--project", default="luna-comic-2")
     ap.add_argument("--cuts", help="comma-separated cut ids")
     ap.add_argument("--pending", action="store_true", help="all cuts without a current clip")
     ap.add_argument("--list", action="store_true")

@@ -1,0 +1,19 @@
+# S01 — paste this exact prompt block
+
+## Prompt (copy everything in the code block)
+```
+LUNA is the character shown in <Picture 1> — keep her hair, outfit, accessories and proportions exactly as they appear there. LUNA, a K-pop virtual idol: long deep-violet hair in a high braided ponytail with silver chain accents, white sleeveless mock-neck zip crop top, white cargo mini-skirt with black belt and hanging chain, black thigh strap on left leg, chunky white platform sneakers with white crew socks, silver bracelets on right wrist. expression: calm. a vast empty arena interior in near-total darkness; a single stage at its centre, faint cold architecture barely traceable at the edges; no crowd, no props, air perfectly still. single cold rim light carving the figure out of darkness; sparse, airy, almost no colour — the frame feels asleep. darkness, a single cold rim light traces LUNA's profile; she is perfectly still, eyes closed; camera: extreme close-up on closed eyes, slow push-in. anime cel-shaded, clean line art, K-pop MV aesthetic, neon backlight, cinematic lighting; 16:9; high-detail generated video. continuity: opens continuing cold dark, nothing yet; the frame itself is switching on; leaves profile traced by the rim light, eyes still closed, completely still. vocal: 「訊號亮起 畫面開啟」 — the rim light IS the 'signal lighting up'; her closed eyes are a screen waiting to power on (L01 訊號亮起 畫面開啟). duration 4.53s, motion synced to 106.0 BPM; no bass (0.12x) - hold on stillness, let the pad breathe. Avoid: extra fingers, deformed hands, inconsistent hair color, changed outfit, text artifacts, watermark, multiple characters
+```
+
+## Reference image
+Upload the project character sheet as the reference image. It is the only image.
+
+## Settings
+- duration: 4.53s in the timeline (generate the grid length above it)
+- aspect ratio: 16:9
+- context_hash: 4b992c617aeeb7ef6809bfb53db7938f8f71d3b143856f6496bdca518b7795a3
+
+## Edit intent (assembler, not the model)
+- trim to bar line: keep the generated clip and cut to 0.49s–5.02s
+- transition: hard cut (all cuts in this edit are hard cuts on the bar grid)
+- lyric intent: the rim light IS the 'signal lighting up'; her closed eyes are a screen waiting to power on (L01 訊號亮起 畫面開啟)

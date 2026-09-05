@@ -1,0 +1,19 @@
+# S12 — paste this exact prompt block
+
+## Prompt (copy everything in the code block)
+```
+LUNA is the character shown in <Picture 1> — keep her hair, outfit, accessories and proportions exactly as they appear there. LUNA, a K-pop virtual idol: long deep-violet hair in a high braided ponytail with silver chain accents, white sleeveless mock-neck zip crop top, white cargo mini-skirt with black belt and hanging chain, black thigh strap on left leg, chunky white platform sneakers with white crew socks, silver bracelets on right wrist. expression: confident smirk. a packed live-arena stage at full performance power: towering light rigs, LED floor, haze, spotlight banks, walls of light behind the performer, audience pit swelling below the stage edge. high-energy stage lighting: neon backlight, strobes, chromatic haze, saturated K-pop colour, cinematic contrast. every automated cut lands exactly on a bar line; hard cuts are the grammar of this edit. motion snaps on the 106 BPM downbeat; poses land on beats, not between them. CHORUS - she points straight down the lens, stage exploding into neon particles and strobes behind her; camera: full body hero shot, low angle, fast push-in. anime cel-shaded, clean line art, K-pop MV aesthetic, neon backlight, cinematic lighting; 16:9; high-detail generated video. continuity: opens continuing the whip-pan lands on a full-body hero shot; the stage is already exploding behind her; leaves finger pointed straight down the lens, the measure held. vocal: 「這一刻創意決定所有 / LIVE AI 現在就創造未來」 — pointing down the lens: creativity decides everything at this moment — the song's thesis as a gesture (L11 這一刻創意決定所有). duration 4.53s, motion synced to 106.0 BPM; HARD CUT on chorus downbeat. First true peak (0.64). Avoid: extra fingers, deformed hands, inconsistent hair color, changed outfit, text artifacts, watermark, multiple characters
+```
+
+## Reference image
+Upload the project character sheet as the reference image. It is the only image.
+
+## Settings
+- duration: 4.53s in the timeline (generate the grid length above it)
+- aspect ratio: 16:9
+- context_hash: 9518d570fbf021d0f3224be375e3f6200a021b70265524e30291ecf292b11876
+
+## Edit intent (assembler, not the model)
+- trim to bar line: keep the generated clip and cut to 45.77s–50.30s
+- transition: hard cut (all cuts in this edit are hard cuts on the bar grid)
+- lyric intent: pointing down the lens: creativity decides everything at this moment — the song's thesis as a gesture (L11 這一刻創意決定所有)

@@ -7,9 +7,9 @@ item (the LLM-lint work order), and registry coverage. Machinable output for
 the UI and for coding agents.
 
 Usage:
-    python app/scripts/plan.py [--project luna-comic]          # human table
-    python app/scripts/plan.py --json                          # machine JSON
-    python app/scripts/plan.py --check                         # exit code only
+    python app/scripts/plan.py                # default project = luna-comic-2, human table
+    python app/scripts/plan.py --json        # machine JSON
+    python app/scripts/plan.py --check       # exit code only
 """
 import argparse
 import json
@@ -73,7 +73,7 @@ def gap_report(project_dir: pathlib.Path):
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__)
-    ap.add_argument("--project", default="luna-comic")
+    ap.add_argument("--project", default="luna-comic-2")
     ap.add_argument("--json", action="store_true", help="machine-readable output")
     ap.add_argument("--check", action="store_true", help="exit 1 if structural gaps exist")
     args = ap.parse_args()

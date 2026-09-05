@@ -1,0 +1,79 @@
+{
+  "schema": "cut_context",
+  "schema_version": "0.1.0",
+  "cut_id": "S19",
+  "project": "LUNA — LIVE AI Comic (luna-comic-2)",
+  "prompt": "LUNA, a K-pop virtual idol: long deep-violet hair in a high braided ponytail with silver chain accents, white sleeveless mock-neck zip crop top, white cargo mini-skirt with black belt and hanging chain, black thigh strap on left leg, chunky white platform sneakers with white crew socks, silver bracelets on right wrist. expression: shy. the arena stripped to a single warm overhead wash: stage floor empty, rigs dark, crowd gone, back wall black. a packed live-arena stage at full performance power: towering light rigs, LED floor, haze, spotlight banks, walls of light behind the performer, audience pit swelling below the stage edge. single warm overhead wash, soft and intimate; sweat catching the light, gentle falloff into black. she catches her breath, a small private smile, sweat catching the light; camera: close-up, soft focus, static. anime cel-shaded, clean line art, K-pop MV aesthetic, neon backlight, cinematic lighting; 16:9; high-detail generated video. continuity: opens continuing close-up, she catches her breath in the warm wash; leaves a private smile, sweat catching the light — the calm before the dropout. vocal: 「Create it Make it Show me your world world w w w world / Dream it Build it Let the future unfold fold」 — create. make. show. — a private smile: she has done all three tonight (L19 Create it Make it Show me your world). duration 4.53s, motion synced to 106.0 BPM; hold - the calm before the dropout",
+  "model_prompt": "LUNA is the character shown in <Picture 1> — keep her hair, outfit, accessories and proportions exactly as they appear there. LUNA, a K-pop virtual idol: long deep-violet hair in a high braided ponytail with silver chain accents, white sleeveless mock-neck zip crop top, white cargo mini-skirt with black belt and hanging chain, black thigh strap on left leg, chunky white platform sneakers with white crew socks, silver bracelets on right wrist. expression: shy. the arena stripped to a single warm overhead wash: stage floor empty, rigs dark, crowd gone, back wall black. a packed live-arena stage at full performance power: towering light rigs, LED floor, haze, spotlight banks, walls of light behind the performer, audience pit swelling below the stage edge. single warm overhead wash, soft and intimate; sweat catching the light, gentle falloff into black. she catches her breath, a small private smile, sweat catching the light; camera: close-up, soft focus, static. anime cel-shaded, clean line art, K-pop MV aesthetic, neon backlight, cinematic lighting; 16:9; high-detail generated video. continuity: opens continuing close-up, she catches her breath in the warm wash; leaves a private smile, sweat catching the light — the calm before the dropout. vocal: 「Create it Make it Show me your world world w w w world / Dream it Build it Let the future unfold fold」 — create. make. show. — a private smile: she has done all three tonight (L19 Create it Make it Show me your world). duration 4.53s, motion synced to 106.0 BPM; hold - the calm before the dropout. Avoid: extra fingers, deformed hands, inconsistent hair color, changed outfit, text artifacts, watermark, multiple characters",
+  "item_snapshot": [
+    {
+      "id": "char.luna",
+      "type": "character",
+      "text": "LUNA, a K-pop virtual idol: long deep-violet hair in a high braided ponytail with silver chain accents, white sleeveless mock-neck zip crop top, white cargo mini-skirt with black belt and hanging chain, black thigh strap on left leg, chunky white platform sneakers with white crew socks, silver bracelets on right wrist"
+    },
+    {
+      "id": "state.arena_wash_only",
+      "type": "state",
+      "text": "the arena stripped to a single warm overhead wash: stage floor empty, rigs dark, crowd gone, back wall black"
+    },
+    {
+      "id": "scene.arena_lit",
+      "type": "scene",
+      "text": "a packed live-arena stage at full performance power: towering light rigs, LED floor, haze, spotlight banks, walls of light behind the performer, audience pit swelling below the stage edge"
+    },
+    {
+      "id": "look.verse2_warm",
+      "type": "look",
+      "text": "single warm overhead wash, soft and intimate; sweat catching the light, gentle falloff into black"
+    },
+    {
+      "id": "style.mv",
+      "type": "style",
+      "text": "anime cel-shaded, clean line art, K-pop MV aesthetic, neon backlight, cinematic lighting; 16:9; high-detail generated video"
+    }
+  ],
+  "refs": [
+    {
+      "path": "assets/reference/luna_character_sheet.jpg",
+      "hash": "703ff0f65094c02d",
+      "sha256": "703ff0f65094c02d8e1de16488ba8afe3afb8f1b8ee759e872d0e53a7075843e"
+    }
+  ],
+  "settings": {
+    "start": 79.73,
+    "end": 84.26,
+    "dur": 4.53,
+    "bar": 36,
+    "section": "Verse 2",
+    "expression": "",
+    "ratio": "16:9",
+    "bpm": 106.0,
+    "item_ids": [
+      "char.luna",
+      "scene.arena_lit",
+      "state.arena_wash_only",
+      "look.verse2_warm",
+      "style.mv"
+    ]
+  },
+  "continuity": {
+    "in": "close-up, she catches her breath in the warm wash",
+    "out": "a private smile, sweat catching the light — the calm before the dropout"
+  },
+  "lyric_lines": [
+    "L19",
+    "L20"
+  ],
+  "lyric_intent": "create. make. show. — a private smile: she has done all three tonight (L19 Create it Make it Show me your world)",
+  "caption": "",
+  "edit_intent": {
+    "in": 79.73,
+    "out": 84.26,
+    "trim_to_bar": true,
+    "transition": "hard cut",
+    "caption_overrides_subtitle": false
+  },
+  "negative": "extra fingers, deformed hands, inconsistent hair color, changed outfit, text artifacts, watermark, multiple characters",
+  "context_hash": "f6d35a8224c3fff3d2d1db8a050cc66b54cce6268a5d7f0f18936294dfe2b4da",
+  "locked_at": null
+}

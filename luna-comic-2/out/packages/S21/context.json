@@ -1,0 +1,85 @@
+{
+  "schema": "cut_context",
+  "schema_version": "0.1.0",
+  "cut_id": "S21",
+  "project": "LUNA — LIVE AI Comic (luna-comic-2)",
+  "prompt": "LUNA, a K-pop virtual idol: long deep-violet hair in a high braided ponytail with silver chain accents, white sleeveless mock-neck zip crop top, white cargo mini-skirt with black belt and hanging chain, black thigh strap on left leg, chunky white platform sneakers with white crew socks, silver bracelets on right wrist. expression: confident smirk. near-total blackout on the arena: one hard overhead beam on the performer, everything else void. a packed live-arena stage at full performance power: towering light rigs, LED floor, haze, spotlight banks, walls of light behind the performer, audience pit swelling below the stage edge. near-dark: one hard overhead beam on her face, everything else void black, fragile and exposed. every automated cut lands exactly on a bar line; hard cuts are the grammar of this edit. bare vocal over the empty bar - her eyes lift to the lens on the line, decision made; frame cuts to black on the last beat before the final chorus; camera: extreme close-up on eyes, hold, then snap to black. anime cel-shaded, clean line art, K-pop MV aesthetic, neon backlight, cinematic lighting; 16:9; high-detail generated video. continuity: opens continuing hold on her eyes in the near-black, the beam holding her face; leaves eyes lift to the lens, decision made; the frame cuts to black on the last beat. vocal: 「321 LIVE AI 現在就創造未來 / 讓你的世界被所有人看見」 — eyes to the lens on '讓你的世界被所有人看見' — the decision to show her world to everyone (L22). duration 4.53s, motion synced to 106.0 BPM; 1:30 is the absolute instrumental floor (bass 0.02x), vocal only (L21 89.2 / L22 91.0). The exposed voice is the power, not silence",
+  "model_prompt": "LUNA is the character shown in <Picture 1> — keep her hair, outfit, accessories and proportions exactly as they appear there. LUNA, a K-pop virtual idol: long deep-violet hair in a high braided ponytail with silver chain accents, white sleeveless mock-neck zip crop top, white cargo mini-skirt with black belt and hanging chain, black thigh strap on left leg, chunky white platform sneakers with white crew socks, silver bracelets on right wrist. expression: confident smirk. near-total blackout on the arena: one hard overhead beam on the performer, everything else void. a packed live-arena stage at full performance power: towering light rigs, LED floor, haze, spotlight banks, walls of light behind the performer, audience pit swelling below the stage edge. near-dark: one hard overhead beam on her face, everything else void black, fragile and exposed. every automated cut lands exactly on a bar line; hard cuts are the grammar of this edit. bare vocal over the empty bar - her eyes lift to the lens on the line, decision made; frame cuts to black on the last beat before the final chorus; camera: extreme close-up on eyes, hold, then snap to black. anime cel-shaded, clean line art, K-pop MV aesthetic, neon backlight, cinematic lighting; 16:9; high-detail generated video. continuity: opens continuing hold on her eyes in the near-black, the beam holding her face; leaves eyes lift to the lens, decision made; the frame cuts to black on the last beat. vocal: 「321 LIVE AI 現在就創造未來 / 讓你的世界被所有人看見」 — eyes to the lens on '讓你的世界被所有人看見' — the decision to show her world to everyone (L22). duration 4.53s, motion synced to 106.0 BPM; 1:30 is the absolute instrumental floor (bass 0.02x), vocal only (L21 89.2 / L22 91.0). The exposed voice is the power, not silence. Avoid: extra fingers, deformed hands, inconsistent hair color, changed outfit, text artifacts, watermark, multiple characters",
+  "item_snapshot": [
+    {
+      "id": "char.luna",
+      "type": "character",
+      "text": "LUNA, a K-pop virtual idol: long deep-violet hair in a high braided ponytail with silver chain accents, white sleeveless mock-neck zip crop top, white cargo mini-skirt with black belt and hanging chain, black thigh strap on left leg, chunky white platform sneakers with white crew socks, silver bracelets on right wrist"
+    },
+    {
+      "id": "state.arena_blackout",
+      "type": "state",
+      "text": "near-total blackout on the arena: one hard overhead beam on the performer, everything else void"
+    },
+    {
+      "id": "scene.arena_lit",
+      "type": "scene",
+      "text": "a packed live-arena stage at full performance power: towering light rigs, LED floor, haze, spotlight banks, walls of light behind the performer, audience pit swelling below the stage edge"
+    },
+    {
+      "id": "look.breakdown_void",
+      "type": "look",
+      "text": "near-dark: one hard overhead beam on her face, everything else void black, fragile and exposed"
+    },
+    {
+      "id": "cam.bar_cuts",
+      "type": "camera_grammar",
+      "text": "every automated cut lands exactly on a bar line; hard cuts are the grammar of this edit"
+    },
+    {
+      "id": "style.mv",
+      "type": "style",
+      "text": "anime cel-shaded, clean line art, K-pop MV aesthetic, neon backlight, cinematic lighting; 16:9; high-detail generated video"
+    }
+  ],
+  "refs": [
+    {
+      "path": "assets/reference/luna_character_sheet.jpg",
+      "hash": "703ff0f65094c02d",
+      "sha256": "703ff0f65094c02d8e1de16488ba8afe3afb8f1b8ee759e872d0e53a7075843e"
+    }
+  ],
+  "settings": {
+    "start": 88.79,
+    "end": 93.32,
+    "dur": 4.53,
+    "bar": 40,
+    "section": "Breakdown",
+    "expression": "",
+    "ratio": "16:9",
+    "bpm": 106.0,
+    "item_ids": [
+      "char.luna",
+      "scene.arena_lit",
+      "state.arena_blackout",
+      "look.breakdown_void",
+      "style.mv",
+      "cam.bar_cuts"
+    ]
+  },
+  "continuity": {
+    "in": "hold on her eyes in the near-black, the beam holding her face",
+    "out": "eyes lift to the lens, decision made; the frame cuts to black on the last beat"
+  },
+  "lyric_lines": [
+    "L21",
+    "L22"
+  ],
+  "lyric_intent": "eyes to the lens on '讓你的世界被所有人看見' — the decision to show her world to everyone (L22)",
+  "caption": "",
+  "edit_intent": {
+    "in": 88.79,
+    "out": 93.32,
+    "trim_to_bar": true,
+    "transition": "hard cut",
+    "caption_overrides_subtitle": false
+  },
+  "negative": "extra fingers, deformed hands, inconsistent hair color, changed outfit, text artifacts, watermark, multiple characters",
+  "context_hash": "6eca5b2faa7535d9ef05ce3a31234c13e8a2a16c9455be770a19cde5df743efb",
+  "locked_at": null
+}

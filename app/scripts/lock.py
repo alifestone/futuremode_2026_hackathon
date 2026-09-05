@@ -8,8 +8,8 @@ context_hash binds prompt + settings + reference hashes so local execution and
 any web export can be reconciled later (decisions.md §9).
 
 Usage:
-    python app/scripts/lock.py [--project luna-comic]                  # lock all cuts
-    python app/scripts/lock.py --cuts S01,S04                          # lock a subset
+    python app/scripts/lock.py              # default project = luna-comic-2, lock all cuts
+    python app/scripts/lock.py --cuts S01,S04                         # lock a subset
     python app/scripts/lock.py --dry-run                               # validate only
 """
 import argparse
@@ -84,7 +84,7 @@ def build_package(project_dir: pathlib.Path, cut, manifest):
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__)
-    ap.add_argument("--project", default="luna-comic")
+    ap.add_argument("--project", default="luna-comic-2")
     ap.add_argument("--cuts", help="comma-separated cut ids; default all")
     ap.add_argument("--dry-run", action="store_true", help="validate, write nothing")
     args = ap.parse_args()

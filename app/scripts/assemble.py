@@ -11,7 +11,7 @@ The audio is the master clock: a short clip is held on its last frame rather
 than sliding later shots off the beat.
 
 Usage:
-    python app/scripts/assemble.py --project luna-comic            # -> out/LUNA_MV.mp4
+    python app/scripts/assemble.py              # default project = luna-comic-2 -> out/LUNA_MV.mp4
     python app/scripts/assemble.py --subs                          # burn lyrics/lyrics.srt
     python app/scripts/assemble.py --check                         # report what is missing
 """
@@ -42,7 +42,7 @@ def probe_duration(path):
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__)
-    ap.add_argument("--project", default="luna-comic")
+    ap.add_argument("--project", default="luna-comic-2")
     ap.add_argument("--subs", action="store_true")
     ap.add_argument("--height", type=int, default=1080)
     ap.add_argument("--check", action="store_true")
