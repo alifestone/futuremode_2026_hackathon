@@ -7,11 +7,13 @@ video storyboard (16:9). They stay separate on purpose — the two tracks carry
 different aspect ratios and different negative prompts, and merging them would
 make an edit to one silently rewrite the other.
 
-Prompts extend the comic's 4-element structure with the three things a video model
-needs and a still does not: where the shot opens, how long it runs, and how the
-motion sits on the beat.
+Prompts extend the comic's 4-element structure with what a video model needs and a
+still does not: the state of the world being rendered around her, where the shot
+opens, the line being sung over it, how long it runs, and how the motion sits on
+the beat.
 
-    character / expression / action+camera / opening framing / motion+duration / style
+    character / expression / action+camera / world state / opening framing /
+    sung line / motion+duration / style
 
 Usage:
     python scripts/build_shots.py                    # write out/shot_prompts.{json,md}
@@ -117,17 +119,75 @@ def framing_instruction(camera):
     return f"The opening frame {content_for(text, framing)}; the shot stays at that framing"
 
 
-def build_prompt(shot, defaults, character):
-    """Assemble the 5-element video prompt."""
+# The film's science-fiction grammar: one world-state per shot, so the sci-fi
+# reads as a single progression rather than per-shot effects. The song is about
+# generation ("一張空白的畫面等著第一束光出現", "從第一個 prompt 到最後一個鏡頭"),
+# so the world is literally rendered around her as she sings — void to wireframe
+# to material to full render, collapsed at the breakdown and rebuilt for the
+# final chorus. A shot's `render_stage` in shots.json selects its clause.
+RENDER_STAGES = {
+    "void": "the world around her is unrendered black, with nothing in it but a single "
+            "cold point of light",
+    "wireframe": "the environment exists only as glowing wireframe edges on black — "
+                 "no surfaces, no textures yet",
+    "materializing": "a render pass is sweeping over the wireframe, skinning edges with "
+                     "material as it goes; surfaces it has not reached are still flat "
+                     "untextured grey",
+    "prompt": "glowing prompt glyphs assemble in the air and collapse into finished solid "
+              "objects as each one completes",
+    "rendered": "the world is fully rendered — complete lighting, true reflections, "
+                "volumetric haze in the air",
+    "collapsing": "the rendered surfaces peel back to bare wireframe and drift apart into "
+                  "latent noise",
+    "regenerating": "the whole world snaps back into full render in one expanding pass, "
+                    "faster and brighter than it built the first time",
+    "collapse_to_point": "the rendered world folds inward and collapses down to one point "
+                         "of cold light",
+}
+
+
+def render_clause(shot):
+    stage = shot.get("render_stage")
+    if not stage:
+        return ""
+    if stage not in RENDER_STAGES:
+        raise SystemExit(f'{shot["id"]}: unknown render_stage {stage!r}. '
+                         f'Known: {", ".join(RENDER_STAGES)}')
+    return RENDER_STAGES[stage]
+
+
+def lyric_clause(shot, lyrics_by_id):
+    """The sung line, so the imagery can carry it.
+
+    Without this the model never saw a word of the song: the compiled prompt
+    listed character, expression, action, camera, duration and style, and the
+    shot's `lyrics` were carried into out/shot_prompts.json for humans only.
+    """
+    lines = [lyrics_by_id[lid]["text"] for lid in shot.get("lyric_lines", [])
+             if lid in lyrics_by_id]
+    if not lines:
+        return ""
+    sung = " / ".join(lines)
+    return (f"The line sung over this shot is 「{sung}」 — the imagery must carry that "
+            f"meaning, never spell it out as on-screen text")
+
+
+def build_prompt(shot, defaults, character, lyrics_by_id):
+    """Assemble the video prompt.
+
+        character / expression / action+camera / world state / opening framing /
+        sung line / motion+duration / style
+    """
     character_desc = ", ".join(character["locked_keywords"])
     parts = [
         f'{character["name"]}, a K-pop virtual idol: {character_desc}',
         f'expression: {shot["expression"]}',
         f'{shot["action"]}; camera: {shot["camera"]}',
     ]
-    framing = framing_instruction(shot["camera"])
-    if framing:
-        parts.append(framing)
+    for clause in (render_clause(shot), framing_instruction(shot["camera"]),
+                   lyric_clause(shot, lyrics_by_id)):
+        if clause:
+            parts.append(clause)
     parts += [
         f'duration {shot["dur"]:.2f}s, motion synced to {BPM} BPM; '
         f'{shot["sync"].rstrip(". ")}',
@@ -148,7 +208,7 @@ def compile_shots(project, book, lyrics_by_id):
 
     compiled = []
     for shot in book["shots"]:
-        prompt = build_prompt(shot, defaults, character)
+        prompt = build_prompt(shot, defaults, character, lyrics_by_id)
         compiled.append({
             "id": shot["id"],
             "section": shot["section"],
@@ -167,6 +227,7 @@ def compile_shots(project, book, lyrics_by_id):
             "negative": defaults["negative"],
             "aspect_ratio": defaults["aspect_ratio"],
             "character_ref": defaults["character_ref"],
+            "render_stage": shot.get("render_stage", ""),
             "hash": shot_hash(prompt, defaults["negative"], defaults["aspect_ratio"]),
         })
     return compiled

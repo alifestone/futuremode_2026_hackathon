@@ -89,18 +89,37 @@ def main():
 
     WORK.mkdir(parents=True, exist_ok=True)
     segments = []
+
+    # Every cut is a measured bar line, so each segment's length is taken from the
+    # timeline, not from its own duration: frames = round(end*fps) - round(start*fps).
+    # Rounding each shot's duration independently instead lets the error accumulate —
+    # measured on the first assembly, cuts drifted from -0.44s to +0.20s across the
+    # film, a 0.64s swing, and at 106 BPM one beat is only 0.566s.
+    lead_in = shots[0]["start"]
+    if lead_in > 0.01:
+        # The storyboard starts on bar 1 at 0.49s, not at 0. Without this the whole
+        # film runs early against the song by exactly that much.
+        black = WORK / "lead_in.mp4"
+        run(["ffmpeg", "-y", "-f", "lavfi", "-i",
+             f"color=c=black:s={width}x{args.height}:r={FPS}:d={lead_in:.3f}",
+             "-frames:v", str(round(lead_in * FPS)), "-c:v", "libx264", "-preset", "medium",
+             "-crf", "18", "-pix_fmt", "yuv420p", str(black)])
+        segments.append(black)
+        print(f"  lead-in {lead_in:.2f}s black to bar 1")
+
     for s in shots:
         clip = CLIPS / f"{s['id']}.mp4"
         seg = WORK / f"{s['id']}.mp4"
-        # tpad holds the final frame if the clip is short; trim then cuts to the slot.
+        frames = round(s["end"] * FPS) - round(s["start"] * FPS)
+        # tpad holds the final frame if the clip is short of its slot.
         vf = (f"scale={width}:{args.height}:force_original_aspect_ratio=decrease,"
               f"pad={width}:{args.height}:(ow-iw)/2:(oh-ih)/2,"
               f"fps={FPS},tpad=stop_mode=clone:stop_duration=2,setsar=1")
-        run(["ffmpeg", "-y", "-i", str(clip), "-t", f"{s['dur']:.3f}",
-             "-vf", vf, "-an", "-c:v", "libx264", "-preset", "medium", "-crf", "18",
+        run(["ffmpeg", "-y", "-i", str(clip), "-vf", vf, "-frames:v", str(frames),
+             "-an", "-c:v", "libx264", "-preset", "medium", "-crf", "18",
              "-pix_fmt", "yuv420p", str(seg)])
         segments.append(seg)
-        print(f"  cut {s['id']} -> {s['dur']:.2f}s")
+        print(f"  cut {s['id']} -> {frames} frames ({frames / FPS:.3f}s for a {s['dur']:.2f}s slot)")
 
     listfile = WORK / "concat.txt"
     listfile.write_text("".join(f"file '{p.name}'\n" for p in segments), encoding="utf-8")
