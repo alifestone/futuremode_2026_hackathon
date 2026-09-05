@@ -67,6 +67,40 @@
       "frames": 124,
       "steps": 8,
       "turbo": true
+    },
+    "S05": {
+      "status": "done",
+      "hash": "11cf4c260ac3",
+      "prompt_id": "b8b6bdac-1c62-4d33-b7c3-a67fd7d8e371",
+      "file": "out/clips/S05.mp4",
+      "backend": "local",
+      "slot_seconds": 4.52,
+      "seed": 3991708270,
+      "seconds_taken": 260,
+      "reference": "/home/lifestone/futuremode_2026_hackathon/luna-comic/assets/reference/luna_character_sheet.jpg",
+      "ts": 1788580644,
+      "width": 1024,
+      "height": 576,
+      "frames": 124,
+      "steps": 8,
+      "turbo": true
+    },
+    "S06": {
+      "status": "done",
+      "hash": "2876aa6494f7",
+      "prompt_id": "d42da6ca-2aeb-434a-97b1-8042d44c328b",
+      "file": "out/clips/S06.mp4",
+      "backend": "local",
+      "slot_seconds": 4.53,
+      "seed": 1134459259,
+      "seconds_taken": 260,
+      "reference": "/home/lifestone/futuremode_2026_hackathon/luna-comic/assets/reference/luna_character_sheet.jpg",
+      "ts": 1788580904,
+      "width": 1024,
+      "height": 576,
+      "frames": 124,
+      "steps": 8,
+      "turbo": true
     }
   }
 }
