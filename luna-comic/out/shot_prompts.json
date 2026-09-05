@@ -17,11 +17,11 @@
           "text": "訊號亮起 畫面開啟"
         }
       ],
-      "prompt": "LUNA, a K-pop virtual idol: long deep-violet hair in a high braided ponytail with silver chain accents, white sleeveless mock-neck zip crop top, white cargo mini-skirt with black belt and hanging chain, black thigh strap on left leg, chunky white platform sneakers with white crew socks, silver bracelets on right wrist. expression: calm. darkness, a single cold rim light traces LUNA's profile; she is perfectly still, eyes closed; camera: extreme close-up on closed eyes, slow push-in. The opening frame is filled edge to edge by her closed eyes, and nothing else is visible; the shot stays at that framing. duration 4.53s, motion synced to 106 BPM; no bass (0.12x) - hold on stillness, let the pad breathe. anime cel-shaded, clean line art, K-pop MV aesthetic, neon backlight, cinematic lighting",
+      "prompt": "LUNA, a K-pop virtual idol: long deep-violet hair in a high braided ponytail with silver chain accents, white sleeveless mock-neck zip crop top, white cargo mini-skirt with black belt and hanging chain, black thigh strap on left leg, chunky white platform sneakers with white crew socks, silver bracelets on right wrist. expression: calm. pitch darkness; a single cold rim light rakes across her closed eyelids and lashes, catching the edge of one eyebrow. She does not move at all; camera: extreme close-up on closed eyes, slow push-in. The opening frame is filled edge to edge by her closed eyes, and nothing else is visible; the shot stays at that framing. duration 4.53s, motion synced to 106 BPM; no bass (0.12x) - hold on stillness, let the pad breathe. anime cel-shaded, clean line art, K-pop MV aesthetic, neon backlight, cinematic lighting",
       "negative": "extra fingers, deformed hands, inconsistent hair color, changed outfit, text artifacts, watermark, multiple characters",
       "aspect_ratio": "16:9",
       "character_ref": "assets/reference/luna_character_sheet.jpg",
-      "hash": "6aa3bdc1ca30"
+      "hash": "d0f1b08a4937"
     },
     {
       "id": "S02",
@@ -79,7 +79,7 @@
       "end": 16.34,
       "dur": 4.53,
       "model": "ComfyUI MiniMax H3",
-      "status": "pending",
+      "status": "generated",
       "caption": "",
       "lyrics": [
         {
@@ -101,7 +101,7 @@
       "end": 20.86,
       "dur": 4.52,
       "model": "ComfyUI MiniMax H3",
-      "status": "pending",
+      "status": "generated",
       "caption": "LIVE AI",
       "lyrics": [
         {
@@ -127,7 +127,7 @@
       "end": 25.39,
       "dur": 4.53,
       "model": "ComfyUI MiniMax H3",
-      "status": "pending",
+      "status": "generated",
       "caption": "",
       "lyrics": [
         {
@@ -153,7 +153,7 @@
       "end": 29.92,
       "dur": 4.53,
       "model": "ComfyUI MiniMax H3",
-      "status": "pending",
+      "status": "generated",
       "caption": "",
       "lyrics": [
         {
@@ -179,7 +179,7 @@
       "end": 34.45,
       "dur": 4.53,
       "model": "ComfyUI MiniMax H3",
-      "status": "pending",
+      "status": "generated",
       "caption": "",
       "lyrics": [
         {
@@ -205,7 +205,7 @@
       "end": 36.71,
       "dur": 2.26,
       "model": "ComfyUI MiniMax H3",
-      "status": "pending",
+      "status": "generated",
       "caption": "",
       "lyrics": [
         {
@@ -227,7 +227,7 @@
       "end": 41.24,
       "dur": 4.53,
       "model": "ComfyUI MiniMax H3",
-      "status": "pending",
+      "status": "generated",
       "caption": "那真的是我嗎？",
       "lyrics": [
         {
@@ -253,7 +253,7 @@
       "end": 45.77,
       "dur": 4.53,
       "model": "ComfyUI MiniMax H3",
-      "status": "pending",
+      "status": "generated",
       "caption": "",
       "lyrics": [
         {
@@ -279,7 +279,7 @@
       "end": 50.3,
       "dur": 4.53,
       "model": "ComfyUI MiniMax H3",
-      "status": "pending",
+      "status": "generated",
       "caption": "",
       "lyrics": [
         {
@@ -305,7 +305,7 @@
       "end": 54.83,
       "dur": 4.53,
       "model": "ComfyUI MiniMax H3",
-      "status": "pending",
+      "status": "generated",
       "caption": "",
       "lyrics": [
         {
@@ -331,7 +331,7 @@
       "end": 57.09,
       "dur": 2.26,
       "model": "ComfyUI MiniMax H3",
-      "status": "pending",
+      "status": "generated",
       "caption": "",
       "lyrics": [
         {
@@ -353,7 +353,7 @@
       "end": 66.15,
       "dur": 9.06,
       "model": "ComfyUI MiniMax H3",
-      "status": "pending",
+      "status": "generated",
       "caption": "",
       "lyrics": [
         {
@@ -379,7 +379,7 @@
       "end": 70.68,
       "dur": 4.53,
       "model": "ComfyUI MiniMax H3",
-      "status": "pending",
+      "status": "generated",
       "caption": "",
       "lyrics": [
         {
@@ -401,7 +401,7 @@
       "end": 75.2,
       "dur": 4.52,
       "model": "ComfyUI MiniMax H3",
-      "status": "pending",
+      "status": "generated",
       "caption": "",
       "lyrics": [
         {
@@ -427,7 +427,7 @@
       "end": 79.73,
       "dur": 4.53,
       "model": "ComfyUI MiniMax H3",
-      "status": "pending",
+      "status": "generated",
       "caption": "",
       "lyrics": [
         {
@@ -453,7 +453,7 @@
       "end": 84.26,
       "dur": 4.53,
       "model": "ComfyUI MiniMax H3",
-      "status": "pending",
+      "status": "generated",
       "caption": "",
       "lyrics": [
         {
@@ -479,7 +479,7 @@
       "end": 88.79,
       "dur": 4.53,
       "model": "ComfyUI MiniMax H3",
-      "status": "pending",
+      "status": "generated",
       "caption": "",
       "lyrics": [
         {
@@ -505,7 +505,7 @@
       "end": 93.32,
       "dur": 4.53,
       "model": "ComfyUI MiniMax H3",
-      "status": "pending",
+      "status": "generated",
       "caption": "",
       "lyrics": [
         {
@@ -531,7 +531,7 @@
       "end": 102.38,
       "dur": 9.06,
       "model": "ComfyUI MiniMax H3",
-      "status": "pending",
+      "status": "generated",
       "caption": "LIVE AI",
       "lyrics": [
         {
@@ -561,7 +561,7 @@
       "end": 111.44,
       "dur": 9.06,
       "model": "ComfyUI MiniMax H3",
-      "status": "pending",
+      "status": "generated",
       "caption": "",
       "lyrics": [
         {
@@ -591,7 +591,7 @@
       "end": 118.22,
       "dur": 6.78,
       "model": "ComfyUI MiniMax H3",
-      "status": "pending",
+      "status": "generated",
       "caption": "",
       "lyrics": [
         {
@@ -621,7 +621,7 @@
       "end": 129.55,
       "dur": 11.33,
       "model": "ComfyUI MiniMax H3",
-      "status": "pending",
+      "status": "generated",
       "caption": "",
       "lyrics": [
         {
@@ -655,7 +655,7 @@
       "end": 134.3,
       "dur": 4.75,
       "model": "ComfyUI MiniMax H3",
-      "status": "pending",
+      "status": "generated",
       "caption": "See you on the next stage.",
       "lyrics": [
         {

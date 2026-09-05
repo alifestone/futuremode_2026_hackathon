@@ -8,12 +8,12 @@ Generate **S12 first** and approve it, then use *its output* as the reference im
 
 ### S01 · 0.49–5.02s (4.53s) · bar 1 · Intro
 
-- **hash** `6aa3bdc1ca30` · **status** generated · **ratio** 16:9
+- **hash** `d0f1b08a4937` · **status** generated · **ratio** 16:9
 - **reference** `assets/reference/luna_character_sheet.jpg`
 - **lyric** L01 「訊號亮起 畫面開啟」
 
 ```
-LUNA, a K-pop virtual idol: long deep-violet hair in a high braided ponytail with silver chain accents, white sleeveless mock-neck zip crop top, white cargo mini-skirt with black belt and hanging chain, black thigh strap on left leg, chunky white platform sneakers with white crew socks, silver bracelets on right wrist. expression: calm. darkness, a single cold rim light traces LUNA's profile; she is perfectly still, eyes closed; camera: extreme close-up on closed eyes, slow push-in. The opening frame is filled edge to edge by her closed eyes, and nothing else is visible; the shot stays at that framing. duration 4.53s, motion synced to 106 BPM; no bass (0.12x) - hold on stillness, let the pad breathe. anime cel-shaded, clean line art, K-pop MV aesthetic, neon backlight, cinematic lighting
+LUNA, a K-pop virtual idol: long deep-violet hair in a high braided ponytail with silver chain accents, white sleeveless mock-neck zip crop top, white cargo mini-skirt with black belt and hanging chain, black thigh strap on left leg, chunky white platform sneakers with white crew socks, silver bracelets on right wrist. expression: calm. pitch darkness; a single cold rim light rakes across her closed eyelids and lashes, catching the edge of one eyebrow. She does not move at all; camera: extreme close-up on closed eyes, slow push-in. The opening frame is filled edge to edge by her closed eyes, and nothing else is visible; the shot stays at that framing. duration 4.53s, motion synced to 106 BPM; no bass (0.12x) - hold on stillness, let the pad breathe. anime cel-shaded, clean line art, K-pop MV aesthetic, neon backlight, cinematic lighting
 ```
 
 Negative:
@@ -57,7 +57,7 @@ extra fingers, deformed hands, inconsistent hair color, changed outfit, text art
 
 ### S04 · 11.81–16.34s (4.53s) · bar 6 · Build
 
-- **hash** `caf11d74e138` · **status** pending · **ratio** 16:9
+- **hash** `caf11d74e138` · **status** generated · **ratio** 16:9
 - **reference** `assets/reference/luna_character_sheet.jpg`
 - **lyric** L03 「321 LIVE AI Li Li Live AI」
 
@@ -73,7 +73,7 @@ extra fingers, deformed hands, inconsistent hair color, changed outfit, text art
 
 ### S05 · 16.34–20.86s (4.52s) · bar 8 · Build
 
-- **hash** `11cf4c260ac3` · **status** pending · **ratio** 16:9
+- **hash** `11cf4c260ac3` · **status** generated · **ratio** 16:9
 - **reference** `assets/reference/luna_character_sheet.jpg`
 - **caption card** 「LIVE AI」 (overrides lyric subtitle)
 - **lyric** L03 「321 LIVE AI Li Li Live AI」
@@ -91,7 +91,7 @@ extra fingers, deformed hands, inconsistent hair color, changed outfit, text art
 
 ### S06 · 20.86–25.39s (4.53s) · bar 10 · Verse 1A
 
-- **hash** `2876aa6494f7` · **status** pending · **ratio** 16:9
+- **hash** `2876aa6494f7` · **status** generated · **ratio** 16:9
 - **reference** `assets/reference/luna_character_sheet.jpg`
 - **lyric** L04 「一張空白的畫面等著第一束光出現」
 - **lyric** L05 「一個還沒有人看過的世界正在指尖慢慢浮現」
@@ -108,7 +108,7 @@ extra fingers, deformed hands, inconsistent hair color, changed outfit, text art
 
 ### S07 · 25.39–29.92s (4.53s) · bar 12 · Verse 1A
 
-- **hash** `8cf9fd1ee1bd` · **status** pending · **ratio** 16:9
+- **hash** `8cf9fd1ee1bd` · **status** generated · **ratio** 16:9
 - **reference** `assets/reference/luna_character_sheet.jpg`
 - **lyric** L05 「一個還沒有人看過的世界正在指尖慢慢浮現」
 - **lyric** L06 「沒有攝影棚 沒有既定劇本 只有時間不停往前」
@@ -125,7 +125,7 @@ extra fingers, deformed hands, inconsistent hair color, changed outfit, text art
 
 ### S08 · 29.92–34.45s (4.53s) · bar 14 · Verse 1B
 
-- **hash** `f1a62411e2d3` · **status** pending · **ratio** 16:9
+- **hash** `f1a62411e2d3` · **status** generated · **ratio** 16:9
 - **reference** `assets/reference/luna_character_sheet.jpg`
 - **lyric** L06 「沒有攝影棚 沒有既定劇本 只有時間不停往前」
 - **lyric** L07 「把腦海裡不可能的畫面現在全部變成眼前」
@@ -142,7 +142,7 @@ extra fingers, deformed hands, inconsistent hair color, changed outfit, text art
 
 ### S09 · 34.45–36.71s (2.26s) · bar 16 · Verse 1B
 
-- **hash** `3a5120b18d25` · **status** pending · **ratio** 16:9
+- **hash** `3a5120b18d25` · **status** generated · **ratio** 16:9
 - **reference** `assets/reference/luna_character_sheet.jpg`
 - **lyric** L07 「把腦海裡不可能的畫面現在全部變成眼前」
 
@@ -158,7 +158,7 @@ extra fingers, deformed hands, inconsistent hair color, changed outfit, text art
 
 ### S10 · 36.71–41.24s (4.53s) · bar 17 · Pre-chorus
 
-- **hash** `df3dc4eff3eb` · **status** pending · **ratio** 16:9
+- **hash** `df3dc4eff3eb` · **status** generated · **ratio** 16:9
 - **reference** `assets/reference/luna_character_sheet.jpg`
 - **caption card** 「那真的是我嗎？」 (overrides lyric subtitle)
 - **lyric** L07 「把腦海裡不可能的畫面現在全部變成眼前」
@@ -176,7 +176,7 @@ extra fingers, deformed hands, inconsistent hair color, changed outfit, text art
 
 ### S11 · 41.24–45.77s (4.53s) · bar 19 · Pre-chorus
 
-- **hash** `00a7f923e3a8` · **status** pending · **ratio** 16:9
+- **hash** `00a7f923e3a8` · **status** generated · **ratio** 16:9
 - **reference** `assets/reference/luna_character_sheet.jpg`
 - **lyric** L09 「每一次生成都是新的宇宙」
 - **lyric** L10 「時間正在倒數沒有人可以停留」
@@ -193,7 +193,7 @@ extra fingers, deformed hands, inconsistent hair color, changed outfit, text art
 
 ### S12 · 45.77–50.30s (4.53s) · bar 21 · Chorus 1
 
-- **hash** `5cd886f735d1` · **status** pending · **ratio** 16:9
+- **hash** `5cd886f735d1` · **status** generated · **ratio** 16:9
 - **reference** `assets/reference/luna_character_sheet.jpg`
 - **lyric** L11 「這一刻創意決定所有」
 - **lyric** L12 「LIVE AI 現在就創造未來」
@@ -210,7 +210,7 @@ extra fingers, deformed hands, inconsistent hair color, changed outfit, text art
 
 ### S13 · 50.30–54.83s (4.53s) · bar 23 · Chorus 1
 
-- **hash** `0f2384894a39` · **status** pending · **ratio** 16:9
+- **hash** `0f2384894a39` · **status** generated · **ratio** 16:9
 - **reference** `assets/reference/luna_character_sheet.jpg`
 - **lyric** L12 「LIVE AI 現在就創造未來」
 - **lyric** L13 「讓想像穿越畫面之外」
@@ -227,7 +227,7 @@ extra fingers, deformed hands, inconsistent hair color, changed outfit, text art
 
 ### S14 · 54.83–57.09s (2.26s) · bar 25 · Chorus 1
 
-- **hash** `592b55324e44` · **status** pending · **ratio** 16:9
+- **hash** `592b55324e44` · **status** generated · **ratio** 16:9
 - **reference** `assets/reference/luna_character_sheet.jpg`
 - **lyric** L13 「讓想像穿越畫面之外」
 
@@ -243,7 +243,7 @@ extra fingers, deformed hands, inconsistent hair color, changed outfit, text art
 
 ### S15 · 57.09–66.15s (9.06s) · bar 26 · Chorus 1 ext.
 
-- **hash** `681be432011f` · **status** pending · **ratio** 16:9
+- **hash** `681be432011f` · **status** generated · **ratio** 16:9
 - **reference** `assets/reference/luna_character_sheet.jpg`
 - **lyric** L14 「LIVE AI 讓世界重新打開」
 - **lyric** L15 「沒有答案只有你怎麼去創造」
@@ -260,7 +260,7 @@ extra fingers, deformed hands, inconsistent hair color, changed outfit, text art
 
 ### S16 · 66.15–70.68s (4.53s) · bar 30 · Chorus 1 ext.
 
-- **hash** `6a34745e93cb` · **status** pending · **ratio** 16:9
+- **hash** `6a34745e93cb` · **status** generated · **ratio** 16:9
 - **reference** `assets/reference/luna_character_sheet.jpg`
 - **lyric** L16 「讓光影 讓聲音 讓故事全部醒來」
 
@@ -276,7 +276,7 @@ extra fingers, deformed hands, inconsistent hair color, changed outfit, text art
 
 ### S17 · 70.68–75.20s (4.52s) · bar 32 · Chorus 1 ext.
 
-- **hash** `f85ebeaa89fb` · **status** pending · **ratio** 16:9
+- **hash** `f85ebeaa89fb` · **status** generated · **ratio** 16:9
 - **reference** `assets/reference/luna_character_sheet.jpg`
 - **lyric** L16 「讓光影 讓聲音 讓故事全部醒來」
 - **lyric** L17 「把不可能變成現在」
@@ -293,7 +293,7 @@ extra fingers, deformed hands, inconsistent hair color, changed outfit, text art
 
 ### S18 · 75.20–79.73s (4.53s) · bar 34 · Verse 2
 
-- **hash** `fd57bd041b71` · **status** pending · **ratio** 16:9
+- **hash** `fd57bd041b71` · **status** generated · **ratio** 16:9
 - **reference** `assets/reference/luna_character_sheet.jpg`
 - **lyric** L18 「CSFCCA LIVE AI」
 - **lyric** L19 「Create it Make it Show me your world world w w w world」
@@ -310,7 +310,7 @@ extra fingers, deformed hands, inconsistent hair color, changed outfit, text art
 
 ### S19 · 79.73–84.26s (4.53s) · bar 36 · Verse 2
 
-- **hash** `0a4a40cb1a68` · **status** pending · **ratio** 16:9
+- **hash** `0a4a40cb1a68` · **status** generated · **ratio** 16:9
 - **reference** `assets/reference/luna_character_sheet.jpg`
 - **lyric** L19 「Create it Make it Show me your world world w w w world」
 - **lyric** L20 「Dream it Build it Let the future unfold fold」
@@ -327,7 +327,7 @@ extra fingers, deformed hands, inconsistent hair color, changed outfit, text art
 
 ### S20 · 84.26–88.79s (4.53s) · bar 38 · Breakdown
 
-- **hash** `82b1532e5425` · **status** pending · **ratio** 16:9
+- **hash** `82b1532e5425` · **status** generated · **ratio** 16:9
 - **reference** `assets/reference/luna_character_sheet.jpg`
 - **lyric** L20 「Dream it Build it Let the future unfold fold」
 - **lyric** L21 「321 LIVE AI 現在就創造未來」
@@ -344,7 +344,7 @@ extra fingers, deformed hands, inconsistent hair color, changed outfit, text art
 
 ### S21 · 88.79–93.32s (4.53s) · bar 40 · Breakdown
 
-- **hash** `9e2c5d3e713c` · **status** pending · **ratio** 16:9
+- **hash** `9e2c5d3e713c` · **status** generated · **ratio** 16:9
 - **reference** `assets/reference/luna_character_sheet.jpg`
 - **lyric** L21 「321 LIVE AI 現在就創造未來」
 - **lyric** L22 「讓你的世界被所有人看見」
@@ -361,7 +361,7 @@ extra fingers, deformed hands, inconsistent hair color, changed outfit, text art
 
 ### S22 · 93.32–102.38s (9.06s) · bar 42 · Final chorus
 
-- **hash** `f50c053f202c` · **status** pending · **ratio** 16:9
+- **hash** `f50c053f202c` · **status** generated · **ratio** 16:9
 - **reference** `assets/reference/luna_character_sheet.jpg`
 - **caption card** 「LIVE AI」 (overrides lyric subtitle)
 - **lyric** L22 「讓你的世界被所有人看見」
@@ -380,7 +380,7 @@ extra fingers, deformed hands, inconsistent hair color, changed outfit, text art
 
 ### S23A · 102.38–111.44s (9.06s) · bar 46 · Final chorus
 
-- **hash** `02770445e8b6` · **status** pending · **ratio** 16:9
+- **hash** `02770445e8b6` · **status** generated · **ratio** 16:9
 - **reference** `assets/reference/luna_character_sheet.jpg`
 - **lyric** L24 「每一個靈感都可能改變明天」
 - **lyric** L25 「讓電影 讓音樂 讓動畫重新醒來」
@@ -398,7 +398,7 @@ extra fingers, deformed hands, inconsistent hair color, changed outfit, text art
 
 ### S23B · 111.44–118.22s (6.78s) · bar 50 · Final chorus
 
-- **hash** `9f5ad20cb7c9` · **status** pending · **ratio** 16:9
+- **hash** `9f5ad20cb7c9` · **status** generated · **ratio** 16:9
 - **reference** `assets/reference/luna_character_sheet.jpg`
 - **lyric** L26 「這不是等待未來」
 - **lyric** L27 「LIVE AI」
@@ -416,7 +416,7 @@ extra fingers, deformed hands, inconsistent hair color, changed outfit, text art
 
 ### S24A · 118.22–129.55s (11.33s) · bar 53 · Climax / Outro
 
-- **hash** `6dbdd5b8e123` · **status** pending · **ratio** 16:9
+- **hash** `6dbdd5b8e123` · **status** generated · **ratio** 16:9
 - **reference** `assets/reference/luna_character_sheet.jpg`
 - **lyric** L28 「讓想像成真」
 - **lyric** L29 「LIVE AI」
@@ -435,7 +435,7 @@ extra fingers, deformed hands, inconsistent hair color, changed outfit, text art
 
 ### S24B · 129.55–134.30s (4.75s) · bar 58 · Climax / Outro
 
-- **hash** `d366ecb8a1ae` · **status** pending · **ratio** 16:9
+- **hash** `d366ecb8a1ae` · **status** generated · **ratio** 16:9
 - **reference** `assets/reference/luna_character_sheet.jpg`
 - **caption card** 「See you on the next stage.」 (overrides lyric subtitle)
 - **lyric** L31 「讓未來發生」
