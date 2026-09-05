@@ -1,0 +1,21 @@
+{
+  "shots": {
+    "S03": {
+      "status": "done",
+      "hash": "5eec69b44a06",
+      "prompt_id": "9a571fc4-ccc7-4f83-9396-070e734abc71",
+      "file": "out/clips/S03.mp4",
+      "backend": "local",
+      "slot_seconds": 2.27,
+      "seed": 4067274346,
+      "seconds_taken": 50,
+      "reference": "/home/lifestone/futuremode_2026_hackathon/luna-comic/assets/reference/luna_character_sheet.jpg",
+      "ts": 1788574779,
+      "width": 736,
+      "height": 416,
+      "frames": 56,
+      "steps": 8,
+      "turbo": true
+    }
+  }
+}
