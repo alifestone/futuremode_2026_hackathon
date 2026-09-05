@@ -8,12 +8,12 @@ Generate **S12 first** and approve it, then use *its output* as the reference im
 
 ### S01 · 0.49–5.02s (4.53s) · bar 1 · Intro
 
-- **hash** `62615d8a1783` · **status** pending · **ratio** 16:9
+- **hash** `6aa3bdc1ca30` · **status** generated · **ratio** 16:9
 - **reference** `assets/reference/luna_character_sheet.jpg`
 - **lyric** L01 「訊號亮起 畫面開啟」
 
 ```
-LUNA, a K-pop virtual idol: long deep-violet hair in a high braided ponytail with silver chain accents, white sleeveless mock-neck zip crop top, white cargo mini-skirt with black belt and hanging chain, black thigh strap on left leg, chunky white platform sneakers with white crew socks, silver bracelets on right wrist. expression: calm. darkness, a single cold rim light traces LUNA's profile; she is perfectly still, eyes closed; camera: extreme close-up on closed eyes, slow push-in. duration 4.53s, motion synced to 106 BPM; no bass (0.12x) - hold on stillness, let the pad breathe. anime cel-shaded, clean line art, K-pop MV aesthetic, neon backlight, cinematic lighting
+LUNA, a K-pop virtual idol: long deep-violet hair in a high braided ponytail with silver chain accents, white sleeveless mock-neck zip crop top, white cargo mini-skirt with black belt and hanging chain, black thigh strap on left leg, chunky white platform sneakers with white crew socks, silver bracelets on right wrist. expression: calm. darkness, a single cold rim light traces LUNA's profile; she is perfectly still, eyes closed; camera: extreme close-up on closed eyes, slow push-in. The opening frame is filled edge to edge by her closed eyes, and nothing else is visible; the shot stays at that framing. duration 4.53s, motion synced to 106 BPM; no bass (0.12x) - hold on stillness, let the pad breathe. anime cel-shaded, clean line art, K-pop MV aesthetic, neon backlight, cinematic lighting
 ```
 
 Negative:
@@ -24,13 +24,13 @@ extra fingers, deformed hands, inconsistent hair color, changed outfit, text art
 
 ### S02 · 5.02–9.54s (4.52s) · bar 3 · Intro
 
-- **hash** `5bb39fb2cee8` · **status** pending · **ratio** 16:9
+- **hash** `64e548d9ed23` · **status** generated · **ratio** 16:9
 - **reference** `assets/reference/luna_character_sheet.jpg`
 - **lyric** L02 「倒數開始 世界重啟」
 - **lyric** L03 「321 LIVE AI Li Li Live AI」
 
 ```
-LUNA, a K-pop virtual idol: long deep-violet hair in a high braided ponytail with silver chain accents, white sleeveless mock-neck zip crop top, white cargo mini-skirt with black belt and hanging chain, black thigh strap on left leg, chunky white platform sneakers with white crew socks, silver bracelets on right wrist. expression: thinking. she stands alone at centre stage, tiny in an empty dark arena, chains on her skirt catching a faint violet glint; camera: wide, high angle, static. duration 4.52s, motion synced to 106 BPM; airy pad only - emptiness is the point. anime cel-shaded, clean line art, K-pop MV aesthetic, neon backlight, cinematic lighting
+LUNA, a K-pop virtual idol: long deep-violet hair in a high braided ponytail with silver chain accents, white sleeveless mock-neck zip crop top, white cargo mini-skirt with black belt and hanging chain, black thigh strap on left leg, chunky white platform sneakers with white crew socks, silver bracelets on right wrist. expression: thinking. she stands alone at centre stage, tiny in an empty dark arena, chains on her skirt catching a faint violet glint; camera: wide, high angle, static. The opening frame shows her small in a large space, with room visible on every side of her; the shot stays at that framing. duration 4.52s, motion synced to 106 BPM; airy pad only - emptiness is the point. anime cel-shaded, clean line art, K-pop MV aesthetic, neon backlight, cinematic lighting
 ```
 
 Negative:
@@ -41,12 +41,12 @@ extra fingers, deformed hands, inconsistent hair color, changed outfit, text art
 
 ### S03 · 9.54–11.81s (2.27s) · bar 5 · Intro
 
-- **hash** `5eec69b44a06` · **status** pending · **ratio** 16:9
+- **hash** `ca105c77ddb3` · **status** generated · **ratio** 16:9
 - **reference** `assets/reference/luna_character_sheet.jpg`
 - **lyric** L03 「321 LIVE AI Li Li Live AI」
 
 ```
-LUNA, a K-pop virtual idol: long deep-violet hair in a high braided ponytail with silver chain accents, white sleeveless mock-neck zip crop top, white cargo mini-skirt with black belt and hanging chain, black thigh strap on left leg, chunky white platform sneakers with white crew socks, silver bracelets on right wrist. expression: calm. her eyes snap open on the last beat before the bass, violet iris catching light; camera: medium close-up, 3/4, slow tilt up. duration 2.27s, motion synced to 106 BPM; 1 bar - land the eye-open exactly on 0:11.81. anime cel-shaded, clean line art, K-pop MV aesthetic, neon backlight, cinematic lighting
+LUNA, a K-pop virtual idol: long deep-violet hair in a high braided ponytail with silver chain accents, white sleeveless mock-neck zip crop top, white cargo mini-skirt with black belt and hanging chain, black thigh strap on left leg, chunky white platform sneakers with white crew socks, silver bracelets on right wrist. expression: calm. her eyes snap open on the last beat before the bass, violet iris catching light; camera: medium close-up, 3/4, slow tilt up. The opening frame holds her from the shoulders up; the shot stays at that framing. duration 2.27s, motion synced to 106 BPM; 1 bar - land the eye-open exactly on 0:11.81. anime cel-shaded, clean line art, K-pop MV aesthetic, neon backlight, cinematic lighting
 ```
 
 Negative:
@@ -57,12 +57,12 @@ extra fingers, deformed hands, inconsistent hair color, changed outfit, text art
 
 ### S04 · 11.81–16.34s (4.53s) · bar 6 · Build
 
-- **hash** `d389d9c09ee1` · **status** pending · **ratio** 16:9
+- **hash** `caf11d74e138` · **status** pending · **ratio** 16:9
 - **reference** `assets/reference/luna_character_sheet.jpg`
 - **lyric** L03 「321 LIVE AI Li Li Live AI」
 
 ```
-LUNA, a K-pop virtual idol: long deep-violet hair in a high braided ponytail with silver chain accents, white sleeveless mock-neck zip crop top, white cargo mini-skirt with black belt and hanging chain, black thigh strap on left leg, chunky white platform sneakers with white crew socks, silver bracelets on right wrist. expression: confident smirk. BASS HITS - every stage light snaps on behind her at once, silhouette blowing out to full colour, ponytail lifting; camera: low angle full body, fast dolly-in. duration 4.53s, motion synced to 106 BPM; HARD CUT on bass entry (+5.5 dB). The first real impact. anime cel-shaded, clean line art, K-pop MV aesthetic, neon backlight, cinematic lighting
+LUNA, a K-pop virtual idol: long deep-violet hair in a high braided ponytail with silver chain accents, white sleeveless mock-neck zip crop top, white cargo mini-skirt with black belt and hanging chain, black thigh strap on left leg, chunky white platform sneakers with white crew socks, silver bracelets on right wrist. expression: confident smirk. BASS HITS - every stage light snaps on behind her at once, silhouette blowing out to full colour, ponytail lifting; camera: low angle full body, fast dolly-in. The opening frame shows her whole body head to toe, filling the height of the frame; the shot stays at that framing. duration 4.53s, motion synced to 106 BPM; HARD CUT on bass entry (+5.5 dB). The first real impact. anime cel-shaded, clean line art, K-pop MV aesthetic, neon backlight, cinematic lighting
 ```
 
 Negative:
@@ -73,14 +73,14 @@ extra fingers, deformed hands, inconsistent hair color, changed outfit, text art
 
 ### S05 · 16.34–20.86s (4.52s) · bar 8 · Build
 
-- **hash** `8bc5572417c3` · **status** pending · **ratio** 16:9
+- **hash** `11cf4c260ac3` · **status** pending · **ratio** 16:9
 - **reference** `assets/reference/luna_character_sheet.jpg`
 - **caption card** 「LIVE AI」 (overrides lyric subtitle)
 - **lyric** L03 「321 LIVE AI Li Li Live AI」
 - **lyric** L04 「一張空白的畫面等著第一束光出現」
 
 ```
-LUNA, a K-pop virtual idol: long deep-violet hair in a high braided ponytail with silver chain accents, white sleeveless mock-neck zip crop top, white cargo mini-skirt with black belt and hanging chain, black thigh strap on left leg, chunky white platform sneakers with white crew socks, silver bracelets on right wrist. expression: confident smirk. first dance hook - sharp arm snap on each downbeat, camera circling 90 degrees; camera: orbit around her, medium full shot. duration 4.52s, motion synced to 106 BPM; downbeats at 16.34 / 18.60 / 20.86 - snap poses on each. anime cel-shaded, clean line art, K-pop MV aesthetic, neon backlight, cinematic lighting
+LUNA, a K-pop virtual idol: long deep-violet hair in a high braided ponytail with silver chain accents, white sleeveless mock-neck zip crop top, white cargo mini-skirt with black belt and hanging chain, black thigh strap on left leg, chunky white platform sneakers with white crew socks, silver bracelets on right wrist. expression: confident smirk. first dance hook - sharp arm snap on each downbeat, camera circling 90 degrees; camera: orbit around her, medium full shot. The opening frame holds her from the knees up; the shot stays at that framing. duration 4.52s, motion synced to 106 BPM; downbeats at 16.34 / 18.60 / 20.86 - snap poses on each. anime cel-shaded, clean line art, K-pop MV aesthetic, neon backlight, cinematic lighting
 ```
 
 Negative:
@@ -91,13 +91,13 @@ extra fingers, deformed hands, inconsistent hair color, changed outfit, text art
 
 ### S06 · 20.86–25.39s (4.53s) · bar 10 · Verse 1A
 
-- **hash** `3d22790fb676` · **status** pending · **ratio** 16:9
+- **hash** `2876aa6494f7` · **status** pending · **ratio** 16:9
 - **reference** `assets/reference/luna_character_sheet.jpg`
 - **lyric** L04 「一張空白的畫面等著第一束光出現」
 - **lyric** L05 「一個還沒有人看過的世界正在指尖慢慢浮現」
 
 ```
-LUNA, a K-pop virtual idol: long deep-violet hair in a high braided ponytail with silver chain accents, white sleeveless mock-neck zip crop top, white cargo mini-skirt with black belt and hanging chain, black thigh strap on left leg, chunky white platform sneakers with white crew socks, silver bracelets on right wrist. expression: calm. arrangement thins out; she walks a neon-wet city street at night, reflections rippling under her platform sneakers; camera: tracking side profile, walking. duration 4.53s, motion synced to 106 BPM; bass drops to 0.62x - pull back to narrative. anime cel-shaded, clean line art, K-pop MV aesthetic, neon backlight, cinematic lighting
+LUNA, a K-pop virtual idol: long deep-violet hair in a high braided ponytail with silver chain accents, white sleeveless mock-neck zip crop top, white cargo mini-skirt with black belt and hanging chain, black thigh strap on left leg, chunky white platform sneakers with white crew socks, silver bracelets on right wrist. expression: calm. arrangement thins out; she walks a neon-wet city street at night, reflections rippling under her platform sneakers; camera: tracking side profile, walking. The opening frame holds her profile from the side; the shot stays at that framing. duration 4.53s, motion synced to 106 BPM; bass drops to 0.62x - pull back to narrative. anime cel-shaded, clean line art, K-pop MV aesthetic, neon backlight, cinematic lighting
 ```
 
 Negative:
@@ -108,13 +108,13 @@ extra fingers, deformed hands, inconsistent hair color, changed outfit, text art
 
 ### S07 · 25.39–29.92s (4.53s) · bar 12 · Verse 1A
 
-- **hash** `89c14b50c5b6` · **status** pending · **ratio** 16:9
+- **hash** `8cf9fd1ee1bd` · **status** pending · **ratio** 16:9
 - **reference** `assets/reference/luna_character_sheet.jpg`
 - **lyric** L05 「一個還沒有人看過的世界正在指尖慢慢浮現」
 - **lyric** L06 「沒有攝影棚 沒有既定劇本 只有時間不停往前」
 
 ```
-LUNA, a K-pop virtual idol: long deep-violet hair in a high braided ponytail with silver chain accents, white sleeveless mock-neck zip crop top, white cargo mini-skirt with black belt and hanging chain, black thigh strap on left leg, chunky white platform sneakers with white crew socks, silver bracelets on right wrist. expression: thinking. she glances up at something off-frame, city bokeh swimming behind her; camera: close-up on face, shallow focus, handheld drift. duration 4.53s, motion synced to 106 BPM; vocal band peaks - hold the face. anime cel-shaded, clean line art, K-pop MV aesthetic, neon backlight, cinematic lighting
+LUNA, a K-pop virtual idol: long deep-violet hair in a high braided ponytail with silver chain accents, white sleeveless mock-neck zip crop top, white cargo mini-skirt with black belt and hanging chain, black thigh strap on left leg, chunky white platform sneakers with white crew socks, silver bracelets on right wrist. expression: thinking. she glances up at something off-frame, city bokeh swimming behind her; camera: close-up on face, shallow focus, handheld drift. The opening frame holds her face and shoulders, her head filling most of the height; the shot stays at that framing. duration 4.53s, motion synced to 106 BPM; vocal band peaks - hold the face. anime cel-shaded, clean line art, K-pop MV aesthetic, neon backlight, cinematic lighting
 ```
 
 Negative:
@@ -125,13 +125,13 @@ extra fingers, deformed hands, inconsistent hair color, changed outfit, text art
 
 ### S08 · 29.92–34.45s (4.53s) · bar 14 · Verse 1B
 
-- **hash** `ae212c13f18b` · **status** pending · **ratio** 16:9
+- **hash** `f1a62411e2d3` · **status** pending · **ratio** 16:9
 - **reference** `assets/reference/luna_character_sheet.jpg`
 - **lyric** L06 「沒有攝影棚 沒有既定劇本 只有時間不停往前」
 - **lyric** L07 「把腦海裡不可能的畫面現在全部變成眼前」
 
 ```
-LUNA, a K-pop virtual idol: long deep-violet hair in a high braided ponytail with silver chain accents, white sleeveless mock-neck zip crop top, white cargo mini-skirt with black belt and hanging chain, black thigh strap on left leg, chunky white platform sneakers with white crew socks, silver bracelets on right wrist. expression: surprised. she turns; a colossal holographic billboard across the street is playing her own face back at her; camera: over-the-shoulder, rack focus to background. duration 4.53s, motion synced to 106 BPM; rack focus on the bar line at 32.19. anime cel-shaded, clean line art, K-pop MV aesthetic, neon backlight, cinematic lighting
+LUNA, a K-pop virtual idol: long deep-violet hair in a high braided ponytail with silver chain accents, white sleeveless mock-neck zip crop top, white cargo mini-skirt with black belt and hanging chain, black thigh strap on left leg, chunky white platform sneakers with white crew socks, silver bracelets on right wrist. expression: surprised. she turns; a colossal holographic billboard across the street is playing her own face back at her; camera: over-the-shoulder, rack focus to background. The opening frame looks past her shoulder, which sits large in the foreground; the shot stays at that framing. duration 4.53s, motion synced to 106 BPM; rack focus on the bar line at 32.19. anime cel-shaded, clean line art, K-pop MV aesthetic, neon backlight, cinematic lighting
 ```
 
 Negative:
@@ -142,12 +142,12 @@ extra fingers, deformed hands, inconsistent hair color, changed outfit, text art
 
 ### S09 · 34.45–36.71s (2.26s) · bar 16 · Verse 1B
 
-- **hash** `8e201f804fbc` · **status** pending · **ratio** 16:9
+- **hash** `3a5120b18d25` · **status** pending · **ratio** 16:9
 - **reference** `assets/reference/luna_character_sheet.jpg`
 - **lyric** L07 「把腦海裡不可能的畫面現在全部變成眼前」
 
 ```
-LUNA, a K-pop virtual idol: long deep-violet hair in a high braided ponytail with silver chain accents, white sleeveless mock-neck zip crop top, white cargo mini-skirt with black belt and hanging chain, black thigh strap on left leg, chunky white platform sneakers with white crew socks, silver bracelets on right wrist. expression: surprised. the projected face glitches - scanlines tear, colour channels split apart; camera: insert, extreme close-up on the hologram. duration 2.26s, motion synced to 106 BPM; 1 bar stinger. anime cel-shaded, clean line art, K-pop MV aesthetic, neon backlight, cinematic lighting
+LUNA, a K-pop virtual idol: long deep-violet hair in a high braided ponytail with silver chain accents, white sleeveless mock-neck zip crop top, white cargo mini-skirt with black belt and hanging chain, black thigh strap on left leg, chunky white platform sneakers with white crew socks, silver bracelets on right wrist. expression: surprised. the projected face glitches - scanlines tear, colour channels split apart; camera: insert, extreme close-up on the hologram. The opening frame is filled edge to edge by the hologram, and nothing else is visible; the shot stays at that framing. duration 2.26s, motion synced to 106 BPM; 1 bar stinger. anime cel-shaded, clean line art, K-pop MV aesthetic, neon backlight, cinematic lighting
 ```
 
 Negative:
@@ -158,14 +158,14 @@ extra fingers, deformed hands, inconsistent hair color, changed outfit, text art
 
 ### S10 · 36.71–41.24s (4.53s) · bar 17 · Pre-chorus
 
-- **hash** `7d64b8beb593` · **status** pending · **ratio** 16:9
+- **hash** `df3dc4eff3eb` · **status** pending · **ratio** 16:9
 - **reference** `assets/reference/luna_character_sheet.jpg`
 - **caption card** 「那真的是我嗎？」 (overrides lyric subtitle)
 - **lyric** L07 「把腦海裡不可能的畫面現在全部變成眼前」
 - **lyric** L08 「從第一個 Prompt 到最後一個鏡頭」
 
 ```
-LUNA, a K-pop virtual idol: long deep-violet hair in a high braided ponytail with silver chain accents, white sleeveless mock-neck zip crop top, white cargo mini-skirt with black belt and hanging chain, black thigh strap on left leg, chunky white platform sneakers with white crew socks, silver bracelets on right wrist. expression: upset. she lifts a hand toward the fracturing hologram, light fragments drifting between her fingers; camera: low angle close-up, slow rise. duration 4.53s, motion synced to 106 BPM; air band rising to 1.15x - riser begins. anime cel-shaded, clean line art, K-pop MV aesthetic, neon backlight, cinematic lighting
+LUNA, a K-pop virtual idol: long deep-violet hair in a high braided ponytail with silver chain accents, white sleeveless mock-neck zip crop top, white cargo mini-skirt with black belt and hanging chain, black thigh strap on left leg, chunky white platform sneakers with white crew socks, silver bracelets on right wrist. expression: upset. she lifts a hand toward the fracturing hologram, light fragments drifting between her fingers; camera: low angle close-up, slow rise. The opening frame holds her face and shoulders, her head filling most of the height; the shot stays at that framing. duration 4.53s, motion synced to 106 BPM; air band rising to 1.15x - riser begins. anime cel-shaded, clean line art, K-pop MV aesthetic, neon backlight, cinematic lighting
 ```
 
 Negative:
@@ -176,13 +176,13 @@ extra fingers, deformed hands, inconsistent hair color, changed outfit, text art
 
 ### S11 · 41.24–45.77s (4.53s) · bar 19 · Pre-chorus
 
-- **hash** `b66977047f7a` · **status** pending · **ratio** 16:9
+- **hash** `00a7f923e3a8` · **status** pending · **ratio** 16:9
 - **reference** `assets/reference/luna_character_sheet.jpg`
 - **lyric** L09 「每一次生成都是新的宇宙」
 - **lyric** L10 「時間正在倒數沒有人可以停留」
 
 ```
-LUNA, a K-pop virtual idol: long deep-violet hair in a high braided ponytail with silver chain accents, white sleeveless mock-neck zip crop top, white cargo mini-skirt with black belt and hanging chain, black thigh strap on left leg, chunky white platform sneakers with white crew socks, silver bracelets on right wrist. expression: confident smirk. her hand closes into a fist; violet energy gathers around her as the riser peaks; camera: medium close-up, push-in, whip-pan out on last beat. duration 4.53s, motion synced to 106 BPM; riser tops out at 45.77 - whip-pan is the cut. anime cel-shaded, clean line art, K-pop MV aesthetic, neon backlight, cinematic lighting
+LUNA, a K-pop virtual idol: long deep-violet hair in a high braided ponytail with silver chain accents, white sleeveless mock-neck zip crop top, white cargo mini-skirt with black belt and hanging chain, black thigh strap on left leg, chunky white platform sneakers with white crew socks, silver bracelets on right wrist. expression: confident smirk. her hand closes into a fist; violet energy gathers around her as the riser peaks; camera: medium close-up, push-in, whip-pan out on last beat. The opening frame holds her from the shoulders up; the shot stays at that framing. duration 4.53s, motion synced to 106 BPM; riser tops out at 45.77 - whip-pan is the cut. anime cel-shaded, clean line art, K-pop MV aesthetic, neon backlight, cinematic lighting
 ```
 
 Negative:
@@ -193,13 +193,13 @@ extra fingers, deformed hands, inconsistent hair color, changed outfit, text art
 
 ### S12 · 45.77–50.30s (4.53s) · bar 21 · Chorus 1
 
-- **hash** `784ce6fb77bf` · **status** pending · **ratio** 16:9
+- **hash** `5cd886f735d1` · **status** pending · **ratio** 16:9
 - **reference** `assets/reference/luna_character_sheet.jpg`
 - **lyric** L11 「這一刻創意決定所有」
 - **lyric** L12 「LIVE AI 現在就創造未來」
 
 ```
-LUNA, a K-pop virtual idol: long deep-violet hair in a high braided ponytail with silver chain accents, white sleeveless mock-neck zip crop top, white cargo mini-skirt with black belt and hanging chain, black thigh strap on left leg, chunky white platform sneakers with white crew socks, silver bracelets on right wrist. expression: confident smirk. CHORUS - she points straight down the lens, stage exploding into neon particles and strobes behind her; camera: full body hero shot, low angle, fast push-in. duration 4.53s, motion synced to 106 BPM; HARD CUT on chorus downbeat. First true peak (0.64). anime cel-shaded, clean line art, K-pop MV aesthetic, neon backlight, cinematic lighting
+LUNA, a K-pop virtual idol: long deep-violet hair in a high braided ponytail with silver chain accents, white sleeveless mock-neck zip crop top, white cargo mini-skirt with black belt and hanging chain, black thigh strap on left leg, chunky white platform sneakers with white crew socks, silver bracelets on right wrist. expression: confident smirk. CHORUS - she points straight down the lens, stage exploding into neon particles and strobes behind her; camera: full body hero shot, low angle, fast push-in. The opening frame shows her whole body head to toe, filling the height of the frame; the shot stays at that framing. duration 4.53s, motion synced to 106 BPM; HARD CUT on chorus downbeat. First true peak (0.64). anime cel-shaded, clean line art, K-pop MV aesthetic, neon backlight, cinematic lighting
 ```
 
 Negative:
@@ -210,13 +210,13 @@ extra fingers, deformed hands, inconsistent hair color, changed outfit, text art
 
 ### S13 · 50.30–54.83s (4.53s) · bar 23 · Chorus 1
 
-- **hash** `717bc05dfb40` · **status** pending · **ratio** 16:9
+- **hash** `0f2384894a39` · **status** pending · **ratio** 16:9
 - **reference** `assets/reference/luna_character_sheet.jpg`
 - **lyric** L12 「LIVE AI 現在就創造未來」
 - **lyric** L13 「讓想像穿越畫面之外」
 
 ```
-LUNA, a K-pop virtual idol: long deep-violet hair in a high braided ponytail with silver chain accents, white sleeveless mock-neck zip crop top, white cargo mini-skirt with black belt and hanging chain, black thigh strap on left leg, chunky white platform sneakers with white crew socks, silver bracelets on right wrist. expression: happy. full choreography, backup silhouettes in formation behind her, light sticks flooding the pit; camera: wide, crane down over dancers. duration 4.53s, motion synced to 106 BPM; mid band 1.36x - widest frame of the chorus. anime cel-shaded, clean line art, K-pop MV aesthetic, neon backlight, cinematic lighting
+LUNA, a K-pop virtual idol: long deep-violet hair in a high braided ponytail with silver chain accents, white sleeveless mock-neck zip crop top, white cargo mini-skirt with black belt and hanging chain, black thigh strap on left leg, chunky white platform sneakers with white crew socks, silver bracelets on right wrist. expression: happy. full choreography, backup silhouettes in formation behind her, light sticks flooding the pit; camera: wide, crane down over dancers. The opening frame shows her small in a large space, with room visible on every side of her; the shot stays at that framing. duration 4.53s, motion synced to 106 BPM; mid band 1.36x - widest frame of the chorus. anime cel-shaded, clean line art, K-pop MV aesthetic, neon backlight, cinematic lighting
 ```
 
 Negative:
@@ -227,12 +227,12 @@ extra fingers, deformed hands, inconsistent hair color, changed outfit, text art
 
 ### S14 · 54.83–57.09s (2.26s) · bar 25 · Chorus 1
 
-- **hash** `8e6bf94d2400` · **status** pending · **ratio** 16:9
+- **hash** `592b55324e44` · **status** pending · **ratio** 16:9
 - **reference** `assets/reference/luna_character_sheet.jpg`
 - **lyric** L13 「讓想像穿越畫面之外」
 
 ```
-LUNA, a K-pop virtual idol: long deep-violet hair in a high braided ponytail with silver chain accents, white sleeveless mock-neck zip crop top, white cargo mini-skirt with black belt and hanging chain, black thigh strap on left leg, chunky white platform sneakers with white crew socks, silver bracelets on right wrist. expression: playful wink. she winks and throws a peace sign, sparkle bloom across the frame; camera: tight close-up, static. duration 2.26s, motion synced to 106 BPM; 1-bar punch-in. anime cel-shaded, clean line art, K-pop MV aesthetic, neon backlight, cinematic lighting
+LUNA, a K-pop virtual idol: long deep-violet hair in a high braided ponytail with silver chain accents, white sleeveless mock-neck zip crop top, white cargo mini-skirt with black belt and hanging chain, black thigh strap on left leg, chunky white platform sneakers with white crew socks, silver bracelets on right wrist. expression: playful wink. she winks and throws a peace sign, sparkle bloom across the frame; camera: tight close-up, static. The opening frame is filled by her face alone, cropped at the chin and the hairline; the shot stays at that framing. duration 2.26s, motion synced to 106 BPM; 1-bar punch-in. anime cel-shaded, clean line art, K-pop MV aesthetic, neon backlight, cinematic lighting
 ```
 
 Negative:
@@ -260,12 +260,12 @@ extra fingers, deformed hands, inconsistent hair color, changed outfit, text art
 
 ### S16 · 66.15–70.68s (4.53s) · bar 30 · Chorus 1 ext.
 
-- **hash** `21a01e11356e` · **status** pending · **ratio** 16:9
+- **hash** `6a34745e93cb` · **status** pending · **ratio** 16:9
 - **reference** `assets/reference/luna_character_sheet.jpg`
 - **lyric** L16 「讓光影 讓聲音 讓故事全部醒來」
 
 ```
-LUNA, a K-pop virtual idol: long deep-violet hair in a high braided ponytail with silver chain accents, white sleeveless mock-neck zip crop top, white cargo mini-skirt with black belt and hanging chain, black thigh strap on left leg, chunky white platform sneakers with white crew socks, silver bracelets on right wrist. expression: happy. seen from behind, arms spread to an ocean of glowing light sticks; camera: back view, wide, slow rise to crowd. duration 4.53s, motion synced to 106 BPM; hi/air climbing to 1.28x. anime cel-shaded, clean line art, K-pop MV aesthetic, neon backlight, cinematic lighting
+LUNA, a K-pop virtual idol: long deep-violet hair in a high braided ponytail with silver chain accents, white sleeveless mock-neck zip crop top, white cargo mini-skirt with black belt and hanging chain, black thigh strap on left leg, chunky white platform sneakers with white crew socks, silver bracelets on right wrist. expression: happy. seen from behind, arms spread to an ocean of glowing light sticks; camera: back view, wide, slow rise to crowd. The opening frame shows her from behind, her back to the lens; the shot stays at that framing. duration 4.53s, motion synced to 106 BPM; hi/air climbing to 1.28x. anime cel-shaded, clean line art, K-pop MV aesthetic, neon backlight, cinematic lighting
 ```
 
 Negative:
@@ -293,13 +293,13 @@ extra fingers, deformed hands, inconsistent hair color, changed outfit, text art
 
 ### S18 · 75.20–79.73s (4.53s) · bar 34 · Verse 2
 
-- **hash** `48e7edc5dd34` · **status** pending · **ratio** 16:9
+- **hash** `fd57bd041b71` · **status** pending · **ratio** 16:9
 - **reference** `assets/reference/luna_character_sheet.jpg`
 - **lyric** L18 「CSFCCA LIVE AI」
 - **lyric** L19 「Create it Make it Show me your world world w w w world」
 
 ```
-LUNA, a K-pop virtual idol: long deep-violet hair in a high braided ponytail with silver chain accents, white sleeveless mock-neck zip crop top, white cargo mini-skirt with black belt and hanging chain, black thigh strap on left leg, chunky white platform sneakers with white crew socks, silver bracelets on right wrist. expression: calm. lights drop to a single warm wash; she walks the empty stage as the arrangement thins; camera: slow lateral track, medium. duration 4.53s, motion synced to 106 BPM; mid pulls back to 0.90x. anime cel-shaded, clean line art, K-pop MV aesthetic, neon backlight, cinematic lighting
+LUNA, a K-pop virtual idol: long deep-violet hair in a high braided ponytail with silver chain accents, white sleeveless mock-neck zip crop top, white cargo mini-skirt with black belt and hanging chain, black thigh strap on left leg, chunky white platform sneakers with white crew socks, silver bracelets on right wrist. expression: calm. lights drop to a single warm wash; she walks the empty stage as the arrangement thins; camera: slow lateral track, medium. The opening frame holds her from the waist up; the shot stays at that framing. duration 4.53s, motion synced to 106 BPM; mid pulls back to 0.90x. anime cel-shaded, clean line art, K-pop MV aesthetic, neon backlight, cinematic lighting
 ```
 
 Negative:
@@ -310,13 +310,13 @@ extra fingers, deformed hands, inconsistent hair color, changed outfit, text art
 
 ### S19 · 79.73–84.26s (4.53s) · bar 36 · Verse 2
 
-- **hash** `9945da3a2ecf` · **status** pending · **ratio** 16:9
+- **hash** `0a4a40cb1a68` · **status** pending · **ratio** 16:9
 - **reference** `assets/reference/luna_character_sheet.jpg`
 - **lyric** L19 「Create it Make it Show me your world world w w w world」
 - **lyric** L20 「Dream it Build it Let the future unfold fold」
 
 ```
-LUNA, a K-pop virtual idol: long deep-violet hair in a high braided ponytail with silver chain accents, white sleeveless mock-neck zip crop top, white cargo mini-skirt with black belt and hanging chain, black thigh strap on left leg, chunky white platform sneakers with white crew socks, silver bracelets on right wrist. expression: shy. she catches her breath, a small private smile, sweat catching the light; camera: close-up, soft focus, static. duration 4.53s, motion synced to 106 BPM; hold - the calm before the dropout. anime cel-shaded, clean line art, K-pop MV aesthetic, neon backlight, cinematic lighting
+LUNA, a K-pop virtual idol: long deep-violet hair in a high braided ponytail with silver chain accents, white sleeveless mock-neck zip crop top, white cargo mini-skirt with black belt and hanging chain, black thigh strap on left leg, chunky white platform sneakers with white crew socks, silver bracelets on right wrist. expression: shy. she catches her breath, a small private smile, sweat catching the light; camera: close-up, soft focus, static. The opening frame holds her face and shoulders, her head filling most of the height; the shot stays at that framing. duration 4.53s, motion synced to 106 BPM; hold - the calm before the dropout. anime cel-shaded, clean line art, K-pop MV aesthetic, neon backlight, cinematic lighting
 ```
 
 Negative:
@@ -327,13 +327,13 @@ extra fingers, deformed hands, inconsistent hair color, changed outfit, text art
 
 ### S20 · 84.26–88.79s (4.53s) · bar 38 · Breakdown
 
-- **hash** `cbb98639b1f5` · **status** pending · **ratio** 16:9
+- **hash** `82b1532e5425` · **status** pending · **ratio** 16:9
 - **reference** `assets/reference/luna_character_sheet.jpg`
 - **lyric** L20 「Dream it Build it Let the future unfold fold」
 - **lyric** L21 「321 LIVE AI 現在就創造未來」
 
 ```
-LUNA, a K-pop virtual idol: long deep-violet hair in a high braided ponytail with silver chain accents, white sleeveless mock-neck zip crop top, white cargo mini-skirt with black belt and hanging chain, black thigh strap on left leg, chunky white platform sneakers with white crew socks, silver bracelets on right wrist. expression: upset. BASS VANISHES - everything cuts to darkness but a single overhead beam; she stands alone singing into the dropout, hologram shards dissolving around her; camera: slow orbit, medium close-up, near-black frame. duration 4.53s, motion synced to 106 BPM; bass 0.39x falling to 0.02x - the emptiest bar in the track, but the vocal carries through it alone (L20 at 85.0). Instruments drop, she does not. anime cel-shaded, clean line art, K-pop MV aesthetic, neon backlight, cinematic lighting
+LUNA, a K-pop virtual idol: long deep-violet hair in a high braided ponytail with silver chain accents, white sleeveless mock-neck zip crop top, white cargo mini-skirt with black belt and hanging chain, black thigh strap on left leg, chunky white platform sneakers with white crew socks, silver bracelets on right wrist. expression: upset. BASS VANISHES - everything cuts to darkness but a single overhead beam; she stands alone singing into the dropout, hologram shards dissolving around her; camera: slow orbit, medium close-up, near-black frame. The opening frame holds her from the shoulders up; the shot stays at that framing. duration 4.53s, motion synced to 106 BPM; bass 0.39x falling to 0.02x - the emptiest bar in the track, but the vocal carries through it alone (L20 at 85.0). Instruments drop, she does not. anime cel-shaded, clean line art, K-pop MV aesthetic, neon backlight, cinematic lighting
 ```
 
 Negative:
@@ -344,13 +344,13 @@ extra fingers, deformed hands, inconsistent hair color, changed outfit, text art
 
 ### S21 · 88.79–93.32s (4.53s) · bar 40 · Breakdown
 
-- **hash** `2c9d19f39938` · **status** pending · **ratio** 16:9
+- **hash** `9e2c5d3e713c` · **status** pending · **ratio** 16:9
 - **reference** `assets/reference/luna_character_sheet.jpg`
 - **lyric** L21 「321 LIVE AI 現在就創造未來」
 - **lyric** L22 「讓你的世界被所有人看見」
 
 ```
-LUNA, a K-pop virtual idol: long deep-violet hair in a high braided ponytail with silver chain accents, white sleeveless mock-neck zip crop top, white cargo mini-skirt with black belt and hanging chain, black thigh strap on left leg, chunky white platform sneakers with white crew socks, silver bracelets on right wrist. expression: confident smirk. bare vocal over the empty bar - her eyes lift to the lens on the line, decision made; frame cuts to black on the last beat before the final chorus; camera: extreme close-up on eyes, hold, then snap to black. duration 4.53s, motion synced to 106 BPM; 1:30 is the absolute instrumental floor (bass 0.02x), vocal only (L21 89.2 / L22 91.0). The exposed voice is the power, not silence. anime cel-shaded, clean line art, K-pop MV aesthetic, neon backlight, cinematic lighting
+LUNA, a K-pop virtual idol: long deep-violet hair in a high braided ponytail with silver chain accents, white sleeveless mock-neck zip crop top, white cargo mini-skirt with black belt and hanging chain, black thigh strap on left leg, chunky white platform sneakers with white crew socks, silver bracelets on right wrist. expression: confident smirk. bare vocal over the empty bar - her eyes lift to the lens on the line, decision made; frame cuts to black on the last beat before the final chorus; camera: extreme close-up on eyes, hold, then snap to black. The opening frame is filled edge to edge by her eyes, and nothing else is visible; the shot stays at that framing. duration 4.53s, motion synced to 106 BPM; 1:30 is the absolute instrumental floor (bass 0.02x), vocal only (L21 89.2 / L22 91.0). The exposed voice is the power, not silence. anime cel-shaded, clean line art, K-pop MV aesthetic, neon backlight, cinematic lighting
 ```
 
 Negative:
@@ -361,7 +361,7 @@ extra fingers, deformed hands, inconsistent hair color, changed outfit, text art
 
 ### S22 · 93.32–102.38s (9.06s) · bar 42 · Final chorus
 
-- **hash** `c44ceed92418` · **status** pending · **ratio** 16:9
+- **hash** `f50c053f202c` · **status** pending · **ratio** 16:9
 - **reference** `assets/reference/luna_character_sheet.jpg`
 - **caption card** 「LIVE AI」 (overrides lyric subtitle)
 - **lyric** L22 「讓你的世界被所有人看見」
@@ -369,7 +369,7 @@ extra fingers, deformed hands, inconsistent hair color, changed outfit, text art
 - **lyric** L24 「每一個靈感都可能改變明天」
 
 ```
-LUNA, a K-pop virtual idol: long deep-violet hair in a high braided ponytail with silver chain accents, white sleeveless mock-neck zip crop top, white cargo mini-skirt with black belt and hanging chain, black thigh strap on left leg, chunky white platform sneakers with white crew socks, silver bracelets on right wrist. expression: confident smirk. EVERYTHING RETURNS AT ONCE - pyrotechnic light burst, full choreography, maximum energy; camera: full body, low angle, explosive push-in then orbit. duration 9.06s, motion synced to 106 BPM; HARD CUT. Highest novelty score in the track (0.86). anime cel-shaded, clean line art, K-pop MV aesthetic, neon backlight, cinematic lighting
+LUNA, a K-pop virtual idol: long deep-violet hair in a high braided ponytail with silver chain accents, white sleeveless mock-neck zip crop top, white cargo mini-skirt with black belt and hanging chain, black thigh strap on left leg, chunky white platform sneakers with white crew socks, silver bracelets on right wrist. expression: confident smirk. EVERYTHING RETURNS AT ONCE - pyrotechnic light burst, full choreography, maximum energy; camera: full body, low angle, explosive push-in then orbit. The opening frame shows her whole body head to toe, filling the height of the frame; the shot stays at that framing. duration 9.06s, motion synced to 106 BPM; HARD CUT. Highest novelty score in the track (0.86). anime cel-shaded, clean line art, K-pop MV aesthetic, neon backlight, cinematic lighting
 ```
 
 Negative:
@@ -380,14 +380,14 @@ extra fingers, deformed hands, inconsistent hair color, changed outfit, text art
 
 ### S23A · 102.38–111.44s (9.06s) · bar 46 · Final chorus
 
-- **hash** `722cc02d2034` · **status** pending · **ratio** 16:9
+- **hash** `02770445e8b6` · **status** pending · **ratio** 16:9
 - **reference** `assets/reference/luna_character_sheet.jpg`
 - **lyric** L24 「每一個靈感都可能改變明天」
 - **lyric** L25 「讓電影 讓音樂 讓動畫重新醒來」
 - **lyric** L26 「這不是等待未來」
 
 ```
-LUNA, a K-pop virtual idol: long deep-violet hair in a high braided ponytail with silver chain accents, white sleeveless mock-neck zip crop top, white cargo mini-skirt with black belt and hanging chain, black thigh strap on left leg, chunky white platform sneakers with white crew socks, silver bracelets on right wrist. expression: happy. sustained final chorus, first half - hero shot on the downbeat, then a crowd wide as the arena lights sweep; camera: multi-angle chorus block, hero shot into crowd wide, cut every 2 bars. duration 9.06s, motion synced to 106 BPM; loudest sustained passage. 4 bars, 3 internal cuts at 2-bar lines (104.64 / 106.91 / 109.17). anime cel-shaded, clean line art, K-pop MV aesthetic, neon backlight, cinematic lighting
+LUNA, a K-pop virtual idol: long deep-violet hair in a high braided ponytail with silver chain accents, white sleeveless mock-neck zip crop top, white cargo mini-skirt with black belt and hanging chain, black thigh strap on left leg, chunky white platform sneakers with white crew socks, silver bracelets on right wrist. expression: happy. sustained final chorus, first half - hero shot on the downbeat, then a crowd wide as the arena lights sweep; camera: multi-angle chorus block, hero shot into crowd wide, cut every 2 bars. The opening frame shows her whole body head to toe, filling the height of the frame; by the last beat the camera has moved until the frame shows her small in a large space, with room visible on every side of her. duration 9.06s, motion synced to 106 BPM; loudest sustained passage. 4 bars, 3 internal cuts at 2-bar lines (104.64 / 106.91 / 109.17). anime cel-shaded, clean line art, K-pop MV aesthetic, neon backlight, cinematic lighting
 ```
 
 Negative:
@@ -398,14 +398,14 @@ extra fingers, deformed hands, inconsistent hair color, changed outfit, text art
 
 ### S23B · 111.44–118.22s (6.78s) · bar 50 · Final chorus
 
-- **hash** `7d8da9f36f79` · **status** pending · **ratio** 16:9
+- **hash** `9f5ad20cb7c9` · **status** pending · **ratio** 16:9
 - **reference** `assets/reference/luna_character_sheet.jpg`
 - **lyric** L26 「這不是等待未來」
 - **lyric** L27 「LIVE AI」
 - **lyric** L28 「讓想像成真」
 
 ```
-LUNA, a K-pop virtual idol: long deep-violet hair in a high braided ponytail with silver chain accents, white sleeveless mock-neck zip crop top, white cargo mini-skirt with black belt and hanging chain, black thigh strap on left leg, chunky white platform sneakers with white crew socks, silver bracelets on right wrist. expression: happy. sustained final chorus, second half - alternating close-ups tightening toward the climax handoff; camera: close-ups on each 2-bar line, tightening in. duration 6.78s, motion synced to 106 BPM; 3 bars, cuts at 113.71 / 115.97. Ends flush on the climax downbeat at 118.22. anime cel-shaded, clean line art, K-pop MV aesthetic, neon backlight, cinematic lighting
+LUNA, a K-pop virtual idol: long deep-violet hair in a high braided ponytail with silver chain accents, white sleeveless mock-neck zip crop top, white cargo mini-skirt with black belt and hanging chain, black thigh strap on left leg, chunky white platform sneakers with white crew socks, silver bracelets on right wrist. expression: happy. sustained final chorus, second half - alternating close-ups tightening toward the climax handoff; camera: close-ups on each 2-bar line, tightening in. The opening frame holds her face and shoulders, her head filling most of the height; the shot stays at that framing. duration 6.78s, motion synced to 106 BPM; 3 bars, cuts at 113.71 / 115.97. Ends flush on the climax downbeat at 118.22. anime cel-shaded, clean line art, K-pop MV aesthetic, neon backlight, cinematic lighting
 ```
 
 Negative:
@@ -416,7 +416,7 @@ extra fingers, deformed hands, inconsistent hair color, changed outfit, text art
 
 ### S24A · 118.22–129.55s (11.33s) · bar 53 · Climax / Outro
 
-- **hash** `da046ee140f4` · **status** pending · **ratio** 16:9
+- **hash** `6dbdd5b8e123` · **status** pending · **ratio** 16:9
 - **reference** `assets/reference/luna_character_sheet.jpg`
 - **lyric** L28 「讓想像成真」
 - **lyric** L29 「LIVE AI」
@@ -424,7 +424,7 @@ extra fingers, deformed hands, inconsistent hair color, changed outfit, text art
 - **lyric** L31 「讓未來發生」
 
 ```
-LUNA, a K-pop virtual idol: long deep-violet hair in a high braided ponytail with silver chain accents, white sleeveless mock-neck zip crop top, white cargo mini-skirt with black belt and hanging chain, black thigh strap on left leg, chunky white platform sneakers with white crew socks, silver bracelets on right wrist. expression: confident smirk. peak energy - she holds the final hero pose as the camera pulls back through the full arena, every light on her; camera: final hero pose, slow pull-back to wide. duration 11.33s, motion synced to 106 BPM; track peak (loudest passage, bass 1.6x). Ends exactly on the 2:09.54 bass collapse. anime cel-shaded, clean line art, K-pop MV aesthetic, neon backlight, cinematic lighting
+LUNA, a K-pop virtual idol: long deep-violet hair in a high braided ponytail with silver chain accents, white sleeveless mock-neck zip crop top, white cargo mini-skirt with black belt and hanging chain, black thigh strap on left leg, chunky white platform sneakers with white crew socks, silver bracelets on right wrist. expression: confident smirk. peak energy - she holds the final hero pose as the camera pulls back through the full arena, every light on her; camera: final hero pose, slow pull-back to wide. The opening frame shows her whole body head to toe, filling the height of the frame; by the last beat the camera has moved until the frame shows her small in a large space, with room visible on every side of her. duration 11.33s, motion synced to 106 BPM; track peak (loudest passage, bass 1.6x). Ends exactly on the 2:09.54 bass collapse. anime cel-shaded, clean line art, K-pop MV aesthetic, neon backlight, cinematic lighting
 ```
 
 Negative:
@@ -435,14 +435,14 @@ extra fingers, deformed hands, inconsistent hair color, changed outfit, text art
 
 ### S24B · 129.55–134.30s (4.75s) · bar 58 · Climax / Outro
 
-- **hash** `6178e8d8a86c` · **status** pending · **ratio** 16:9
+- **hash** `d366ecb8a1ae` · **status** pending · **ratio** 16:9
 - **reference** `assets/reference/luna_character_sheet.jpg`
 - **caption card** 「See you on the next stage.」 (overrides lyric subtitle)
 - **lyric** L31 「讓未來發生」
 - **lyric** L32 「CSFCCA LIVE AI」
 
 ```
-LUNA, a K-pop virtual idol: long deep-violet hair in a high braided ponytail with silver chain accents, white sleeveless mock-neck zip crop top, white cargo mini-skirt with black belt and hanging chain, black thigh strap on left leg, chunky white platform sneakers with white crew socks, silver bracelets on right wrist. expression: calm. the bass collapses - lights fall away one bank at a time, she holds the pose in near-darkness; CSFCCA logo flares on the final transient and freezes; camera: wide, static, lights falling away; hard cut to logo on the final hit. duration 4.75s, motion synced to 106 BPM; HARD CUT at 129.55 (outro collapse). Final transient 0.96 at 132.90 - the logo lands there and holds to 134.30. anime cel-shaded, clean line art, K-pop MV aesthetic, neon backlight, cinematic lighting
+LUNA, a K-pop virtual idol: long deep-violet hair in a high braided ponytail with silver chain accents, white sleeveless mock-neck zip crop top, white cargo mini-skirt with black belt and hanging chain, black thigh strap on left leg, chunky white platform sneakers with white crew socks, silver bracelets on right wrist. expression: calm. the bass collapses - lights fall away one bank at a time, she holds the pose in near-darkness; CSFCCA logo flares on the final transient and freezes; camera: wide, static, lights falling away; hard cut to logo on the final hit. The opening frame shows her small in a large space, with room visible on every side of her; the shot stays at that framing. duration 4.75s, motion synced to 106 BPM; HARD CUT at 129.55 (outro collapse). Final transient 0.96 at 132.90 - the logo lands there and holds to 134.30. anime cel-shaded, clean line art, K-pop MV aesthetic, neon backlight, cinematic lighting
 ```
 
 Negative:

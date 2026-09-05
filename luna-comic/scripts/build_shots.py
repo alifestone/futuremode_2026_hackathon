@@ -2,15 +2,16 @@
 """Compile storyboard/shots.json into per-shot video generation prompts.
 
 The video counterpart of build_prompts.py. That script compiles the superseded
-13-panel comic track (3:4 stills); this one compiles the authoritative 24-shot
+13-panel comic track (3:4 stills); this one compiles the authoritative 26-shot
 video storyboard (16:9). They stay separate on purpose — the two tracks carry
 different aspect ratios and different negative prompts, and merging them would
 make an edit to one silently rewrite the other.
 
-Prompts extend the comic's 4-element structure with the two things a video model
-needs and a still does not: clip duration, and how the motion sits on the beat.
+Prompts extend the comic's 4-element structure with the three things a video model
+needs and a still does not: where the shot opens, how long it runs, and how the
+motion sits on the beat.
 
-    character / expression / action+camera / motion+duration / style
+    character / expression / action+camera / opening framing / motion+duration / style
 
 Usage:
     python scripts/build_shots.py                    # write out/shot_prompts.{json,md}
@@ -21,6 +22,7 @@ import argparse
 import hashlib
 import json
 import pathlib
+import re
 import sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
@@ -31,6 +33,90 @@ def load(name):
     return json.loads((ROOT / name).read_text(encoding="utf-8"))
 
 
+# Opening-composition vocabulary.
+#
+# Measured across two local batches. Naming a shot size and forbidding the
+# alternative ("OPENS already framed as an extreme close-up — do not establish
+# with a wider view first") does not work: S01 answered it by compositing BOTH
+# readings into one frame, a full-body LUNA standing in front of a giant pair of
+# closed eyes, and S03 ignored it entirely. Negations feed the model the very
+# thing they forbid, and shot-size jargon is not what it was trained on.
+#
+# What the model does follow is a description of what is physically in the
+# opening frame — the style of MiniMax's own reference prompts ("The scene opens
+# exactly on image 1, the mouse resting on the dark surface"). So each framing
+# token is translated into content, in the present tense, with no jargon and no
+# prohibition.
+FRAMINGS = [
+    "extreme close-up", "tight close-up", "medium close-up", "close-up",
+    "medium full shot", "full body", "hero shot", "hero pose",
+    "over-the-shoulder", "back view", "side profile", "wide", "medium",
+]
+# A move that genuinely changes framing, e.g. "hero shot into crowd wide".
+TRANSITIONS = [" into ", " then ", " to "]
+
+FRAME_CONTENT = {
+    "extreme close-up": "is filled edge to edge by {subject}, and nothing else is visible",
+    "tight close-up": "is filled by her face alone, cropped at the chin and the hairline",
+    "close-up": "holds her face and shoulders, her head filling most of the height",
+    "medium close-up": "holds her from the shoulders up",
+    "medium": "holds her from the waist up",
+    "medium full shot": "holds her from the knees up",
+    "full body": "shows her whole body head to toe, filling the height of the frame",
+    "hero shot": "shows her whole body head to toe, filling the height of the frame",
+    "hero pose": "shows her whole body head to toe, filling the height of the frame",
+    "wide": "shows her small in a large space, with room visible on every side of her",
+    "back view": "shows her from behind, her back to the lens",
+    "side profile": "holds her profile from the side",
+    "over-the-shoulder": "looks past her shoulder, which sits large in the foreground",
+}
+DEFAULT_SUBJECT = "her eyes"
+
+
+def find_framing(text):
+    """Longest framing phrase at the earliest position, or None."""
+    hits = [(text.index(f), -len(f), f) for f in FRAMINGS if f in text]
+    return min(hits)[2] if hits else None
+
+
+def subject_after(text, framing):
+    """The 'on ...' that a close-up names, e.g. 'extreme close-up on the hologram'."""
+    tail = text.split(framing, 1)[1]
+    match = re.match(r"\s+on\s+([^,;]+)", tail)
+    if not match:
+        return DEFAULT_SUBJECT
+    subject = match.group(1).strip()
+    return subject if subject.startswith(("her ", "the ", "his ")) else f"her {subject}"
+
+
+def content_for(text, framing):
+    template = FRAME_CONTENT[framing]
+    if "{subject}" not in template:
+        return template
+    return template.format(subject=subject_after(text, framing))
+
+
+def framing_instruction(camera):
+    """Describe what is in the opening frame, in the model's own idiom."""
+    text = camera.lower()
+
+    for token in TRANSITIONS:
+        if token not in text:
+            continue
+        before, after = text.split(token, 1)
+        start, end = find_framing(before), find_framing(after)
+        # Only a real framing on BOTH sides means the composition changes;
+        # "rack focus to background" and "snap to black" do not.
+        if start and end and start != end:
+            return (f"The opening frame {content_for(before, start)}; by the last beat the "
+                    f"camera has moved until the frame {content_for(after, end)}")
+
+    framing = find_framing(text)
+    if not framing:
+        return ""
+    return f"The opening frame {content_for(text, framing)}; the shot stays at that framing"
+
+
 def build_prompt(shot, defaults, character):
     """Assemble the 5-element video prompt."""
     character_desc = ", ".join(character["locked_keywords"])
@@ -38,6 +124,11 @@ def build_prompt(shot, defaults, character):
         f'{character["name"]}, a K-pop virtual idol: {character_desc}',
         f'expression: {shot["expression"]}',
         f'{shot["action"]}; camera: {shot["camera"]}',
+    ]
+    framing = framing_instruction(shot["camera"])
+    if framing:
+        parts.append(framing)
+    parts += [
         f'duration {shot["dur"]:.2f}s, motion synced to {BPM} BPM; '
         f'{shot["sync"].rstrip(". ")}',
         defaults["style_suffix"],

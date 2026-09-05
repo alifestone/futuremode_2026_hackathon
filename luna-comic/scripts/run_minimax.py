@@ -131,12 +131,24 @@ def grid_length(seconds):
 
 
 def dimensions(megapixels, ratio="16:9"):
-    """Width/height at the requested pixel budget, snapped to multiples of 32."""
+    """Width/height at the requested pixel budget, both multiples of 32.
+
+    H3 only accepts dimensions on a 32-pixel grid, and rounding each side
+    independently distorts the frame — 0.5 MP at 16:9 lands on 928x512, which is
+    1.813 rather than 1.778. So search the grid and pay a little pixel budget to
+    keep the aspect exact: the same request lands on 1024x576 instead.
+    """
     w_ratio, h_ratio = (int(x) for x in ratio.split(":"))
-    width = math.sqrt(megapixels * 1_000_000 * w_ratio / h_ratio)
-    width = max(32, round(width / 32) * 32)
-    height = max(32, round(width * h_ratio / w_ratio / 32) * 32)
-    return width, height
+    target = ratio_value = w_ratio / h_ratio
+    best, best_score = None, None
+    for width in range(320, 2049, 32):
+        height = max(32, round(width / ratio_value / 32) * 32)
+        ratio_error = abs(width / height - target) / target
+        mp_error = abs(width * height / 1_000_000 - megapixels) / megapixels
+        score = ratio_error * 30 + mp_error
+        if best_score is None or score < best_score:
+            best, best_score = (width, height), score
+    return best
 
 
 def cloud_duration(shot):
